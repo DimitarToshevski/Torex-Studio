@@ -1,0 +1,14 @@
+<div class="post_wrapper">
+    {{#each posts}}
+        <div class="post_header">
+            <h5>{{title}}</h5>
+        </div>
+        <div class="post_body">
+            <p>{{body}}</p>
+        </div>
+    {{else}}
+        <div class="no_posts">
+            <span>There are no posts at the moment</span>
+        </div>
+    {{/each}}
+</div>

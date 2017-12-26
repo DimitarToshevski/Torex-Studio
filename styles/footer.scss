@@ -1,0 +1,104 @@
+$linkHoverColor: rgb(28, 105, 0);
+$mainHeaderColor: rgb(197, 197, 197);
+$mainBodyColor: rgb(163, 163, 163);
+* {
+  box-sizing: border-box;
+}
+
+.footer_wrapper {
+  background-color: rgb(37, 37, 37);
+  .footer_row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    section {
+      display: inline-flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer_section_header {
+      color: $mainHeaderColor;
+      display: flex;
+      justify-content: center;
+      font-size: 25px;
+      margin: 25px 0 25px 0;
+    }
+    .footer_section_body {
+      color: $mainBodyColor;
+      font-size: 27px;
+      text-align: center;
+      line-height: 45px;
+      h5 {
+        font-size: 15px;
+        float: right;
+      }
+      .partner {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 70px;
+        width: 287px;
+        &.aqua {
+          margin-bottom: 25px;
+          margin-top: -20px;
+          h5 {
+            margin-top: 28px;
+          }
+          img {
+            width: 90px;
+            height: 70px;
+          }
+        }
+        &.food {
+          margin-left: 22px;
+          padding-bottom: 25px;
+          h5 {
+            margin: 5px 0 0 10px;
+          }
+          img {
+            width: 80px;
+            height: 40px;
+          }
+        }
+
+        &.sofia {
+          h5 {
+            margin: 12px 0 0 20px;
+          }
+          img {
+            width: 60px;
+            height: 60px;
+          }
+        }
+        &:hover {
+          transition: all .3s ease-in-out;
+          transform: scale(1.1, 1.1);
+        }
+      }
+      .social {
+        display: inline-flex;
+        margin: 50px 18px 0 0;
+        border-radius: 50px;
+        height: 50px;
+        padding: 2px 0 0 2px;
+        transition: all .3s ease-in-out;
+        img {
+          height: 50px;
+        }
+        &:hover {
+          transform: scale(1.1, 1.1);
+          box-shadow: 2px 2px 2px 2px $mainBodyColor;
+        }
+      }
+    }
+    a {
+      color: $mainHeaderColor;
+      &:hover {
+        text-decoration: none;
+        color: $linkHoverColor;
+      }
+    }
+  }
+}

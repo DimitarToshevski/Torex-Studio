@@ -1,0 +1,11 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "handlebars": "^4.0.11",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.9",
+    "sammy": "^0.7.6"
+  }
+}

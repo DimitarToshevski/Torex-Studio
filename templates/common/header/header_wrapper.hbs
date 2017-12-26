@@ -1,0 +1,16 @@
+{{#if video_source}}
+    <header class="header_wrapper">
+        <div class="header_row home">
+            {{>header_logo}}
+            {{>header_menu}}
+        </div>
+        {{>header_video}}
+    </header>
+{{else}}
+    <header class="header_wrapper">
+        <div class="header_row">
+            {{>header_logo}}
+            {{>header_menu}}
+        </div>
+    </header>
+{{/if}}

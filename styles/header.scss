@@ -1,0 +1,24 @@
+.header_row {
+  background-color: rgba(1,1,1,0.7);
+  display: flex;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  .header_menu {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    li {
+      display: inline-flex;
+      flex-direction: row-reverse;
+    }
+  }
+
+}
+.home_header {
+  margin-top: 161px;
+  background: none;
+}
+.header_video {
+  margin-top: -161px;
+}
