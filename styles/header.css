@@ -14,10 +14,12 @@
       list-style-type: none; }
     .header_row .header_menu #videos_button:hover .videos_dropdown {
       display: block; }
+    .header_row .header_menu #photography_button:hover .photography_dropdown {
+      display: block; }
     .header_row .header_menu li {
       height: 30px;
       float: left;
-      padding: 0 15px;
+      margin: 0 15px;
       font-size: 20px;
       font-weight: bold; }
       .header_row .header_menu li a {
@@ -29,31 +31,32 @@
         .header_row .header_menu li a:hover {
           color: indianred;
           transform: scale(1.1, 1.1); }
-      .header_row .header_menu li .videos_dropdown {
+      .header_row .header_menu li .videos_dropdown, .header_row .header_menu li .photography_dropdown {
         border-top: 1px solid indianred;
         position: absolute;
         display: none;
         width: 170px;
         margin-top: 10px;
         background-color: rgba(4, 4, 4, 0.8); }
-        .header_row .header_menu li .videos_dropdown li {
+        .header_row .header_menu li .videos_dropdown li, .header_row .header_menu li .photography_dropdown li {
           display: flex;
           width: 100%;
           height: 60px;
           padding: 0;
+          margin: 0;
           flex-direction: row;
           border-bottom: 1px solid #c5c5c5; }
-          .header_row .header_menu li .videos_dropdown li a {
+          .header_row .header_menu li .videos_dropdown li a, .header_row .header_menu li .photography_dropdown li a {
             display: flex;
             padding: 20px 0 0 16px;
             height: 60px;
             width: 100%; }
-          .header_row .header_menu li .videos_dropdown li:nth-child(2) a {
-            padding-top: 8px; }
-          .header_row .header_menu li .videos_dropdown li:hover {
+          .header_row .header_menu li .videos_dropdown li:hover, .header_row .header_menu li .photography_dropdown li:hover {
             background-color: indianred; }
-            .header_row .header_menu li .videos_dropdown li:hover a {
+            .header_row .header_menu li .videos_dropdown li:hover a, .header_row .header_menu li .photography_dropdown li:hover a {
               color: white; }
+        .header_row .header_menu li .videos_dropdown #music_clips a, .header_row .header_menu li .photography_dropdown #music_clips a {
+          padding-top: 8px; }
   .header_row .header_logo {
     margin-left: 10%;
     transition: all .3s ease-in-out; }

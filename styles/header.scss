@@ -18,10 +18,14 @@ $mainHeaderColor: rgb(197, 197, 197);
       .videos_dropdown{
         display: block;}
     }
+    #photography_button:hover {
+      .photography_dropdown{
+        display: block;}
+    }
     li {
       height: 30px;
       float: left;
-      padding: 0 15px;
+      margin: 0 15px;
       font-size: 20px;
       font-weight: bold;
       a {
@@ -38,7 +42,7 @@ $mainHeaderColor: rgb(197, 197, 197);
           transform: scale(1.1, 1.1);
         }
       }
-      .videos_dropdown {
+      .videos_dropdown, .photography_dropdown {
         border-top: 1px solid indianred;
         position: absolute;
         display: none;
@@ -50,6 +54,7 @@ $mainHeaderColor: rgb(197, 197, 197);
           width: 100%;
           height: 60px;
           padding: 0;
+          margin: 0;
           flex-direction: row;
           border-bottom: 1px solid $mainHeaderColor;
           a {
@@ -58,15 +63,15 @@ $mainHeaderColor: rgb(197, 197, 197);
             height: 60px;
             width: 100%;
           }
-          &:nth-child(2) a {
-            padding-top: 8px;
-          }
           &:hover {
             background-color: indianred;
             & a {
               color: white;
             }
           }
+        }
+        #music_clips a {
+          padding-top: 8px;
         }
       }
     }
@@ -90,3 +95,4 @@ $mainHeaderColor: rgb(197, 197, 197);
 .header_video {
   margin-top: -161px;
 }
+
