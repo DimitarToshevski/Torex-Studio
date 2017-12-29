@@ -96,3 +96,20 @@ $mainHeaderColor: rgb(197, 197, 197);
   margin-top: -161px;
 }
 
+#video_pause_button {
+  background: rgba(51, 51, 51, 0.5);
+  border: 4px solid $mainHeaderColor;
+  border-radius: 50px;
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  color: white;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  justify-content: center;
+  align-items: center;
+  i {
+
+  }
+}
