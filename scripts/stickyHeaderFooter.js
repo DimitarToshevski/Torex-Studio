@@ -12,7 +12,7 @@ let sticky = (()=> {
             if (footerTop < docHeight) {
                 footer.css('margin-top', 10 + (docHeight - footerTop) + 'px');
             }
-        }, 50)
+        }, 100)
     }
 
     //adding a disappearing functionality on the header on the home page only
@@ -23,7 +23,7 @@ let sticky = (()=> {
             //it adds sometimes class 'home_header' even if there is no class 'home'
             let divHeaderRow = $('.header_row');
             if (divHeaderRow.hasClass('home')) {
-                $('.home').addClass("home_header").css('margin-top', '161px');
+                $('.home').addClass("home_header");
                 $(window).on('scroll', () => {
                     if ($(document).scrollTop() > 150) {
                         divHeaderRow.removeClass("home_header");
@@ -34,8 +34,9 @@ let sticky = (()=> {
             } else {
                 $(window).off('scroll')
             }
-        }, 100)
+        }, 150)
     }
+
 
     return {
         stickFooter,

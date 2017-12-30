@@ -1,12 +1,12 @@
-$(() => {
+function videoPlayPause() {
     setTimeout(() => {
         if ($('#video_pause_button').hasClass('paused')) {
             playVideo();
         } else {
             pauseVideo();
         }
-    }, 150);
-})();
+    }, 350);
+}
 
 function pauseVideo() {
     $('.fa-pause').closest('#video_pause_button').click(() => {
