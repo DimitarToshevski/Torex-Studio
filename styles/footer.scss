@@ -40,6 +40,13 @@ $mainBodyColor: rgb(163, 163, 163);
         flex-wrap: nowrap;
         height: 70px;
         width: 287px;
+        a {
+          color: $mainHeaderColor;
+          &:hover {
+            text-decoration: none;
+            color: $linkHoverColor;
+          }
+        }
         &.aqua {
           margin-bottom: 25px;
           margin-top: -20px;
@@ -93,12 +100,6 @@ $mainBodyColor: rgb(163, 163, 163);
         }
       }
     }
-    a {
-      color: $mainHeaderColor;
-      &:hover {
-        text-decoration: none;
-        color: $linkHoverColor;
-      }
-    }
+
   }
 }

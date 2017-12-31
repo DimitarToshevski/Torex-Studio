@@ -33,6 +33,11 @@
         flex-wrap: nowrap;
         height: 70px;
         width: 287px; }
+        .footer_wrapper .footer_row .footer_section_body .partner a {
+          color: #c5c5c5; }
+          .footer_wrapper .footer_row .footer_section_body .partner a:hover {
+            text-decoration: none;
+            color: #1c6900; }
         .footer_wrapper .footer_row .footer_section_body .partner.aqua {
           margin-bottom: 25px;
           margin-top: -20px; }
@@ -69,10 +74,5 @@
         .footer_wrapper .footer_row .footer_section_body .social:hover {
           transform: scale(1.1, 1.1);
           box-shadow: 2px 2px 2px 2px #a3a3a3; }
-    .footer_wrapper .footer_row a {
-      color: #c5c5c5; }
-      .footer_wrapper .footer_row a:hover {
-        text-decoration: none;
-        color: #1c6900; }
 
 /*# sourceMappingURL=footer.css.map */
