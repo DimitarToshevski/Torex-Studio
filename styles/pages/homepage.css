@@ -63,7 +63,7 @@
       color: #c5c5c5; }
     .homepage_main_wrapper .homepage_main_body a {
       text-decoration: none; }
-      .homepage_main_wrapper .homepage_main_body a:hover h1, .homepage_main_wrapper .homepage_main_body a:hover p {
+      .homepage_main_wrapper .homepage_main_body a:hover h1 {
         text-decoration: none;
         color: #1ca03c; }
       .homepage_main_wrapper .homepage_main_body a:hover img {
@@ -95,5 +95,7 @@
       font-size: 24px;
       line-height: 30px;
       letter-spacing: 2px; }
+    .homepage_main_wrapper .homepage_main_body .section_body p {
+      display: none; }
 
 /*# sourceMappingURL=homepage.css.map */
