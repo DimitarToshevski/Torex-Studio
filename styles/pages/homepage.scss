@@ -86,8 +86,10 @@ $hrColor: indianred;
     display: inline-flex;
     flex-wrap: wrap;
     width: 90%;
+    height: 560px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 32, 0.5) 100%);
     margin-bottom: 50px;
+    padding-top: 50px;
     h1 {
       color: $mainHeaderColor;
     }
@@ -121,6 +123,10 @@ $hrColor: indianred;
           opacity: 0.7;
         }
       }
+      .section_body {
+        width: 100%;
+        padding-top: 30px;
+      }
       hr {
         height: 2px;
         width: 150px;
@@ -133,16 +139,27 @@ $hrColor: indianred;
         }
       }
     }
+    .homepage_section_offers {
+      .section_body {
+        h4 {
+          color: $mainHeaderColor;
+          font-size: 30px;
+          line-height: 44px;
+        }
+        p {
+          display: none;
+          color: $mainHeaderColor;
+          font-size: 20px;
+        }
+      }
+    }
     .homepage_section_about {
-    p {
-      color: $mainHeaderColor;
-      font-size: 24px;
-      line-height: 30px;
-      letter-spacing: 2px;
-    }
-    }
-    .section_body p {
-      display: none;
+      p {
+        color: $mainHeaderColor;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 2px;
+      }
     }
   }
 }

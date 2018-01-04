@@ -57,8 +57,10 @@
     display: inline-flex;
     flex-wrap: wrap;
     width: 90%;
+    height: 560px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 32, 0.5) 100%);
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+    padding-top: 50px; }
     .homepage_main_wrapper .homepage_main_body h1 {
       color: #c5c5c5; }
     .homepage_main_wrapper .homepage_main_body a {
@@ -83,6 +85,9 @@
           display: flex;
           justify-content: center;
           opacity: 0.7; }
+      .homepage_main_wrapper .homepage_main_body section .section_body {
+        width: 100%;
+        padding-top: 30px; }
       .homepage_main_wrapper .homepage_main_body section hr {
         height: 2px;
         width: 150px;
@@ -90,12 +95,18 @@
       .homepage_main_wrapper .homepage_main_body section:hover hr {
         transition: all .3s ease-in-out;
         width: 200px; }
+    .homepage_main_wrapper .homepage_main_body .homepage_section_offers .section_body h4 {
+      color: #c5c5c5;
+      font-size: 30px;
+      line-height: 44px; }
+    .homepage_main_wrapper .homepage_main_body .homepage_section_offers .section_body p {
+      display: none;
+      color: #c5c5c5;
+      font-size: 20px; }
     .homepage_main_wrapper .homepage_main_body .homepage_section_about p {
       color: #c5c5c5;
       font-size: 24px;
       line-height: 30px;
       letter-spacing: 2px; }
-    .homepage_main_wrapper .homepage_main_body .section_body p {
-      display: none; }
 
 /*# sourceMappingURL=homepage.css.map */
