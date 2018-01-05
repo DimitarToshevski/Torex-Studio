@@ -2,7 +2,8 @@
   box-sizing: border-box; }
 
 .footer_wrapper {
-  background-color: #252525; }
+  background-color: #252525;
+  padding-bottom: 50px; }
   .footer_wrapper .footer_row {
     display: flex;
     justify-content: space-between;

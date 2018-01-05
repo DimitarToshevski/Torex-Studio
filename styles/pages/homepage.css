@@ -95,6 +95,14 @@
       .homepage_main_wrapper .homepage_main_body section:hover hr {
         transition: all .3s ease-in-out;
         width: 200px; }
+    .homepage_main_wrapper .homepage_main_body .homepage_section_offers .header_offer_1 {
+      border-bottom: 1px solid #c5c5c5;
+      text-align: left;
+      cursor: pointer; }
+    .homepage_main_wrapper .homepage_main_body .homepage_section_offers .section_body a {
+      color: #c5c5c5; }
+      .homepage_main_wrapper .homepage_main_body .homepage_section_offers .section_body a:hover {
+        color: #1ca03c; }
     .homepage_main_wrapper .homepage_main_body .homepage_section_offers .section_body h4 {
       color: #c5c5c5;
       font-size: 30px;
@@ -102,11 +110,20 @@
     .homepage_main_wrapper .homepage_main_body .homepage_section_offers .section_body p {
       display: none;
       color: #c5c5c5;
-      font-size: 20px; }
+      font-size: 20px;
+      text-align: left;
+      text-decoration: none; }
     .homepage_main_wrapper .homepage_main_body .homepage_section_about p {
       color: #c5c5c5;
       font-size: 24px;
       line-height: 30px;
       letter-spacing: 2px; }
+
+.hoverEffect img {
+  animation-name: pulse_animation;
+  animation-duration: 1500ms;
+  transform-origin: 70% 70%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
 
 /*# sourceMappingURL=homepage.css.map */

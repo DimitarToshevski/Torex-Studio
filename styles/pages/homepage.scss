@@ -140,7 +140,18 @@ $hrColor: indianred;
       }
     }
     .homepage_section_offers {
+      .header_offer_1 {
+        border-bottom: 1px solid $mainHeaderColor;
+        text-align: left;
+        cursor: pointer;
+      }
       .section_body {
+        a {
+          color: $mainHeaderColor;
+          &:hover {
+            color: $linkHoverColor;
+          }
+        }
         h4 {
           color: $mainHeaderColor;
           font-size: 30px;
@@ -150,6 +161,8 @@ $hrColor: indianred;
           display: none;
           color: $mainHeaderColor;
           font-size: 20px;
+          text-align: left;
+          text-decoration: none;
         }
       }
     }
@@ -163,4 +176,12 @@ $hrColor: indianred;
     }
   }
 }
-
+.hoverEffect {
+  img {
+    animation-name: pulse_animation;
+    animation-duration: 1500ms;
+    transform-origin: 70% 70%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
