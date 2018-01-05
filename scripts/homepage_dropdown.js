@@ -22,7 +22,7 @@ function accordeon() {
                     .find('h1').css('color', 'rgb(28, 160, 60)');
                 accordeonDropdownLinks.mouseleave(() => {
                     sectionOffersHeader.removeClass('hoverEffect')
-                        .find('h1').css('color', 'rgb(197, 197, 197)');
+                        .find('h1').css('color', '');
                 })
             })
         })
