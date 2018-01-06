@@ -174,8 +174,37 @@ $hrColor: indianred;
         letter-spacing: 2px;
       }
     }
+
+    .post_wrapper {
+      padding-left: 25px;
+      .post_header {
+        color: $mainHeaderColor;
+        h5 {
+          font-size: 22px;
+        }
+        span {
+          float: right;
+        }
+        text-align: left;
+      }
+      .post_body {
+        color: $mainBodyColor;
+        font-size: 16px;
+        text-align: left;
+        margin: 5px 0 18px 0;
+      }
+      &:hover {
+        h5 {
+          color: $linkHoverColor;
+        }
+
+        transition: all .3s ease-in-out;
+        transform: scale(1.03, 1.03);
+      }
+    }
   }
 }
+
 .hoverEffect {
   img {
     animation-name: pulse_animation;

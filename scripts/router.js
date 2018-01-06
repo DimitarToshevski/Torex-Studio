@@ -25,7 +25,13 @@ $(() => {
                 footer_section_follow: './templates/common/footer/footer_section_follow.hbs'
             }).then(function () {
                 this.partial('./templates/common/page.hbs');
-            }).then(function() {sticky.stickFooter(); sticky.stickHeader(); videoPlayPause(); accordeon();})
+            }).then(function () {
+                sticky.stickFooter();
+                sticky.stickHeader();
+                videoPlayPause();
+                accordeon();
+                hoverHomepageSection();
+            })
         });
 
         this.get('#/about', function () {
@@ -41,7 +47,10 @@ $(() => {
                 contact_us_button: './templates/common/contact_us_button.hbs'
             }).then(function () {
                 this.partial('./templates/common/page.hbs');
-            }).then(function() {sticky.stickFooter(); sticky.stickHeader()})
+            }).then(function () {
+                sticky.stickFooter();
+                sticky.stickHeader()
+            })
         });
 
     });

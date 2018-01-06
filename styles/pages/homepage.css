@@ -118,6 +118,25 @@
       font-size: 24px;
       line-height: 30px;
       letter-spacing: 2px; }
+    .homepage_main_wrapper .homepage_main_body .post_wrapper {
+      padding-left: 25px; }
+      .homepage_main_wrapper .homepage_main_body .post_wrapper .post_header {
+        color: #c5c5c5;
+        text-align: left; }
+        .homepage_main_wrapper .homepage_main_body .post_wrapper .post_header h5 {
+          font-size: 22px; }
+        .homepage_main_wrapper .homepage_main_body .post_wrapper .post_header span {
+          float: right; }
+      .homepage_main_wrapper .homepage_main_body .post_wrapper .post_body {
+        color: #a3a3a3;
+        font-size: 16px;
+        text-align: left;
+        margin: 5px 0 18px 0; }
+      .homepage_main_wrapper .homepage_main_body .post_wrapper:hover {
+        transition: all .3s ease-in-out;
+        transform: scale(1.03, 1.03); }
+        .homepage_main_wrapper .homepage_main_body .post_wrapper:hover h5 {
+          color: #1ca03c; }
 
 .hoverEffect img {
   animation-name: pulse_animation;

@@ -1,8 +1,7 @@
 function accordeon() {
-    setTimeout(function () {
+    setTimeout(() => {
         let sectionOffersHeader = $('.homepage_section_offers').find($('.section_header'));
         let accordeonDropdownLinks = $('.body_offer_1').find('a');
-
         $('.header_offer_1').find('h4').click(function () {
             if ($(event.target).hasClass('shownDropdown')) {
                 $('.shown').slideUp();
@@ -16,7 +15,7 @@ function accordeon() {
                 $(event.target).parent().next('.body_offer_1').find('p').addClass('shown').slideDown();
 
             }
-            //Adding image pulse and header change on color when the mouse enters a dropdown from the accordeon
+            //Adding image pulse effect and header changes color when the mouse enters a dropdown from the accordeon
             accordeonDropdownLinks.mouseenter(() => {
                 sectionOffersHeader.addClass('hoverEffect')
                     .find('h1').css('color', 'rgb(28, 160, 60)');
