@@ -82,6 +82,26 @@ body {
     .header_row .header_logo:hover {
       transform: scale(1.1, 1.1); }
 
+#scroll_top {
+  background: indianred;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
+  color: white;
+  border-radius: 10px;
+  transform: rotate(270deg);
+  transition: all .2s ease-in-out; }
+  #scroll_top:hover {
+    text-decoration: none;
+    background: white;
+    color: indianred; }
+    #scroll_top:hover span {
+      display: inline-flex;
+      transform: scale(1.4, 1.4); }
+
 .home_header {
   background: none; }
 
