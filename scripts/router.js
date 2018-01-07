@@ -31,6 +31,7 @@ $(() => {
                 videoPlayPause();
                 accordeon();
                 hoverHomepageSection();
+                scrollTop();
             })
         });
 

@@ -84,7 +84,13 @@ body {
 
 #scroll_top {
   background: indianred;
-  display: inline-flex;
+  float: right;
+  margin-right: 50px;
+  position: fixed;
+  z-index: 5;
+  top: 85%;
+  left: calc(97% - 40px);
+  display: none;
   align-items: center;
   justify-content: center;
   width: 50px;
