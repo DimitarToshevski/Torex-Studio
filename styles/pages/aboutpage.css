@@ -1,0 +1,57 @@
+.aboutpage_main_wrapper {
+  position: relative;
+  top: 140px;
+  display: flex;
+  padding: 50px 10px 10px 10px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 300px; }
+  .aboutpage_main_wrapper .aboutpage_main_header {
+    color: #c5c5c5;
+    font-size: 35px; }
+    .aboutpage_main_wrapper .aboutpage_main_header hr {
+      width: 100px;
+      height: 2px;
+      background: indianred; }
+  .aboutpage_main_wrapper .aboutpage_main_body {
+    padding: 50px 0 50px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+    .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper {
+      margin-bottom: 10px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 32, 0.5) 100%); }
+      .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_header {
+        padding: 10px 0 10px 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        color: #c5c5c5; }
+        .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_header h1 {
+          width: 100%;
+          text-align: center;
+          font-size: 30px; }
+        .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_header h5 {
+          font-size: 20px; }
+      .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        color: #c5c5c5;
+        justify-content: center; }
+        .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body img {
+          width: 350px;
+          height: 250px;
+          margin: 10px;
+          cursor: pointer;
+          border-radius: 10px; }
+        .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body p {
+          display: flex;
+          font-size: 20px;
+          line-height: 25px; }
+  .aboutpage_main_wrapper:hover .aboutpage_main_header hr {
+    transition: all 0.3s ease-in-out;
+    width: 200px; }
+
+/*# sourceMappingURL=aboutpage.css.map */
