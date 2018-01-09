@@ -3,6 +3,13 @@ $mainHeaderColor: rgb(197, 197, 197);
 $mainBodyColor: rgb(163, 163, 163);
 $hrColor: indianred;
 $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 32, 0.5) 100%);
+@mixin pulseEffect($iteration_count) {
+  animation-name: pulse_animation;
+  animation-duration: 1500ms;
+  transform-origin: 70% 70%;
+  animation-iteration-count: $iteration_count;
+  animation-timing-function: linear;
+}
 
 .aboutpage_main_wrapper {
   position: relative;
@@ -23,7 +30,7 @@ $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 
     }
   }
   .aboutpage_main_body {
-    padding:  50px 0 50px 0;
+    padding: 50px 0 50px 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -58,18 +65,22 @@ $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 
           cursor: pointer;
           border-radius: 10px;
         }
-        p {
-          display: flex;
-          font-size: 20px;
-          line-height: 25px;
+        a {
+          text-decoration: none;
+          color: $mainHeaderColor;
+          p {
+            display: none;
+            font-size: 20px;
+            line-height: 25px;
+          }
         }
       }
     }
   }
-&:hover {
-.aboutpage_main_header hr {
-  transition: all 0.3s ease-in-out;
-  width: 200px;
-}
-}
+  &:hover {
+    .aboutpage_main_header hr {
+      transition: all 0.3s ease-in-out;
+      width: 200px;
+    }
+  }
 }

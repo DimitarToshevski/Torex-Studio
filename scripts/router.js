@@ -57,6 +57,7 @@ $(() => {
                 sticky.stickFooter();
                 sticky.stickHeader();
                 videoPlayPause();
+                hoverAboutpageSection();
                 scrollTop();
             })
         });

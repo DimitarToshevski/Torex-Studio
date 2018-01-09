@@ -46,10 +46,13 @@
           margin: 10px;
           cursor: pointer;
           border-radius: 10px; }
-        .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body p {
-          display: flex;
-          font-size: 20px;
-          line-height: 25px; }
+        .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body a {
+          text-decoration: none;
+          color: #c5c5c5; }
+          .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body a p {
+            display: none;
+            font-size: 20px;
+            line-height: 25px; }
   .aboutpage_main_wrapper:hover .aboutpage_main_header hr {
     transition: all 0.3s ease-in-out;
     width: 200px; }
