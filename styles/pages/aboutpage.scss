@@ -58,12 +58,18 @@ $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 
         align-items: center;
         color: $mainHeaderColor;
         justify-content: center;
+        #radiused {
+          background: yellow;
+          display: flex;
+          align-content: center;
+          align-items: center;
+          border-radius: 150px;
+        }
         img {
           width: 350px;
-          height: 250px;
-          margin: 10px;
+          height: 270px;
           cursor: pointer;
-          border-radius: 10px;
+          border-radius: 140px;
         }
         a {
           text-decoration: none;
@@ -72,6 +78,7 @@ $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 
             display: none;
             font-size: 20px;
             line-height: 25px;
+            width: 310px;
           }
         }
       }

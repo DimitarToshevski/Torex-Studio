@@ -11,10 +11,10 @@ function hoverAboutpageSection() {
                 $(event.target).removeClass('shownParagraph');
             }
             else {
-                $('.shownDropdown').removeClass('shownParagraph');
+                $('.shownParagraph').removeClass('shownParagraph');
                 $(event.target).addClass('shownParagraph');
                 $('.shown').removeClass('shown').hide();
-                $(event.target).parent().find('p').addClass('shown').show();
+                $(event.target).parent().find('p').css('margin-left', '10px').addClass('shown').show();
 
             }
         });
@@ -22,11 +22,11 @@ function hoverAboutpageSection() {
         //Adding image pulse effect and header changes color when the mouse enters a paragraph
         accordeonLinks.mouseenter(() => {
             $(event.target).css({"transition": "all .3s ease-in-out", "transform": "scale(1.03, 1.03)"});
-            $(event.target).parent().parent().parent().find(sectionHeader).addClass('hoverEffect')
+            $(event.target).parent().parent().parent().parent().find(sectionHeader).addClass('hoverEffect')
                 .find('h1').css('color', 'rgb(28, 160, 60)');
             accordeonLinks.mouseleave(() => {
                 $(event.target).css({"transition": "", "transform": ""});
-                $(event.target).parent().parent().parent().find(sectionHeader).removeClass('hoverEffect')
+                $(event.target).parent().parent().parent().parent().find(sectionHeader).removeClass('hoverEffect')
                     .find('h1').css('color', '');
             })
         })
