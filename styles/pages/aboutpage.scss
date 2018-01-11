@@ -34,9 +34,9 @@ $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    background: $mainGradient;
     .aboutpage_section_teammate_wrapper {
-      margin-bottom: 10px;
-      background: $mainGradient;
+      margin-bottom: 50px;
       .aboutpage_section_teammate_header {
         padding: 10px 0 10px 0;
         display: flex;
@@ -47,9 +47,12 @@ $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 
           width: 100%;
           text-align: center;
           font-size: 30px;
+          font-weight: bold;
         }
         h5 {
           font-size: 20px;
+          font-weight: bold;
+          font-style: italic;
         }
       }
       .aboutpage_section_teammate_body {
@@ -58,10 +61,10 @@ $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 
         align-items: center;
         color: $mainHeaderColor;
         justify-content: center;
-        #radiused {
-          background: yellow;
+        .radiused {
+          background: linear-gradient(to bottom, rgba(6, 23, 49,0.65) 0%,rgba(6, 23, 49,0.35) 100%);
+          border: 2px solid rgb(190, 202, 218);
           display: flex;
-          align-content: center;
           align-items: center;
           border-radius: 150px;
         }
@@ -73,11 +76,12 @@ $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 
         }
         a {
           text-decoration: none;
-          color: $mainHeaderColor;
+          color: rgb(204, 204, 204);
           p {
             display: none;
             font-size: 20px;
             line-height: 25px;
+            font-weight: bold;
             width: 310px;
           }
         }
