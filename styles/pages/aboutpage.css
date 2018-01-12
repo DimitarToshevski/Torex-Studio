@@ -59,8 +59,10 @@
           color: #cccccc; }
           .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body a p {
             display: none;
-            font-size: 20px;
-            line-height: 25px;
+            padding-right: 10px;
+            padding-left: 10px;
+            font-size: 17px;
+            line-height: 22px;
             font-weight: bold;
             width: 310px; }
   .aboutpage_main_wrapper:hover .aboutpage_main_header hr {

@@ -33,7 +33,7 @@ function hoverAboutpageSection() {
                     .find('h1').css('color', '');
             })
         });*/
-        $($('.radiused')[1]).css({'flex-direction': 'row-reverse', 'text-align': 'right'});
-        $($('.radiused')[3]).css({'flex-direction': 'row-reverse', 'text-align': 'right'});
+        $($('.radiused')[1]).css({'flex-direction': 'row-reverse', 'text-align': 'right'}).find('p').css('padding-left', '52px');
+        $($('.radiused')[3]).css({'flex-direction': 'row-reverse', 'text-align': 'right'}).find('p').css('padding-left', '55px');
     }, 500)
 }
