@@ -33,7 +33,9 @@ function hoverAboutpageSection() {
                     .find('h1').css('color', '');
             })
         });*/
+        $($('.radiused')[0]).find('p').css({'margin-left': '-85px', 'margin-right': '20px', 'width': '384px', 'height': '270px', 'line-height': '29px', 'padding-right': '30px'});
         $($('.radiused')[1]).css({'flex-direction': 'row-reverse', 'text-align': 'right'}).find('p').css('padding-left', '52px');
+        $($('.radiused')[2]).find('p').css('padding-left', '55px');
         $($('.radiused')[3]).css({'flex-direction': 'row-reverse', 'text-align': 'right'}).find('p').css('padding-left', '55px');
     }, 500)
 }

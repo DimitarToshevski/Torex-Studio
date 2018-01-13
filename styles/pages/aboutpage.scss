@@ -67,6 +67,14 @@ $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 
           display: flex;
           align-items: center;
           border-radius: 150px;
+          #shaping_div {
+            width: 10px;
+            height: 270px;
+            background: yellow;
+            float: left;
+            shape-outside: ellipse(100px 114px at -13% 50%);
+            margin-right: 90px;
+          }
         }
         img {
           width: 350px;
@@ -79,12 +87,8 @@ $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 
           color: rgb(204, 204, 204);
           p {
             display: none;
-            padding-right: 10px;
-            padding-left: 10px;
             font-size: 17px;
-            line-height: 22px;
             font-weight: bold;
-            width: 310px;
           }
         }
       }

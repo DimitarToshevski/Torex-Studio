@@ -49,6 +49,13 @@
           display: flex;
           align-items: center;
           border-radius: 150px; }
+          .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body .radiused #shaping_div {
+            width: 10px;
+            height: 270px;
+            background: yellow;
+            float: left;
+            shape-outside: ellipse(100px 114px at -13% 50%);
+            margin-right: 90px; }
         .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body img {
           width: 350px;
           height: 270px;
@@ -59,12 +66,8 @@
           color: #cccccc; }
           .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body a p {
             display: none;
-            padding-right: 10px;
-            padding-left: 10px;
             font-size: 17px;
-            line-height: 22px;
-            font-weight: bold;
-            width: 310px; }
+            font-weight: bold; }
   .aboutpage_main_wrapper:hover .aboutpage_main_header hr {
     transition: all 0.3s ease-in-out;
     width: 200px; }
