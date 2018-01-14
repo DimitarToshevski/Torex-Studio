@@ -41,18 +41,26 @@ $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 
         padding: 10px 0 10px 0;
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
+        flex-direction: column;
         color: $mainHeaderColor;
-        h1 {
-          width: 100%;
-          text-align: center;
-          font-size: 30px;
-          font-weight: bold;
+        a {
+          color: $mainHeaderColor;
+          text-decoration: none;
+          h1 {
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+          }
+          &:hover {
+            color: $linkHoverColor;
+          }
         }
         h5 {
           font-size: 20px;
           font-weight: bold;
           font-style: italic;
+          text-align: center;
         }
       }
       .aboutpage_section_teammate_body {
@@ -67,20 +75,15 @@ $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 
           display: flex;
           align-items: center;
           border-radius: 150px;
-          #shaping_div {
-            width: 10px;
-            height: 270px;
-            background: yellow;
-            float: left;
-            shape-outside: ellipse(100px 114px at -13% 50%);
-            margin-right: 90px;
-          }
         }
         img {
           width: 350px;
           height: 270px;
           cursor: pointer;
           border-radius: 140px;
+          &:hover {
+            box-shadow: 0 0 7px 4px white;
+          }
         }
         a {
           text-decoration: none;
@@ -89,6 +92,66 @@ $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 
             display: none;
             font-size: 17px;
             font-weight: bold;
+          }
+          #teammate_1_p {
+            margin-left: -80px;
+            margin-right: 20px;
+            width: 384px;
+            height: 270px;
+            line-height: 29px;
+            padding-right: 30px;
+            .shaping_span {
+              width: 10px;
+              height: 270px;
+              float: left;
+              shape-outside: ellipse(100px 114px at -13% 50%);
+              margin-right: 90px;
+            }
+          }
+          #teammate_2_p {
+            margin-left: 75px;
+            margin-right: -123px;
+            width: 384px;
+            height: 270px;
+            line-height: 27px;
+            padding-right: 30px;
+            padding-left: 32px;
+            .shaping_span {
+              width: 10px;
+              height: 270px;
+              float: right;
+              shape-outside: ellipse(110px 120px at 108% 50%);
+              margin-left: 95px;
+            }
+          }
+          #teammate_3_p {
+            margin-left: -133px;
+            margin-right: 65px;
+            width: 384px;
+            height: 270px;
+            line-height: 29px;
+            padding-right: 30px;
+            .shaping_span {
+              width: 10px;
+              height: 270px;
+              float: left;
+              shape-outside: ellipse(100px 114px at -13% 50%);
+              margin-right: 90px;
+            }
+          }
+          #teammate_4_p {
+            margin-left: 60px;
+            margin-right: -93px;
+            width: 384px;
+            height: 270px;
+            line-height: 27px;
+            .shaping_span {
+              width: 10px;
+              height: 270px;
+              float: right;
+              shape-outside: ellipse(110px 120px at 108% 50%);
+              margin-left: 95px;
+            }
           }
         }
       }

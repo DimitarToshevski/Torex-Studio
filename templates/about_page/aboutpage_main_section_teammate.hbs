@@ -1,15 +1,17 @@
 {{#each teammates}}
     <section class="aboutpage_section_teammate_wrapper col-xl-5 col-lg-8 col-md-8 col-sm-12 col-xs-12">
         <div class="aboutpage_section_teammate_header">
-            <h1>{{name}}</h1>
+            <a href="{{profile}}" target="_blank">
+                <h1>{{name}}</h1>
+            </a>
             <h5>({{role}})</h5>
         </div>
         <div class="aboutpage_section_teammate_body">
             <div class="radiused">
-            <img src="{{img_source}}">
-            <a href="{{profile}}">
-                <p id="{{id}}"><span id="shaping_div"></span>{{resume}}</p>
-            </a>
+                <img src="{{img_source}}">
+                <a href="{{profile}}" target="_blank">
+                    <p id="teammate_{{id}}_p"><span class="shaping_span"></span>{{resume}}</p>
+                </a>
             </div>
         </div>
     </section>

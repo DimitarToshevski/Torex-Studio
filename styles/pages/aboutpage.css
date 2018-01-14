@@ -26,17 +26,23 @@
         padding: 10px 0 10px 0;
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
+        flex-direction: column;
         color: #c5c5c5; }
-        .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_header h1 {
-          width: 100%;
-          text-align: center;
-          font-size: 30px;
-          font-weight: bold; }
+        .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_header a {
+          color: #c5c5c5;
+          text-decoration: none; }
+          .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_header a h1 {
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold; }
+          .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_header a:hover {
+            color: #1ca03c; }
         .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_header h5 {
           font-size: 20px;
           font-weight: bold;
-          font-style: italic; }
+          font-style: italic;
+          text-align: center; }
       .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body {
         padding: 10px;
         display: flex;
@@ -49,18 +55,13 @@
           display: flex;
           align-items: center;
           border-radius: 150px; }
-          .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body .radiused #shaping_div {
-            width: 10px;
-            height: 270px;
-            background: yellow;
-            float: left;
-            shape-outside: ellipse(100px 114px at -13% 50%);
-            margin-right: 90px; }
         .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body img {
           width: 350px;
           height: 270px;
           cursor: pointer;
           border-radius: 140px; }
+          .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body img:hover {
+            box-shadow: 0 0 7px 4px white; }
         .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body a {
           text-decoration: none;
           color: #cccccc; }
@@ -68,6 +69,58 @@
             display: none;
             font-size: 17px;
             font-weight: bold; }
+          .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body a #teammate_1_p {
+            margin-left: -80px;
+            margin-right: 20px;
+            width: 384px;
+            height: 270px;
+            line-height: 29px;
+            padding-right: 30px; }
+            .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body a #teammate_1_p .shaping_span {
+              width: 10px;
+              height: 270px;
+              float: left;
+              shape-outside: ellipse(100px 114px at -13% 50%);
+              margin-right: 90px; }
+          .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body a #teammate_2_p {
+            margin-left: 75px;
+            margin-right: -123px;
+            width: 384px;
+            height: 270px;
+            line-height: 27px;
+            padding-right: 30px;
+            padding-left: 32px; }
+            .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body a #teammate_2_p .shaping_span {
+              width: 10px;
+              height: 270px;
+              float: right;
+              shape-outside: ellipse(110px 120px at 108% 50%);
+              margin-left: 95px; }
+          .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body a #teammate_3_p {
+            margin-left: -133px;
+            margin-right: 65px;
+            width: 384px;
+            height: 270px;
+            line-height: 29px;
+            padding-right: 30px; }
+            .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body a #teammate_3_p .shaping_span {
+              width: 10px;
+              height: 270px;
+              float: left;
+              shape-outside: ellipse(100px 114px at -13% 50%);
+              margin-right: 90px; }
+          .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body a #teammate_4_p {
+            margin-left: 60px;
+            margin-right: -93px;
+            width: 384px;
+            height: 270px;
+            line-height: 27px; }
+            .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body a #teammate_4_p .shaping_span {
+              width: 10px;
+              height: 270px;
+              float: right;
+              shape-outside: ellipse(110px 120px at 108% 50%);
+              margin-left: 95px; }
   .aboutpage_main_wrapper:hover .aboutpage_main_header hr {
     transition: all 0.3s ease-in-out;
     width: 200px; }

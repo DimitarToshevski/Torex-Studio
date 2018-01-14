@@ -4,6 +4,7 @@ function hoverAboutpageSection() {
         let sectionTeammateBody = $('.aboutpage_section_teammate_body');
         let accordeonLinks = sectionTeammateBody.find('a');
         let img = sectionTeammateBody.find('img');
+        let radiusedDiv = $('.radiused');
         img.click(() => {
             if ($(event.target).hasClass('shownParagraph')) {
                 $('.shown').hide();
@@ -14,7 +15,7 @@ function hoverAboutpageSection() {
                 $('.shownParagraph').removeClass('shownParagraph');
                 $(event.target).addClass('shownParagraph');
                 $('.shown').removeClass('shown').hide();
-                $(event.target).parent().find('p').css('margin-left', '10px').addClass('shown').animate({
+                $(event.target).parent().find('p').addClass('shown').animate({
                     width: 'toggle',
                     height: 'toggle'
                 });
@@ -33,9 +34,8 @@ function hoverAboutpageSection() {
                     .find('h1').css('color', '');
             })
         });*/
-        $($('.radiused')[0]).find('p').css({'margin-left': '-85px', 'margin-right': '20px', 'width': '384px', 'height': '270px', 'line-height': '29px', 'padding-right': '30px'});
-        $($('.radiused')[1]).css({'flex-direction': 'row-reverse', 'text-align': 'right'}).find('p').css('padding-left', '52px');
-        $($('.radiused')[2]).find('p').css('padding-left', '55px');
-        $($('.radiused')[3]).css({'flex-direction': 'row-reverse', 'text-align': 'right'}).find('p').css('padding-left', '55px');
+        $(radiusedDiv[1]).css({'flex-direction': 'row-reverse', 'text-align': 'right'});
+        $(radiusedDiv[2]).find('p').css('padding-left', '55px');
+        $(radiusedDiv[3]).css({'flex-direction': 'row-reverse', 'text-align': 'right'});
     }, 500)
 }
