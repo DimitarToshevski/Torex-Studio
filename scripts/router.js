@@ -40,6 +40,9 @@ $(() => {
             $.get('./teammates.json').then((teammates) => {
                 this.teammates = teammates;
             });
+            $.get('./teammate_slider.json').then((images) => {
+                this.image = images;
+            });
             this.loadPartials({
                 header_wrapper: './templates/common/header/header_wrapper.hbs',
                 header_logo: './templates/common/header/header_logo.hbs',
@@ -59,6 +62,7 @@ $(() => {
                 videoPlayPause();
                 hoverAboutpageSection();
                 scrollTop();
+                slickTeammate();
             })
         });
 

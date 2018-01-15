@@ -125,4 +125,11 @@
     transition: all 0.3s ease-in-out;
     width: 200px; }
 
+#prev, #next, #dots {
+  color: white; }
+
+#teammate_slider img {
+  width: 800px;
+  height: 600px; }
+
 /*# sourceMappingURL=aboutpage.css.map */
