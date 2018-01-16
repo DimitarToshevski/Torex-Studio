@@ -7,14 +7,20 @@ function hoverAboutpageSection() {
         let radiusedDiv = $('.radiused');
         img.click(() => {
             if ($(event.target).hasClass('shownParagraph')) {
-                $('.shown').hide();
+                $('.shown').animate({
+                    width: 'toggle',
+                    height: 'toggle'
+                });
                 $('.shown').removeClass('shown');
                 $(event.target).removeClass('shownParagraph');
             }
             else {
                 $('.shownParagraph').removeClass('shownParagraph');
                 $(event.target).addClass('shownParagraph');
-                $('.shown').removeClass('shown').hide();
+                $('.shown').removeClass('shown').animate({
+                    width: 'toggle',
+                    height: 'toggle'
+                });
                 $(event.target).parent().find('p').addClass('shown').animate({
                     width: 'toggle',
                     height: 'toggle'
@@ -35,7 +41,6 @@ function hoverAboutpageSection() {
             })
         });*/
         $(radiusedDiv[1]).css({'flex-direction': 'row-reverse', 'text-align': 'right'});
-        $(radiusedDiv[2]).find('p').css('padding-left', '55px');
         $(radiusedDiv[3]).css({'flex-direction': 'row-reverse', 'text-align': 'right'});
     }, 500)
 }

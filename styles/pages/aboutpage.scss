@@ -3,11 +3,11 @@ $mainHeaderColor: rgb(197, 197, 197);
 $mainBodyColor: rgb(163, 163, 163);
 $hrColor: indianred;
 $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 32, 0.5) 100%);
-@mixin pulseEffect($iteration_count) {
+@mixin pulseEffect() {
   animation-name: pulse_animation;
   animation-duration: 1500ms;
   transform-origin: 70% 70%;
-  animation-iteration-count: $iteration_count;
+  animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
@@ -32,6 +32,7 @@ $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 
   .aboutpage_main_body {
     padding: 50px 0 50px 0;
     display: flex;
+    width: 95%;
     justify-content: center;
     flex-wrap: wrap;
     background: $mainGradient;
@@ -70,7 +71,7 @@ $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 
         color: $mainHeaderColor;
         justify-content: center;
         .radiused {
-          background: linear-gradient(to bottom, rgba(6, 23, 49,0.65) 0%,rgba(6, 23, 49,0.35) 100%);
+          background: linear-gradient(to bottom, rgba(6, 23, 49, 0.65) 0%, rgba(6, 23, 49, 0.35) 100%);
           border: 2px solid rgb(190, 202, 218);
           display: flex;
           align-items: center;
@@ -130,7 +131,7 @@ $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 
             width: 384px;
             height: 270px;
             line-height: 29px;
-            padding-right: 30px;
+            padding: 0 30px 0 55px;
             .shaping_span {
               width: 10px;
               height: 270px;
@@ -164,12 +165,41 @@ $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 
     }
   }
 }
-#prev, #next, #dots {
-  color: white;
+
+//Slider
+#prev, #next {
+  color: $mainHeaderColor;
+  font-size: 60px;
+  cursor: pointer;
+  position: absolute;
+  top: 188%;
+  &:hover i {
+    color: indianred;
+    @include pulseEffect();
+  }
+}
+#prev {
+  z-index: 1000;
+  left: 16%;
+}
+#next {
+  z-index: 1000;
+  right: 20%;
 }
 #teammate_slider {
+  padding-left: 25%;
+  margin-bottom: 50px;
   img {
     width: 800px;
     height: 600px;
+    border-radius: 30px;
+  }
+}
+.slick-dots{
+  right: 1%;
+  li button {
+    background: $mainHeaderColor;
+    border-radius: 50%;
+    color: red;
   }
 }
