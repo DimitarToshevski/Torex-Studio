@@ -130,7 +130,7 @@
   color: #c5c5c5;
   font-size: 60px;
   cursor: pointer;
-  position: absolute;
+  position: relative;
   top: 188%; }
   #prev:hover i, #next:hover i {
     color: indianred;
