@@ -41,6 +41,6 @@ function hoverAboutpageSection() {
             })
         });*/
         $(radiusedDiv[1]).css({'flex-direction': 'row-reverse', 'text-align': 'right'});
-        $(radiusedDiv[3]).css({'flex-direction': 'row-reverse', 'text-align': 'right'});
+        $(radiusedDiv[3]).css({'flex-direction': 'row-reverse', 'text-align': 'right', 'margin-left': '15px'});
     }, 500)
 }

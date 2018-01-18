@@ -129,9 +129,7 @@
 #prev, #next {
   color: #c5c5c5;
   font-size: 60px;
-  cursor: pointer;
-  position: relative;
-  top: 188%; }
+  cursor: pointer; }
   #prev:hover i, #next:hover i {
     color: indianred;
     animation-name: pulse_animation;
@@ -140,24 +138,32 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear; }
 
+#slider_controls {
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 20%;
+  bottom: 375px; }
+
 #prev {
   z-index: 1000;
-  left: 16%; }
+  margin-right: 111%; }
 
 #next {
-  z-index: 1000;
-  right: 20%; }
+  z-index: 1000; }
 
 #teammate_slider {
-  padding-left: 25%;
+  padding-left: 24%;
   margin-bottom: 50px; }
   #teammate_slider img {
-    width: 800px;
-    height: 600px;
+    width: 700px;
+    height: 500px;
     border-radius: 30px; }
 
 .slick-dots {
-  right: 1%; }
+  right: 0; }
   .slick-dots li button {
     background: #c5c5c5;
     border-radius: 50%;
