@@ -32,11 +32,11 @@ function hoverAboutpageSection() {
         //Adding image pulse effect and header changes color when the mouse enters a paragraph
         accordeonLinks.mouseenter(() => {
             $(event.target).css({"transition": "all .3s ease-in-out", "transform": "scale(1.03, 1.03)"});
-            $(event.target).parent().parent().parent().prev().addClass('hoverEffect')
+            $(event.target).parent().parent().prev().addClass('hoverEffect')
                 .find('h1').css('color', 'rgb(28, 160, 60)');
             accordeonLinks.mouseleave(() => {
                 $(event.target).css({"transition": "", "transform": ""});
-                $(event.target).parent().parent().parent().prev().removeClass('hoverEffect')
+                $(event.target).parent().parent().prev().removeClass('hoverEffect')
                     .find('h1').css('color', '');
             })
         });*/
