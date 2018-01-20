@@ -5,7 +5,7 @@ function hoverAboutpageSection() {
         let accordeonLinks = sectionTeammateBody.find('a');
         let img = sectionTeammateBody.find('img');
         let radiusedDiv = $('.radiused');
-        img.click(() => {
+        img.click((event) => {
             if ($(event.target).hasClass('shownParagraph')) {
                 $('.shown').animate({
                     width: 'toggle',

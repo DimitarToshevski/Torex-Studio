@@ -82,6 +82,7 @@
               height: 270px;
               float: left;
               shape-outside: ellipse(100px 114px at -13% 50%);
+              -webkit-shape-outside: ellipse(100px 114px at -13% 50%);
               margin-right: 90px; }
           .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body a #teammate_2_p {
             margin-left: 75px;
@@ -96,6 +97,7 @@
               height: 270px;
               float: right;
               shape-outside: ellipse(110px 120px at 108% 50%);
+              -webkit-shape-outside: ellipse(110px 120px at 108% 50%);
               margin-left: 95px; }
           .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body a #teammate_3_p {
             margin-left: -133px;
@@ -109,6 +111,7 @@
               height: 270px;
               float: left;
               shape-outside: ellipse(100px 114px at -13% 50%);
+              -webkit-shape-outside: ellipse(100px 114px at -13% 50%);
               margin-right: 90px; }
           .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body a #teammate_4_p {
             margin-left: 60px;
@@ -121,6 +124,7 @@
               height: 270px;
               float: right;
               shape-outside: ellipse(110px 120px at 108% 50%);
+              -webkit-shape-outside: ellipse(110px 120px at 108% 50%);
               margin-left: 95px; }
   .aboutpage_main_wrapper:hover .aboutpage_main_header hr {
     transition: all 0.3s ease-in-out;

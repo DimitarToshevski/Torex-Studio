@@ -1,7 +1,7 @@
 $(() => {
     const router = Sammy('#wrapper', function () {
         this.use('Handlebars', 'hbs');
-
+//for deployment we must put this.get('#/') and on home links - /#/ - logo and Nachalo
         this.get('index.html', function () {
             this.video_source = './images/STUDIO-TOREX-2015-SHOWREEL.mp4';
             //adding additional condition statement for img so i can use offers in footer also
@@ -66,6 +66,6 @@ $(() => {
             })
         });
 
-    });
+    });//for deployment we must put router.run('#/')
     router.run();
 });

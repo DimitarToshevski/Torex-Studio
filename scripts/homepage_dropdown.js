@@ -2,7 +2,7 @@ function accordeon() {
     setTimeout(() => {
         let sectionOffersHeader = $('.homepage_section_offers').find($('.section_header'));
         let accordeonDropdownLinks = $('.body_offer_1').find('a');
-        $('.header_offer_1').find('h4').click(function () {
+        $('.header_offer_1').find('h4').click(function (event) {
             if ($(event.target).hasClass('shownDropdown')) {
                 $('.shown').slideUp();
                 $('.shown').removeClass('shown');
