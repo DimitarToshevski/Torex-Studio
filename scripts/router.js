@@ -37,7 +37,7 @@ $(() => {
         });
 
         this.get('#/about', function () {
-            $.get('./teammates.json').then((teammates) => {
+            $.get('./database/teammates.json').then((teammates) => {
                 this.teammates = teammates;
             });
             $.get('./teammate_slider.json').then((images) => {
@@ -59,7 +59,6 @@ $(() => {
             }).then(function () {
                 sticky.stickFooter();
                 sticky.stickHeader();
-                videoPlayPause();
                 hoverAboutpageSection();
                 scrollTop();
                 slickTeammate();
