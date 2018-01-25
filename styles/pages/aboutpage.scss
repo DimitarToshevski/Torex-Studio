@@ -86,61 +86,147 @@ $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 
             box-shadow: 0 0 7px 4px white;
           }
         }
-          p {
-            display: none;
-            font-size: 17px;
-            font-weight: bold;
+        p {
+          display: none;
+          font-size: 17px;
+          font-weight: bold;
+        }
+        #teammate_1_p {
+          width: 315px;
+          height: 270px;
+          line-height: 29px;
+          padding-right: 58px;
+          #row1 {
+            margin-left: -55px;
           }
-          #teammate_1_p {
-            width: 315px;
-            height: 270px;
-            line-height: 29px;
-            padding-right: 58px;
-            #row1 { margin-left: -55px; }
-            #row2 { margin-left: -24px; }
-            #row3 { margin-left: -6px; }
-            #row4 { margin-left: 3px; }
-            #row5 { margin-left: 7px; }
-            #row6 { margin-left: 5px; }
-            #row7 { margin-left: -4px; }
-            #row8 { margin-left: -20px; }
-            #row9 { margin-left: -47px; }
+          #row2 {
+            margin-left: -24px;
           }
-          #teammate_2_p {
-            width: 315px;
-            height: 270px;
-            line-height: 27px;
+          #row3 {
+            margin-left: -6px;
+          }
+          #row4 {
+            margin-left: 3px;
+          }
+          #row5 {
+            margin-left: 7px;
+          }
+          #row6 {
+            margin-left: 5px;
+          }
+          #row7 {
+            margin-left: -4px;
+          }
+          #row8 {
+            margin-left: -20px;
+          }
+          #row9 {
+            margin-left: -47px;
+          }
+        }
+        #teammate_2_p {
+          width: 315px;
+          height: 270px;
+          line-height: 27px;
 
-            #row1 { margin-right: -59px; }
-            #row2 { margin: 0 -25px 0 83px; }
-            #row3 { margin: 0 -8px 0 32px; }
-            #row4 { margin: 0 2px 0 64px; }
-            #row5 { margin: 0 7px 0 81px; }
-            #row6 { margin: 0 7px 0 66px; }
-            #row7 { margin-left: 30px; }
-            #row8 { margin: 0 -10px 0 107px; }
-            #row9 { margin: 0 -31px 0 62px; }
-            #row10 { margin-right: -66px; }
+          #row1 {
+            margin-right: -59px;
           }
-          #teammate_3_p {
-            width: 269px;
-            height: 270px;
-            line-height: 29px;
-            #row1 { margin: 0 66px 0 -57px; }
-            #row2 { margin: 0 70px 0 -23px; }
-            #row3 { margin: 0 58px 0 -6px; }
-            #row4 { margin: 0 43px 0 3px; }
-            #row5 { margin: 0 30px 0 6px; }
-            #row6 { margin: 0 36px 0 4px; }
-            #row7 { margin: 0 66px 0 -4px; }
-            #row8 { margin: 0 213px 0 -20px; }
-            #row9 { margin-left: -44px; }
+          #row2 {
+            margin: 0 -25px 0 83px;
           }
-          #teammate_4_p {
-            width: 315px;
-            height: 270px;
-            line-height: 27px;
+          #row3 {
+            margin: 0 -8px 0 32px;
           }
+          #row4 {
+            margin: 0 2px 0 64px;
+          }
+          #row5 {
+            margin: 0 7px 0 81px;
+          }
+          #row6 {
+            margin: 0 7px 0 66px;
+          }
+          #row7 {
+            margin-left: 30px;
+          }
+          #row8 {
+            margin: 0 -10px 0 107px;
+          }
+          #row9 {
+            margin: 0 -31px 0 62px;
+          }
+          #row10 {
+            margin-right: -66px;
+          }
+        }
+        #teammate_3_p {
+          width: 269px;
+          height: 270px;
+          line-height: 29px;
+          #row1 {
+            margin: 0 66px 0 -57px;
+          }
+          #row2 {
+            margin: 0 70px 0 -23px;
+          }
+          #row3 {
+            margin: 0 58px 0 -6px;
+          }
+          #row4 {
+            margin: 0 43px 0 3px;
+          }
+          #row5 {
+            margin: 0 30px 0 6px;
+          }
+          #row6 {
+            margin: 0 36px 0 4px;
+          }
+          #row7 {
+            margin: 0 66px 0 -4px;
+          }
+          #row8 {
+            margin: 0 213px 0 -20px;
+          }
+          #row9 {
+            margin-left: -44px;
+          }
+        }
+        #teammate_4_p {
+          width: 350px;
+          height: 270px;
+          line-height: 27px;
+          #row1 {
+            margin: 0 -55px 0 57px;
+          }
+          #row2 {
+            margin: 0 -25px 0 64px;
+          }
+          #row3 {
+            margin: 0 -7px 0 0;
+          }
+          #row4 {
+            margin: 0 4px 0 0;
+          }
+          #row5 {
+            margin: 0 7px 0 60px;
+          }
+          #row6 {
+            margin: 0 6px 0 20px;
+          }
+          #row7 {
+            margin: 0 2px 0 78px;
+          }
+          #row8 {
+            margin: 0 -11px 0 52px;
+          }
+          #row9 {
+            margin: 0 -32px 0 116px;
+          }
+          #row10 {
+            margin: 0 -62px 0 0;
+          }
+        }
       }
     }
   }
@@ -162,36 +248,44 @@ $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 
     @include pulseEffect();
   }
 }
+
 #slider_controls {
   width: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  left: 20%;
+  left: 9%;
   bottom: 375px;
 }
+
 #prev {
   z-index: 1000;
   margin-right: 111%;
 }
+
 #next {
   z-index: 1000;
 }
-#teammate_slider {
-  padding-left: 24%;
-  margin-bottom: 50px;
-  img {
-    width: 700px;
-    height: 500px;
-    border-radius: 30px;
+
+.container {
+  margin: 0 auto;
+  padding: 60px;
+  width: 80%;
+  #teammate_slider {
+    margin-bottom: 50px;
+    padding-left: 14%;
+    img {
+      width: 700px;
+      height: 500px;
+      border-radius: 30px;
+    }
   }
-}
-.slick-dots{
-  right: 0;
-  li button {
-    background: $mainHeaderColor;
-    border-radius: 50%;
-    color: red;
+  .slick-dots {
+    right: 0;
+    li button {
+      background: $mainHeaderColor;
+      border-radius: 50%;
+    }
   }
 }

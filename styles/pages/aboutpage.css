@@ -137,9 +137,29 @@
           .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_3_p #row9 {
             margin-left: -44px; }
         .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_4_p {
-          width: 315px;
+          width: 350px;
           height: 270px;
           line-height: 27px; }
+          .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_4_p #row1 {
+            margin: 0 -55px 0 57px; }
+          .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_4_p #row2 {
+            margin: 0 -25px 0 64px; }
+          .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_4_p #row3 {
+            margin: 0 -7px 0 0; }
+          .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_4_p #row4 {
+            margin: 0 4px 0 0; }
+          .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_4_p #row5 {
+            margin: 0 7px 0 60px; }
+          .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_4_p #row6 {
+            margin: 0 6px 0 20px; }
+          .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_4_p #row7 {
+            margin: 0 2px 0 78px; }
+          .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_4_p #row8 {
+            margin: 0 -11px 0 52px; }
+          .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_4_p #row9 {
+            margin: 0 -32px 0 116px; }
+          .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_4_p #row10 {
+            margin: 0 -62px 0 0; }
   .aboutpage_main_wrapper:hover .aboutpage_main_header hr {
     transition: all 0.3s ease-in-out;
     width: 200px; }
@@ -162,7 +182,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  left: 20%;
+  left: 9%;
   bottom: 375px; }
 
 #prev {
@@ -172,19 +192,21 @@
 #next {
   z-index: 1000; }
 
-#teammate_slider {
-  padding-left: 24%;
-  margin-bottom: 50px; }
-  #teammate_slider img {
-    width: 700px;
-    height: 500px;
-    border-radius: 30px; }
-
-.slick-dots {
-  right: 0; }
-  .slick-dots li button {
-    background: #c5c5c5;
-    border-radius: 50%;
-    color: red; }
+.container {
+  margin: 0 auto;
+  padding: 60px;
+  width: 80%; }
+  .container #teammate_slider {
+    margin-bottom: 50px;
+    padding-left: 14%; }
+    .container #teammate_slider img {
+      width: 700px;
+      height: 500px;
+      border-radius: 30px; }
+  .container .slick-dots {
+    right: 0; }
+    .container .slick-dots li button {
+      background: #c5c5c5;
+      border-radius: 50%; }
 
 /*# sourceMappingURL=aboutpage.css.map */

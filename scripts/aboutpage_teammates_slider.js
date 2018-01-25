@@ -12,6 +12,7 @@ function slickTeammate() {
             dots: true,
             pauseOnDotsHover: true,
             centerMode: true,
+            centerPadding: '40px',
             infinite: true,
             fade: true,
             cssEase: 'linear'

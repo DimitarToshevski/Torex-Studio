@@ -1,0 +1,13 @@
+<div class="ads_main_wrapper">
+    {{#each ad}}
+        <div class="single_ad_wrapper col-xl-3 col-lg-4 col-md-6 col-sm-12">
+            <a href="{{ad_video_url}}" title="{{ad_title}}"><img class="ad_img" src="{{ad_img_url}}" alt="{{ad_title}}"></a>
+
+            <div class="single_ad_overlay">
+                <h5>{{ad_title}}</h5>
+                <hr>
+                <span>Watch video</span>
+            </div>
+        </div>
+    {{/each}}
+</div>

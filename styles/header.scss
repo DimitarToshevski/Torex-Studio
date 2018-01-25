@@ -56,7 +56,7 @@ body {
       margin: 0 15px;
       font-size: 20px;
       font-weight: bold;
-      a {
+      a,span {
         display: flex;
         transition: all .3s ease-in-out;
         text-decoration: none;
@@ -69,6 +69,9 @@ body {
           color: indianred;
           transform: scale(1.1, 1.1);
         }
+      }
+      span {
+        cursor: default;
       }
       .videos_dropdown, .photography_dropdown {
         border-top: 1px solid indianred;
@@ -108,6 +111,10 @@ body {
   .header_logo {
     margin-left: 10%;
     transition: all .3s ease-in-out;
+    img {
+      width: 130px;
+      height: 100px;
+    }
     &:hover {
       transform: scale(1.1, 1.1);
     }

@@ -65,15 +65,15 @@ $(() => {
             })
         });
 
-        this.get('#/videos', function () {
-            $.get('../database/videos.json').then((videos) => {
-                this.video = videos;
+        this.get('#/videos/ads', function () {
+            $.get('./database/videos.json').then((videos) => {
+                this.ad = videos[0]["ad"];
             });
             this.loadPartials({
                 header_wrapper: './templates/common/header/header_wrapper.hbs',
                 header_logo: './templates/common/header/header_logo.hbs',
                 header_menu: './templates/common/header/header_menu.hbs',
-                main: './templates/video_page/videopage_main_wrapper.hbs',
+                main: './templates/video_page/ads_main_wrapper.hbs',
                 footer_wrapper: './templates/common/footer/footer_wrapper.hbs',
                 footer_section_offers: './templates/common/footer/footer_section_offers.hbs',
                 footer_section_partners: './templates/common/footer/footer_section_partners.hbs',
