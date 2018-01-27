@@ -2,7 +2,7 @@
   {
     "id": "1",
     "profile": "https://www.facebook.com/torexa",
-    "img_source": "./images/teammate1.jpg",
+    "img_source": "./images/Aboutpage/teammate1.jpg",
     "name": "Иван Димитров",
     "role": "Режисьор",
     "resume": {
@@ -20,7 +20,7 @@
   {
     "id": "2",
     "profile": "https://www.facebook.com/aeroooochocolate",
-    "img_source": "./images/teammate2.jpg",
+    "img_source": "./images/Aboutpage/teammate2.jpg",
     "name": "Андрей Кряколов",
     "role": "Оператор",
     "resume": {
@@ -39,7 +39,7 @@
   {
     "id": "3",
     "profile": "https://www.facebook.com/dimitar.stefanov.52",
-    "img_source": "./images/teammate3.jpg",
+    "img_source": "./images/Aboutpage/teammate3.jpg",
     "name": "Димитър Стефанов",
     "role": "Осветител",
     "resume": {
@@ -57,7 +57,7 @@
   {
     "id": "4",
     "profile": "https://www.facebook.com/JKro0",
-    "img_source": "./images/teammate4.jpg",
+    "img_source": "./images/Aboutpage/teammate4.jpg",
     "name": "Любомир Иванов",
     "role": "Композитор ",
     "resume": {

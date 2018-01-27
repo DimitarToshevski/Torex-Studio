@@ -1,0 +1,24 @@
+{
+  "portrets": [
+    {"url": "./images/Photography/1.jpg"},
+    {"url": "./images/Photography/2.jpg"},
+    {"url": "./images/Photography/3.jpg"},
+    {"url": "./images/Photography/4.jpg"},
+    {"url": "./images/Photography/5.jpg"},
+    {"url": "./images/Photography/6.jpg"},
+    {"url": "./images/Photography/7.jpg"},
+    {"url": "./images/Photography/8.jpg"},
+    {"url": "./images/Photography/9.jpg"}
+  ],
+  "weddings": [
+    {"url": "./images/Photography/1.jpg"},
+    {"url": "./images/Photography/2.jpg"},
+    {"url": "./images/Photography/3.jpg"}
+  ],
+  "behind": [
+    {"url": "./images/Photography/1.jpg"},
+    {"url": "./images/Photography/2.jpg"}],
+  "boudoir": [
+    {"url": "./images/Photography/1.jpg"}
+  ]
+}
