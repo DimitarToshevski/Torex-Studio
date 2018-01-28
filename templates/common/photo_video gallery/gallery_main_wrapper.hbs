@@ -1,0 +1,12 @@
+<div id="gallery">
+    {{#if video}}
+        {{#each video}}
+            {{>single_video}}
+        {{/each}}
+
+    {{else}}
+        {{#each photo}}
+            {{>single_photo}}
+        {{/each}}
+    {{/if}}
+</div>
