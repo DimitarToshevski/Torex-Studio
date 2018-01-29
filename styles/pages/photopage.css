@@ -1,3 +1,34 @@
+.lg-toolbar {
+  top: 87px; }
 
+.lg-image {
+  margin-top: 135px; }
+
+#gallery .photos {
+  height: 300px;
+  border-radius: 10%; }
+#gallery .photo_overlay {
+  display: flex;
+  flex-direction: column-reverse;
+  background: rgba(210, 210, 210, 0);
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  color: #0D0A0A;
+  justify-content: center;
+  align-items: center;
+  font-size: 33px;
+  font-weight: bold;
+  border-radius: 10%; }
+  #gallery .photo_overlay i {
+    display: none;
+    font-size: 40px; }
+  #gallery .photo_overlay:hover {
+    cursor: zoom-in; }
+    #gallery .photo_overlay:hover i {
+      display: inline-block; }
 
 /*# sourceMappingURL=photopage.css.map */

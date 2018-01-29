@@ -1,24 +1,25 @@
 {
   "portrets": [
-    {"url": "./images/Photography/1.jpg"},
-    {"url": "./images/Photography/2.jpg"},
-    {"url": "./images/Photography/3.jpg"},
-    {"url": "./images/Photography/4.jpg"},
-    {"url": "./images/Photography/5.jpg"},
-    {"url": "./images/Photography/6.jpg"},
-    {"url": "./images/Photography/7.jpg"},
-    {"url": "./images/Photography/8.jpg"},
-    {"url": "./images/Photography/9.jpg"}
+    {"url": "./images/Photography/1.jpg", "title": "Zaglavie 1"},
+    {"url": "./images/Photography/2.jpg", "title": "Zaglavie 2"},
+    {"url": "./images/Photography/3.jpg", "title": "Zaglavie 3"},
+    {"url": "./images/Photography/4.jpg", "title": "Zaglavie 4"},
+    {"url": "./images/Photography/5.jpg", "title": "Zaglavie 5"},
+    {"url": "./images/Photography/6.jpg", "title": "Zaglavie 6"},
+    {"url": "./images/Photography/7.jpg", "title": "Zaglavie 7"},
+    {"url": "./images/Photography/8.jpg", "title": "Zaglavie 8"},
+    {"url": "./images/Photography/9.jpg", "title": "Zaglavie 9"}
   ],
   "weddings": [
-    {"url": "./images/Photography/1.jpg"},
-    {"url": "./images/Photography/2.jpg"},
-    {"url": "./images/Photography/3.jpg"}
+    {"url": "./images/Photography/1.jpg", "title": "Zaglavie 1"},
+    {"url": "./images/Photography/2.jpg", "title": "Zaglavie 2"},
+    {"url": "./images/Photography/3.jpg", "title": "Zaglavie 3"}
   ],
   "behind": [
-    {"url": "./images/Photography/1.jpg"},
-    {"url": "./images/Photography/2.jpg"}],
+    {"url": "./images/Photography/1.jpg", "title": "Zaglavie 1"},
+    {"url": "./images/Photography/2.jpg", "title": "Zaglavie 2"}
+  ],
   "boudoir": [
-    {"url": "./images/Photography/1.jpg"}
+    {"url": "./images/Photography/1.jpg", "title": "Zaglavie 1"}
   ]
 }

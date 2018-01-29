@@ -1,12 +1,15 @@
-<div id="gallery">
-    {{#if video}}
-        {{#each video}}
-            {{>single_video}}
-        {{/each}}
+<div class="gallery_wrapper">
+    <div id="gallery">
+        {{#if video}}
 
-    {{else}}
-        {{#each photo}}
-            {{>single_photo}}
-        {{/each}}
-    {{/if}}
+            {{#each video}}
+                {{>single_video}}
+            {{/each}}
+
+        {{else}}
+            {{#each photo}}
+                {{>single_photo}}
+            {{/each}}
+        {{/if}}
+    </div>
 </div>
