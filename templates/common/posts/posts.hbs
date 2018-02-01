@@ -1,16 +1,25 @@
-{{#each posts}}
-    <div class="post_wrapper">
-        <a href="#/posts/{{id}}">
-            <div class="post_header">
-                <h5>{{title}}</h5><span>{{date}}</span>
-            </div>
-            <div class="post_body">
-                <p>{{body}}</p>
-            </div>
-        </a>
-    </div>
-{{else}}
-    <div class="no_posts">
-        <span>There are no posts at the moment</span>
-    </div>
-{{/each}}
+{{#if post_page}}
+    {{#each posts}}
+        <div class="post_wrapper">
+            <a href="#/posts/{{id}}">
+                <div class="post_header">
+                    <h5>{{title}}</h5>
+                </div>
+                <div class="post_body">
+                    <p>{{body}}</p>
+                    {{#if img_src}}
+                        <img src="{{img_src}}">
+                    {{/if}}
+                    {{#if video_url}}
+                        <iframe width="254" height="180" src="{{video_url}}"></iframe>
+                    {{/if}}
+                    <div>{{date}}</div>
+                </div>
+            </a>
+        </div>
+    {{else}}
+        <div class="no_posts">
+            <span>There are no posts at the moment</span>
+        </div>
+    {{/each}}
+{{/if}}

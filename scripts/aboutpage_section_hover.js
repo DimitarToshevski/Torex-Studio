@@ -25,7 +25,6 @@ function hoverAboutpageSection() {
                     width: 'toggle',
                     height: 'toggle'
                 });
-
             }
         });
 /*

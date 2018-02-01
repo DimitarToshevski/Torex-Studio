@@ -1,14 +1,14 @@
 {{#each teammates}}
     <section class="aboutpage_section_teammate_wrapper col-xl-5 col-lg-8 col-md-8 col-sm-12 col-xs-12">
         <div class="aboutpage_section_teammate_header">
-            <a href="{{profile}}" target="_blank">
+            <a href="{{profile}}" target="_blank" title="Check my profile">
                 <h1>{{name}}</h1>
             </a>
             <h5>({{role}})</h5>
         </div>
         <div class="aboutpage_section_teammate_body">
             <div class="radiused">
-                <img src="{{img_source}}">
+                <img src="{{img_source}}" alt="No image preview" title="Click to see more information">
                     <p id="teammate_{{id}}_p">
                         <span id="row1">{{resume.row1}}</span>
                         <span id="row2">{{resume.row2}}</span>

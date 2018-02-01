@@ -1,0 +1,14 @@
+<div class="single_post_wrapper">
+        <div class="post_header">
+            <h5>{{post.title}}</h5><span>{{post.date}}</span>
+        </div>
+        <div class="post_body">
+            <p>{{post.body}}</p>
+            {{#if post.img_src}}
+                <img src="{{post.img_src}}">
+            {{/if}}
+            {{#if post.video_url}}
+                <iframe src="{{post.video_url}}"></iframe>
+            {{/if}}
+        </div>
+</div>
