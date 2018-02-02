@@ -3,6 +3,7 @@ $(() => {
         this.use('Handlebars', 'hbs');
 //for deployment we must put this.get('#/') and on home links - /#/ - logo and Nachalo
         this.get('index.html', function () {
+            this.home_page = true;
             this.video_source = './images/Homepage/STUDIO-TOREX-2015-SHOWREEL.mp4';
             //adding additional condition statement for img so i can use offers in footer also
             this.offers_image_source = './images/Homepage/PlayDisabled.png';
