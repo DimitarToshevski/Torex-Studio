@@ -1,15 +1,24 @@
 <div class="single_post_wrapper">
-        <div class="post_header">
-            <h5>{{post.title}}</h5><span>{{post.date}}</span>
-            <div>{{date}}</div>
-        </div>
-        <div class="post_body">
-            <p>{{post.body}}</p>
+    <div class="post_header">
+        <h5>{{post.subtitle}}</h5>
+
+        <div>{{post.date}}</div>
+    </div>
+    <div class="post_body">
+        <div class="first_section">
             {{#if post.img_src}}
                 <img src="{{post.img_src}}">
             {{/if}}
-            {{#if post.video_url}}
-                <iframe src="{{post.video_url}}"></iframe>
-            {{/if}}
+            <p id="first_paragraph">{{post.body}}</p>
         </div>
+
+        {{#if post.video_url}}
+            <div class="second_section">
+                <iframe src="{{post.video_url}}"></iframe>
+                {{#if post.body2}}
+                    <p id="second_paragraph">{{post.body2}}</p>
+                {{/if}}
+            </div>
+        {{/if}}
+    </div>
 </div>

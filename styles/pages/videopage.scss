@@ -10,7 +10,7 @@ $linkHoverColor: rgb(28, 160, 60);
   position: relative;
   top: 150px;
   background: $mainGradient;
-  margin: 0 2% 15% 2%;
+  margin: 0 2% 200px 2%;
   padding: 3%;
   #gallery {
     display: flex;
@@ -46,7 +46,7 @@ $linkHoverColor: rgb(28, 160, 60);
         display: flex;
         flex-direction: column-reverse;
         background: rgba(210, 210, 210, 0.0);
-        opacity: 0.8;
+        opacity: 0.5;
         position: absolute;
         top: 19.5%;
         left: 0;
@@ -58,6 +58,9 @@ $linkHoverColor: rgb(28, 160, 60);
         font-size: 33px;
         font-weight: bold;
         border-radius: 10%;
+        span {
+          opacity: 0;
+        }
         i {
           font-size: 40px;
         }
@@ -68,6 +71,9 @@ $linkHoverColor: rgb(28, 160, 60);
           opacity: 1;
           background: rgba(210, 210, 210, 0.7);
           border: 4px solid #0D0A0A;
+          span {
+            opacity: 1;
+          }
         }
       }
     }

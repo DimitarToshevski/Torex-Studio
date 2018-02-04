@@ -6,7 +6,8 @@
                     <h5>{{title}}</h5>
                 </div>
                 <div class="post_body">
-                        <img src="{{img_src}}">
+                    <img src="{{img_src}}">
+
                     <p>{{subtitle}}</p>
                 </div>
             </a>
@@ -35,4 +36,31 @@
             <span>There are no posts at the moment</span>
         </div>
     {{/each}}
+{{/if}}
+{{#if single_post}}
+    <div class="all_posts">
+        <div class="all_posts_header">
+            <h5>Още за Вас:</h5>
+        </div>
+        <div id="list_posts">
+            {{#each posts}}
+                <div class="post_slider_wrapper" title="{{subtitle}}">
+                    <a href="#/posts/{{id}}">
+                        <div class="single_post_header">
+                            <h5>{{title}}</h5>
+                        </div>
+                        <div class="single_post_body">
+                            <img src="{{img_src}}">
+
+                            <p>{{subtitle}}</p>
+                        </div>
+                    </a>
+                </div>
+            {{else}}
+                <div class="no_posts">
+                    <span>There are no posts at the moment</span>
+                </div>
+            {{/each}}
+        </div>
+    </div>
 {{/if}}

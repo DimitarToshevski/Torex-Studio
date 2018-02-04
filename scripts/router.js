@@ -267,12 +267,12 @@ $(() => {
         });
 
         this.get('#/posts/:id', function () {
+            this.single_post = true;
             let id = Number(this.params['id']) - 1;
-            console.log(typeof id);
             this.redirect('#/posts', this.params['id']);
             $.get('./database/posts.json').then((posts) => {
                 this.post = posts[id];
-                console.log(posts[id])
+                this.posts = posts;
             });
 
             this.loadPartials({
@@ -281,6 +281,7 @@ $(() => {
                 header_menu: './templates/common/header/header_menu.hbs',
                 main: './templates/post_page/postpage_main_wrapper.hbs',
                 post: './templates/post_page/single_post.hbs',
+                posts: './templates/common/posts/posts.hbs',
                 footer_wrapper: './templates/common/footer/footer_wrapper.hbs',
                 footer_section_offers: './templates/common/footer/footer_section_offers.hbs',
                 footer_section_partners: './templates/common/footer/footer_section_partners.hbs',
