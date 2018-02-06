@@ -1,4 +1,7 @@
-function scrollTop() {
+function scrollTop(now) {
+    if(now) {
+        $('html').scrollTop(0);
+    }
     setTimeout(() => {
         let scrollTopButton = $('#scroll_top');
         let headerHeight = $('.header_row').height();
