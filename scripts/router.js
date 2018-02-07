@@ -3,12 +3,15 @@ $(() => {
         this.use('Handlebars', 'hbs');
 //for deployment we must put this.get('#/') and on home links - /#/ - logo and Nachalo
         this.get('index.html', function () {
-            this.home_page = true;
+            this.home_page = true; //If this is true - posts are rendering for homepage
             this.video_source = './images/Homepage/STUDIO-TOREX-2015-SHOWREEL.mp4';
             //adding additional condition statement for img so i can use offers in footer also
             this.offers_image_source = './images/Homepage/PlayDisabled.png';
             $.get('./database/posts.json').then((posts) => {
                 this.posts = posts;
+            });
+            $.get('./database/offers.json').then((offers) => {
+                this.offers = offers['offers'];
             });
             this.loadPartials({
                 header_wrapper: './templates/common/header/header_wrapper.hbs',
@@ -242,7 +245,7 @@ $(() => {
         });
 
         this.get('#/posts', function () {
-            this.post_page = true;
+            this.post_page = true; //If this is true - posts are rendering for post page
             $.get('./database/posts.json').then((posts) => {
                 this.posts = posts;
             });
@@ -267,7 +270,7 @@ $(() => {
         });
 
         this.get('#/posts/:id', function () {
-            this.single_post = true;
+            this.single_post = true; //If this is true - all posts are being rendered in a slider on each single post
             let id = Number(this.params['id']) - 1;
             this.redirect('#/posts', this.params['id']);
             $.get('./database/posts.json').then((posts) => {
@@ -297,12 +300,16 @@ $(() => {
         });
 
         this.get('#/contact', function () {
-
+            this.contact_page = true;
+            $.get('./database/offers.json').then((offers) => {
+                this.offers = offers['offers'];
+            });
             this.loadPartials({
                 header_wrapper: './templates/common/header/header_wrapper.hbs',
                 header_logo: './templates/common/header/header_logo.hbs',
                 header_menu: './templates/common/header/header_menu.hbs',
                 main: './templates/contact_page/contactpage_main_wrapper.hbs',
+                contactpage_main_section_offers: './templates/contact_page/contactpage_main_section_offers.hbs',
                 footer_wrapper: './templates/common/footer/footer_wrapper.hbs',
                 footer_section_offers: './templates/common/footer/footer_section_offers.hbs',
                 footer_section_partners: './templates/common/footer/footer_section_partners.hbs',

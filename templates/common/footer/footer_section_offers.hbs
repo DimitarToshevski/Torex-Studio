@@ -3,10 +3,9 @@
         <h5>НАШИТЕ УСЛУГИ:</h5>
     </div>
     <div class="footer_section_body">
-    <h6>Режисура</h6>
-    <h6>Постпродукция и монтаж</h6>
-    <h6>Звукозапис и звукообработка</h6>
-    <h6>Заснемане</h6>
-    {{>contact_us_button}}
+        {{#each offers}}
+            <h6>{{header}}</h6>
+        {{/each}}
+        {{>contact_us_button}}
     </div>
 </section>
