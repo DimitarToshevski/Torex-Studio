@@ -47,6 +47,9 @@ $(() => {
             $.get('./database/teammate_slider.json').then((images) => {
                 this.image = images;
             });
+            $.get('./database/offers.json').then((offers) => {
+                this.offers = offers['offers'];
+            });
             this.loadPartials({
                 header_wrapper: './templates/common/header/header_wrapper.hbs',
                 header_logo: './templates/common/header/header_logo.hbs',
@@ -73,6 +76,9 @@ $(() => {
             $.get('./database/videos.json').then((videos) => {
                 this.video = videos["ads"];
             });
+            $.get('./database/offers.json').then((offers) => {
+                this.offers = offers['offers'];
+            });
             this.loadPartials({
                 header_wrapper: './templates/common/header/header_wrapper.hbs',
                 header_logo: './templates/common/header/header_logo.hbs',
@@ -97,6 +103,9 @@ $(() => {
         this.get('#/videos/music', function () {
             $.get('./database/videos.json').then((videos) => {
                 this.video = videos["music"];
+            });
+            $.get('./database/offers.json').then((offers) => {
+                this.offers = offers['offers'];
             });
             this.loadPartials({
                 header_wrapper: './templates/common/header/header_wrapper.hbs',
@@ -123,6 +132,9 @@ $(() => {
             $.get('./database/videos.json').then((videos) => {
                 this.video = videos["weddings"];
             });
+            $.get('./database/offers.json').then((offers) => {
+                this.offers = offers['offers'];
+            });
             this.loadPartials({
                 header_wrapper: './templates/common/header/header_wrapper.hbs',
                 header_logo: './templates/common/header/header_logo.hbs',
@@ -147,6 +159,9 @@ $(() => {
         this.get('#/photography/portrets', function () {
             $.get('./database/photos.json').then((photos) => {
                 this.photo = photos["portrets"];
+            });
+            $.get('./database/offers.json').then((offers) => {
+                this.offers = offers['offers'];
             });
             this.loadPartials({
                 header_wrapper: './templates/common/header/header_wrapper.hbs',
@@ -173,6 +188,9 @@ $(() => {
             $.get('./database/photos.json').then((photos) => {
                 this.photo = photos["weddings"];
             });
+            $.get('./database/offers.json').then((offers) => {
+                this.offers = offers['offers'];
+            });
             this.loadPartials({
                 header_wrapper: './templates/common/header/header_wrapper.hbs',
                 header_logo: './templates/common/header/header_logo.hbs',
@@ -197,6 +215,9 @@ $(() => {
         this.get('#/photography/behind', function () {
             $.get('./database/photos.json').then((photos) => {
                 this.photo = photos["behind"];
+            });
+            $.get('./database/offers.json').then((offers) => {
+                this.offers = offers['offers'];
             });
             this.loadPartials({
                 header_wrapper: './templates/common/header/header_wrapper.hbs',
@@ -223,6 +244,9 @@ $(() => {
             $.get('./database/photos.json').then((photos) => {
                 this.photo = photos["boudoir"];
             });
+            $.get('./database/offers.json').then((offers) => {
+                this.offers = offers['offers'];
+            });
             this.loadPartials({
                 header_wrapper: './templates/common/header/header_wrapper.hbs',
                 header_logo: './templates/common/header/header_logo.hbs',
@@ -248,6 +272,9 @@ $(() => {
             this.post_page = true; //If this is true - posts are rendering for post page
             $.get('./database/posts.json').then((posts) => {
                 this.posts = posts;
+            });
+            $.get('./database/offers.json').then((offers) => {
+                this.offers = offers['offers'];
             });
             this.loadPartials({
                 header_wrapper: './templates/common/header/header_wrapper.hbs',
@@ -276,6 +303,9 @@ $(() => {
             $.get('./database/posts.json').then((posts) => {
                 this.post = posts[id];
                 this.posts = posts;
+            });
+            $.get('./database/offers.json').then((offers) => {
+                this.offers = offers['offers'];
             });
 
             this.loadPartials({
@@ -310,6 +340,7 @@ $(() => {
                 header_menu: './templates/common/header/header_menu.hbs',
                 main: './templates/contact_page/contactpage_main_wrapper.hbs',
                 contactpage_main_section_offers: './templates/contact_page/contactpage_main_section_offers.hbs',
+                contactpage_main_section_working_time: './templates/contact_page/contactpage_main_section_working_time.hbs',
                 footer_wrapper: './templates/common/footer/footer_wrapper.hbs',
                 footer_section_offers: './templates/common/footer/footer_section_offers.hbs',
                 footer_section_partners: './templates/common/footer/footer_section_partners.hbs',
