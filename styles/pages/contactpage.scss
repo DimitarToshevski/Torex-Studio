@@ -1,7 +1,8 @@
 $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 32, 0.5) 100%);
 $linkHoverColor: rgb(28, 160, 60);
 $mainHeaderColor: rgb(197, 197, 197);
-.contactpage_main_wrapper {position: relative;
+.contactpage_main_wrapper {
+  position: relative;
   top: 150px;
   margin: 0 3% 200px 3%;
   padding: 3%;
@@ -25,7 +26,7 @@ $mainHeaderColor: rgb(197, 197, 197);
       text-align: center;
       color: $mainHeaderColor;
       .offer_header {
-        color: rgb(200, 45,45);
+        color: rgb(200, 45, 45);
         font-size: 30px;
         img {
           width: 155px;
@@ -37,6 +38,49 @@ $mainHeaderColor: rgb(197, 197, 197);
   .contactpage_section_working_time {
     .section_header {
       color: $mainHeaderColor;
+    }
+  }
+  .contactpage_section_form {
+    #contact_form {
+      color: $mainHeaderColor;
+      width: 50%;
+      display: flex;
+      padding: 25px;
+      form {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background:  yellow;
+        fieldset {
+          display: flex;
+          flex-direction: column;
+          border-width: 2px;
+          border-style: groove;
+          border-color: $mainHeaderColor;
+          padding: 10px;
+          legend {
+            font-size: 25px;
+          }
+          label {
+            font-size: 20px;
+            text-align: center;
+          }
+          input {
+            width: 100%;
+          }
+          textarea {
+            width: 100%;
+            height: 150px;
+          }
+          input[type="button"] {
+            width: 30%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+    #contact_google_map {
+
     }
   }
 }
