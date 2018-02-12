@@ -15,7 +15,7 @@ $linkHoverColor: rgb(28, 160, 60);
   #gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     a {
       position: relative;
       text-decoration: none;

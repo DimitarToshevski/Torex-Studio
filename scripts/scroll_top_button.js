@@ -1,6 +1,6 @@
 function scrollTop(now) {
     if(now) {
-        $('html').scrollTop(0);
+        $(window).scrollTop(0);
     }
     setTimeout(() => {
         let scrollTopButton = $('#scroll_top');
