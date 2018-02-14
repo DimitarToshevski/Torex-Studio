@@ -353,6 +353,7 @@ $(() => {
                 sticky.stickFooter();
                 sticky.stickHeader();
                 scrollTop(true);
+                googleMaps();
             })
         });
 

@@ -57,5 +57,8 @@
         .contactpage_main_wrapper .contactpage_section_form #contact_form form fieldset input[type="button"] {
           width: 30%;
           margin: 0 auto; }
+  .contactpage_main_wrapper .contactpage_section_form #contact_google_map {
+    width: 400px;
+    height: 400px; }
 
 /*# sourceMappingURL=contactpage.css.map */
