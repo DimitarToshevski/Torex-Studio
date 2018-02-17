@@ -33,24 +33,35 @@ $mainHeaderColor: rgb(197, 197, 197);
           height: 130px;
         }
       }
+      .offer_body {
+        font-size: 20px;
+        padding-top: 15px;
+      }
     }
   }
   .contactpage_section_working_time {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
     .section_header {
       color: $mainHeaderColor;
+      font-size: 30px;
     }
   }
   .contactpage_section_form {
+    display: flex;
+    flex-wrap: wrap;
     #contact_form {
       color: $mainHeaderColor;
-      width: 50%;
       display: flex;
       padding: 25px;
+      background: beige;
+      justify-content: center;
       form {
         display: flex;
         justify-content: center;
-        width: 100%;
-        background:  yellow;
+        background: yellow;
+        width: 500px;
         fieldset {
           display: flex;
           flex-direction: column;
@@ -80,8 +91,17 @@ $mainHeaderColor: rgb(197, 197, 197);
       }
     }
     #contact_google_map {
-      width: 400px;
-      height: 400px;
+      color: $mainHeaderColor;
+      display: flex;
+      padding: 25px;
+      background: beige;
+      justify-content: center;
+      #google_map {
+        height: 350px;
+        width: 500px;
+        color: white;
+        background-color: yellow;
+      }
     }
   }
 }

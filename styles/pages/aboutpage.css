@@ -168,7 +168,7 @@
   color: #c5c5c5;
   font-size: 60px;
   cursor: pointer; }
-  #prev:hover i, #next:hover i {
+  #prev:hover, #next:hover {
     color: indianred;
     animation-name: pulse_animation;
     animation-duration: 1500ms;

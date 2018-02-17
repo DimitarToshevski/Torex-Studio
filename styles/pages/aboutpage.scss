@@ -243,7 +243,7 @@ $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 
   color: $mainHeaderColor;
   font-size: 60px;
   cursor: pointer;
-  &:hover i {
+  &:hover {
     color: indianred;
     @include pulseEffect();
   }

@@ -25,40 +25,60 @@
       .contactpage_main_wrapper .contactpage_section_offers .section_body .offer_header img {
         width: 155px;
         height: 130px; }
-  .contactpage_main_wrapper .contactpage_section_working_time .section_header {
-    color: #c5c5c5; }
-  .contactpage_main_wrapper .contactpage_section_form #contact_form {
-    color: #c5c5c5;
-    width: 50%;
+    .contactpage_main_wrapper .contactpage_section_offers .section_body .offer_body {
+      font-size: 20px;
+      padding-top: 15px; }
+  .contactpage_main_wrapper .contactpage_section_working_time {
     display: flex;
-    padding: 25px; }
-    .contactpage_main_wrapper .contactpage_section_form #contact_form form {
+    justify-content: center;
+    padding: 50px; }
+    .contactpage_main_wrapper .contactpage_section_working_time .section_header {
+      color: #c5c5c5;
+      font-size: 30px; }
+  .contactpage_main_wrapper .contactpage_section_form {
+    display: flex;
+    flex-wrap: wrap; }
+    .contactpage_main_wrapper .contactpage_section_form #contact_form {
+      color: #c5c5c5;
       display: flex;
-      justify-content: center;
-      width: 100%;
-      background: yellow; }
-      .contactpage_main_wrapper .contactpage_section_form #contact_form form fieldset {
+      padding: 25px;
+      background: beige;
+      justify-content: center; }
+      .contactpage_main_wrapper .contactpage_section_form #contact_form form {
         display: flex;
-        flex-direction: column;
-        border-width: 2px;
-        border-style: groove;
-        border-color: #c5c5c5;
-        padding: 10px; }
-        .contactpage_main_wrapper .contactpage_section_form #contact_form form fieldset legend {
-          font-size: 25px; }
-        .contactpage_main_wrapper .contactpage_section_form #contact_form form fieldset label {
-          font-size: 20px;
-          text-align: center; }
-        .contactpage_main_wrapper .contactpage_section_form #contact_form form fieldset input {
-          width: 100%; }
-        .contactpage_main_wrapper .contactpage_section_form #contact_form form fieldset textarea {
-          width: 100%;
-          height: 150px; }
-        .contactpage_main_wrapper .contactpage_section_form #contact_form form fieldset input[type="button"] {
-          width: 30%;
-          margin: 0 auto; }
-  .contactpage_main_wrapper .contactpage_section_form #contact_google_map {
-    width: 400px;
-    height: 400px; }
+        justify-content: center;
+        background: yellow;
+        width: 500px; }
+        .contactpage_main_wrapper .contactpage_section_form #contact_form form fieldset {
+          display: flex;
+          flex-direction: column;
+          border-width: 2px;
+          border-style: groove;
+          border-color: #c5c5c5;
+          padding: 10px; }
+          .contactpage_main_wrapper .contactpage_section_form #contact_form form fieldset legend {
+            font-size: 25px; }
+          .contactpage_main_wrapper .contactpage_section_form #contact_form form fieldset label {
+            font-size: 20px;
+            text-align: center; }
+          .contactpage_main_wrapper .contactpage_section_form #contact_form form fieldset input {
+            width: 100%; }
+          .contactpage_main_wrapper .contactpage_section_form #contact_form form fieldset textarea {
+            width: 100%;
+            height: 150px; }
+          .contactpage_main_wrapper .contactpage_section_form #contact_form form fieldset input[type="button"] {
+            width: 30%;
+            margin: 0 auto; }
+    .contactpage_main_wrapper .contactpage_section_form #contact_google_map {
+      color: #c5c5c5;
+      display: flex;
+      padding: 25px;
+      background: beige;
+      justify-content: center; }
+      .contactpage_main_wrapper .contactpage_section_form #contact_google_map #google_map {
+        height: 350px;
+        width: 500px;
+        color: white;
+        background-color: yellow; }
 
 /*# sourceMappingURL=contactpage.css.map */
