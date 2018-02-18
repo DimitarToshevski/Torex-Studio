@@ -1,33 +1,41 @@
+html {
+  cursor: default; }
+
 .contactpage_main_wrapper {
   position: relative;
   top: 150px;
   margin: 0 3% 200px 3%;
-  padding: 3%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 32, 0.5) 100%); }
-  .contactpage_main_wrapper .contactpage_section_offers .section_header {
-    color: #c5c5c5;
-    width: 100%; }
-    .contactpage_main_wrapper .contactpage_section_offers .section_header h1 {
-      width: 100%;
+  .contactpage_main_wrapper .contactpage_section_offers {
+    background: rgba(120, 120, 120, 0.5);
+    padding: 30px;
+    border-radius: 10%; }
+    .contactpage_main_wrapper .contactpage_section_offers .section_header {
+      color: #c5c5c5;
+      width: 100%; }
+      .contactpage_main_wrapper .contactpage_section_offers .section_header h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 55px; }
+    .contactpage_main_wrapper .contactpage_section_offers .section_body {
+      display: flex;
+      flex-wrap: wrap;
       text-align: center;
-      font-size: 55px; }
-  .contactpage_main_wrapper .contactpage_section_offers .section_body {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    color: #c5c5c5; }
-    .contactpage_main_wrapper .contactpage_section_offers .section_body .offer_header {
-      color: #c82d2d;
-      font-size: 30px; }
-      .contactpage_main_wrapper .contactpage_section_offers .section_body .offer_header img {
-        width: 155px;
-        height: 130px; }
-    .contactpage_main_wrapper .contactpage_section_offers .section_body .offer_body {
-      font-size: 20px;
-      padding-top: 15px; }
+      color: #c5c5c5; }
+      .contactpage_main_wrapper .contactpage_section_offers .section_body .offer_header {
+        color: #7a1919;
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 5px; }
+        .contactpage_main_wrapper .contactpage_section_offers .section_body .offer_header img {
+          width: 155px;
+          height: 130px; }
+      .contactpage_main_wrapper .contactpage_section_offers .section_body .offer_body {
+        font-size: 20px;
+        padding-top: 15px; }
   .contactpage_main_wrapper .contactpage_section_working_time {
     display: flex;
     justify-content: center;
@@ -35,6 +43,15 @@
     .contactpage_main_wrapper .contactpage_section_working_time .section_header {
       color: #c5c5c5;
       font-size: 30px; }
+      .contactpage_main_wrapper .contactpage_section_working_time .section_header div h5 {
+        text-align: center; }
+      .contactpage_main_wrapper .contactpage_section_working_time .section_header div hr {
+        width: 70px;
+        height: 1px;
+        background: indianred;
+        transition: all ease-in-out 0.3s; }
+      .contactpage_main_wrapper .contactpage_section_working_time .section_header div:hover hr {
+        width: 130px; }
   .contactpage_main_wrapper .contactpage_section_form {
     display: flex;
     flex-wrap: wrap; }

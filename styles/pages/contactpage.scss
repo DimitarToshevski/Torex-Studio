@@ -1,16 +1,22 @@
 $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 32, 0.5) 100%);
 $linkHoverColor: rgb(28, 160, 60);
 $mainHeaderColor: rgb(197, 197, 197);
+html {
+
+  cursor: default;
+}
 .contactpage_main_wrapper {
   position: relative;
   top: 150px;
   margin: 0 3% 200px 3%;
-  padding: 3%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   background: $mainGradient;
   .contactpage_section_offers {
+    background: rgba(120, 120, 120, 0.5);
+    padding: 30px;
+    border-radius: 10%;
     .section_header {
       color: $mainHeaderColor;
       width: 100%;
@@ -26,8 +32,10 @@ $mainHeaderColor: rgb(197, 197, 197);
       text-align: center;
       color: $mainHeaderColor;
       .offer_header {
-        color: rgb(200, 45, 45);
+        color: rgb(122, 25, 25);
         font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 5px;
         img {
           width: 155px;
           height: 130px;
@@ -46,6 +54,21 @@ $mainHeaderColor: rgb(197, 197, 197);
     .section_header {
       color: $mainHeaderColor;
       font-size: 30px;
+      div {
+        h5 {
+          text-align: center;
+
+        }
+        hr {
+          width: 70px;
+          height: 1px;
+          background: indianred;
+          transition: all ease-in-out 0.3s;
+        }
+        &:hover hr{
+          width: 130px;
+        }
+      }
     }
   }
   .contactpage_section_form {
