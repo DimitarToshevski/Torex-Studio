@@ -24,7 +24,8 @@ html {
       display: flex;
       flex-wrap: wrap;
       text-align: center;
-      color: #c5c5c5; }
+      color: #c5c5c5;
+      transition: all ease-in-out 0.3s; }
       .contactpage_main_wrapper .contactpage_section_offers .section_body .offer_header {
         color: #7a1919;
         font-size: 30px;
@@ -35,7 +36,10 @@ html {
           height: 130px; }
       .contactpage_main_wrapper .contactpage_section_offers .section_body .offer_body {
         font-size: 20px;
-        padding-top: 15px; }
+        padding-top: 15px;
+        letter-spacing: 2px; }
+      .contactpage_main_wrapper .contactpage_section_offers .section_body:hover img {
+        transform: scale(1.1, 1.1); }
   .contactpage_main_wrapper .contactpage_section_working_time {
     display: flex;
     justify-content: center;
@@ -59,43 +63,76 @@ html {
       color: #c5c5c5;
       display: flex;
       padding: 25px;
-      background: beige;
       justify-content: center; }
       .contactpage_main_wrapper .contactpage_section_form #contact_form form {
         display: flex;
         justify-content: center;
-        background: yellow;
-        width: 500px; }
+        background: rgba(120, 120, 120, 0.5);
+        width: 500px;
+        height: 530px;
+        padding: 20px;
+        border-radius: 10px; }
         .contactpage_main_wrapper .contactpage_section_form #contact_form form fieldset {
           display: flex;
+          align-items: center;
           flex-direction: column;
           border-width: 2px;
           border-style: groove;
           border-color: #c5c5c5;
-          padding: 10px; }
+          padding: 20px; }
           .contactpage_main_wrapper .contactpage_section_form #contact_form form fieldset legend {
-            font-size: 25px; }
-          .contactpage_main_wrapper .contactpage_section_form #contact_form form fieldset label {
-            font-size: 20px;
+            font-size: 30px;
+            letter-spacing: 3px;
             text-align: center; }
+          .contactpage_main_wrapper .contactpage_section_form #contact_form form fieldset label {
+            font-size: 25px;
+            text-align: left;
+            margin: 10px 0; }
           .contactpage_main_wrapper .contactpage_section_form #contact_form form fieldset input {
             width: 100%; }
           .contactpage_main_wrapper .contactpage_section_form #contact_form form fieldset textarea {
             width: 100%;
-            height: 150px; }
+            height: 150px;
+            resize: none; }
           .contactpage_main_wrapper .contactpage_section_form #contact_form form fieldset input[type="button"] {
             width: 30%;
-            margin: 0 auto; }
+            min-width: 100px;
+            height: 10%;
+            margin: 15px auto;
+            font-size: 22px;
+            font-weight: bold;
+            background: rgba(252, 60, 30, 0.6);
+            border: 3px solid rgba(197, 197, 197, 0.6);
+            border-radius: 20px;
+            box-shadow: 0 0 10px 5px rgba(153, 153, 153, 0.35);
+            transition: all .5s;
+            color: white; }
+            .contactpage_main_wrapper .contactpage_section_form #contact_form form fieldset input[type="button"]:hover {
+              background: rgba(33, 241, 33, 0.6);
+              cursor: pointer;
+              font-size: 25px; }
     .contactpage_main_wrapper .contactpage_section_form #contact_google_map {
       color: #c5c5c5;
       display: flex;
+      flex-direction: column;
       padding: 25px;
-      background: beige;
       justify-content: center; }
-      .contactpage_main_wrapper .contactpage_section_form #contact_google_map #google_map {
-        height: 350px;
-        width: 500px;
-        color: white;
-        background-color: yellow; }
+      .contactpage_main_wrapper .contactpage_section_form #contact_google_map #map_wrapper {
+        text-align: center;
+        background: rgba(120, 120, 120, 0.5);
+        height: 530px;
+        border-radius: 10px;
+        padding: 20px; }
+        .contactpage_main_wrapper .contactpage_section_form #contact_google_map #map_wrapper h1 {
+          font-size: 30px;
+          font-weight: bold;
+          letter-spacing: 3px;
+          padding-top: 4px;
+          margin: 0 0 55px 0; }
+        .contactpage_main_wrapper .contactpage_section_form #contact_google_map #map_wrapper #google_map {
+          height: 400px;
+          width: 100%;
+          color: white;
+          background: greenyellow; }
 
 /*# sourceMappingURL=contactpage.css.map */
