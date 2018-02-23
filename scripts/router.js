@@ -73,7 +73,7 @@ $(() => {
         });
 
         this.get('#/videos/ads', function () {
-            $.get('./database/videos.json').then((videos) => {
+            $.get('https://torex-studio.firebaseio.com/videos.json').then((videos) => {
                 this.video = videos["ads"];
             });
             $.get('./database/offers.json').then((offers) => {
