@@ -1,7 +1,8 @@
 function lightGallery() {
     setTimeout(()=>{
         $('#gallery').lightGallery({
-            subHtmlSelectorRelative: true
+            subHtmlSelectorRelative: true,
+            download: false
         });
     },50);
 }

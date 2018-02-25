@@ -3,76 +3,90 @@
     {
       "video_url": "//www.youtube.com/embed/W6juJDk4e-k",
       "video_title": "ELINOR - WAKE UP PARTY - ADVERTISE",
-      "img_url": "//img.youtube.com/vi/W6juJDk4e-k/mqdefault.jpg"
+      "img_url": "//img.youtube.com/vi/W6juJDk4e-k/mqdefault.jpg",
+      "type": "ads"
     },
     {
       "video_url": "//www.youtube.com/embed/EBV_r-Nhi9c",
       "video_title": "Видео за историята на България",
-      "img_url": "//img.youtube.com/vi/EBV_r-Nhi9c/mqdefault.jpg"
+      "img_url": "//img.youtube.com/vi/EBV_r-Nhi9c/mqdefault.jpg",
+      "type": "ads"
     },
     {
       "video_url": "//www.youtube.com/embed/4gZLsJo8e28",
       "video_title": "Elinor - Advertise Video - First Birthday",
-      "img_url": "//img.youtube.com/vi/4gZLsJo8e28/mqdefault.jpg"
+      "img_url": "//img.youtube.com/vi/4gZLsJo8e28/mqdefault.jpg",
+      "type": "ads"
     },
     {
       "video_url": "//www.youtube.com/embed/YuDucq25G6s",
       "video_title": "CutKit ръкавица против порязване",
-      "img_url": "//img.youtube.com/vi/YuDucq25G6s/mqdefault.jpg"
+      "img_url": "//img.youtube.com/vi/YuDucq25G6s/mqdefault.jpg",
+      "type": "ads"
     }
   ],
   "music": [
     {
       "video_url": "//www.youtube.com/embed/V16vGuAs2To",
       "video_title": "ЕПИЗОД - АСЕНОВГРАД",
-      "img_url": "//img.youtube.com/vi/V16vGuAs2To/mqdefault.jpg"
+      "img_url": "//img.youtube.com/vi/V16vGuAs2To/mqdefault.jpg",
+      "type": "music"
     },
     {
       "video_url": "//www.youtube.com/embed/VYk2MbQwkQM",
       "video_title": "SALI OKKA - AMERIKA KYUCHEK feat.TONI STORARO & SOFI MARINOVA",
-      "img_url": "//img.youtube.com/vi/VYk2MbQwkQM/mqdefault.jpg"
+      "img_url": "//img.youtube.com/vi/VYk2MbQwkQM/mqdefault.jpg",
+      "type": "music"
     },
     {
       "video_url": "//www.youtube.com/embed/YWD-YdScOv4",
       "video_title": "Krey C - Go Hard (Official Video)",
-      "img_url": "//img.youtube.com/vi/YWD-YdScOv4/mqdefault.jpg"
+      "img_url": "//img.youtube.com/vi/YWD-YdScOv4/mqdefault.jpg",
+      "type": "music"
     },
     {
       "video_url": "//www.youtube.com/embed/jy1d3OslELI",
       "video_title": "Filip - Izhvurlqi Bokluka (Official Video)",
-      "img_url": "//img.youtube.com/vi/jy1d3OslELI/mqdefault.jpg"
+      "img_url": "//img.youtube.com/vi/jy1d3OslELI/mqdefault.jpg",
+      "type": "music"
     },
     {
       "video_url": "//www.youtube.com/embed/530WBc-Tzxc",
       "video_title": "Sali Okka - Kyucheka Belgrad (Official Video) 2014. HIT.",
-      "img_url": "//img.youtube.com/vi/530WBc-Tzxc/mqdefault.jpg"
+      "img_url": "//img.youtube.com/vi/530WBc-Tzxc/mqdefault.jpg",
+      "type": "music"
     },
     {
       "video_url": "//www.youtube.com/embed/PPVfyA4AonI",
       "video_title": "Tisho & Tosho - Kiflata (Official Video) (Full HD)",
-      "img_url": "//img.youtube.com/vi/PPVfyA4AonI/mqdefault.jpg"
+      "img_url": "//img.youtube.com/vi/PPVfyA4AonI/mqdefault.jpg",
+      "type": "music"
     },
     {
       "video_url": "//www.youtube.com/embed/PPVfyA4AonI",
       "video_title": "Tisho & Tosho - Kiflata (Official Video) (Full HD)",
-      "img_url": "//img.youtube.com/vi/PPVfyA4AonI/mqdefault.jpg"
+      "img_url": "//img.youtube.com/vi/PPVfyA4AonI/mqdefault.jpg",
+      "type": "music"
     }
   ],
   "weddings": [
     {
       "video_url": "//www.youtube.com/embed/xMmEunfzZcM",
       "video_title": "Sweet Plan - Sladuk Plan - Reaction - Greatest Wedding Proposal Ever",
-      "img_url": "//img.youtube.com/vi/xMmEunfzZcM/mqdefault.jpg"
+      "img_url": "//img.youtube.com/vi/xMmEunfzZcM/mqdefault.jpg",
+      "type": "weddings"
     },
     {
       "video_url": "//www.youtube.com/embed/8QprmMDaQrA",
       "video_title": "Matey & Veronika - Wedding Trailer",
-      "img_url": "//img.youtube.com/vi/8QprmMDaQrA/mqdefault.jpg"
+      "img_url": "//img.youtube.com/vi/8QprmMDaQrA/mqdefault.jpg",
+      "type": "weddings"
     },
     {
       "video_url": "//www.youtube.com/embed/3vHbxgfaNaI",
       "video_title": "Hristina Dimitrova - Weddings, PR, Party",
-      "img_url": "//img.youtube.com/vi/3vHbxgfaNaI/mqdefault.jpg"
+      "img_url": "//img.youtube.com/vi/3vHbxgfaNaI/mqdefault.jpg",
+      "type": "weddings"
     }
   ]
 }

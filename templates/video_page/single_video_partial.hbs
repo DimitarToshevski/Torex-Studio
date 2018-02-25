@@ -1,9 +1,11 @@
-<a href="{{video_url}}"
-   data-poster="{{img_url}}"
-   data-sub-html="<h4>{{video_title}}</h4>">
+{{#each video}}
+    <a href="{{video_url}}"
+       data-poster="{{img_url}}"
+       data-sub-html="<h4>{{video_title}}</h4>">
         <div class="caption">
             <h4>{{video_title}}</h4>
         </div>
         <img src="{{img_url}}" alt="No image preview"/>
-    <div class="video_overlay"><span>Watch now</span><i class="fab fa-youtube" aria-hidden="true"></i></div>
-</a>
+        <div class="video_overlay"><span>Watch now</span><i class="fab fa-youtube" aria-hidden="true"></i></div>
+    </a>
+{{/each}}
