@@ -32,11 +32,12 @@ handlers.home = function (ctx) {
             .then(() => {
             sticky.stickFooter();
             sticky.stickHeader();
-            videoPlayPause();
             accordeon();
             hoverHomepageSection();
+            adaptNav();
         })
     }).then(()=>{
-        scrollTop(true)
+        scrollTop(true);
+        videoPlayPause();
     })
-}
+};

@@ -37,4 +37,4 @@ handlers.postDetails = function (ctx) {
         sticky.stickHeader();
         scrollTop(true);
     })
-}
+};

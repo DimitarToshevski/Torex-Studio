@@ -22,11 +22,9 @@ body {
     color: white;
     font-size: 2em;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    width: 100%;
     display: none;
     align-self: center;
-    justify-content: flex-end;
-    padding-right: 50px; }
+    justify-content: flex-end; }
     .header_row #btn_menu i:hover {
       cursor: pointer; }
   .header_row .header_menu {
@@ -183,7 +181,16 @@ body {
 
   .header_row #btn_menu {
     display: flex;
-    position: absolute; }
+    z-index: 2000;
+    position: absolute;
+    top: 34px;
+    right: 50px;
+    width: 28px; }
+    .header_row #btn_menu .fa-bars {
+      cursor: pointer; }
+
+  .header_nav {
+    display: none; }
 
   .header_wrapper .header_video .contact_us_button {
     position: relative;

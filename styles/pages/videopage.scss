@@ -15,14 +15,16 @@ $linkHoverColor: rgb(28, 160, 60);
   #gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    padding-left: 10px;
     a {
       position: relative;
       text-decoration: none;
       color: $mainHeaderColor;
       text-align: center;
       transition: all 0.3s;
-      width: 345px;
+      width: 270px;
+      margin: 20px 15px;
       .caption {
         height: 60px;
         font-size: 20px;
@@ -32,13 +34,13 @@ $linkHoverColor: rgb(28, 160, 60);
         align-items: center;
         flex-direction: column;
         h4 {
-          margin-bottom: 15px;
+          margin-bottom: 45px;
           letter-spacing: 2px;
         }
       }
 
       img {
-        margin-bottom: 8%;
+        margin-bottom: 10%;
         width: 100%;
         border-radius: 10%;
       }
@@ -48,10 +50,10 @@ $linkHoverColor: rgb(28, 160, 60);
         background: rgba(210, 210, 210, 0.0);
         opacity: 0.5;
         position: absolute;
-        top: 19.5%;
+        top: 24.5%;
         left: 0;
         width: 100%;
-        height: 70%;
+        height: 65%;
         color: #0D0A0A;
         justify-content: center;
         align-items: center;

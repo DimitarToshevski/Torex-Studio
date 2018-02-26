@@ -29,11 +29,9 @@ body {
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
-    width: 100%;
     display: none;
     align-self: center;
     justify-content: flex-end;
-    padding-right: 50px;
     i:hover {
       cursor: pointer;
     }
@@ -62,7 +60,7 @@ body {
       margin: 0 15px;
       font-size: 20px;
       font-weight: bold;
-      a,span {
+      a, span {
         display: flex;
         transition: all .3s ease-in-out;
         text-decoration: none;
@@ -235,7 +233,17 @@ body {
   }
   .header_row #btn_menu {
     display: flex;
+    z-index: 2000;
     position: absolute;
+    top: 34px;
+    right: 50px;
+    width: 28px;
+    .fa-bars {
+      cursor: pointer;
+    }
+  }
+  .header_nav {
+    display: none;
   }
   .header_wrapper .header_video {
     .contact_us_button {

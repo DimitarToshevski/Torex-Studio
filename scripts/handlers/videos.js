@@ -53,4 +53,4 @@ handlers.videos = function (ctx) {
         scrollTop(true);
         lightGallery();
     })
-}
+};

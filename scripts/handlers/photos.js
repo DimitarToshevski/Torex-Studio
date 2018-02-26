@@ -62,4 +62,4 @@ handlers.photos = function (ctx) {
         sticky.stickHeader();
         scrollTop(true);
     })
-}
+};
