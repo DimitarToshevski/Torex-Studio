@@ -21,5 +21,6 @@ handlers.contact = function () {
         sticky.stickFooter();
         sticky.stickHeader();
         scrollTop(true);
+        googleMaps();
     })
 };

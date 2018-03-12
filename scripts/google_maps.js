@@ -1,12 +1,18 @@
 function googleMaps() {
     setTimeout(()=> {
-        let map = $('#contact_google_map');
-        map.googleMap();
-        map.addMarker({
-            coords: [48.895651, 2.290569], // GPS coords
-            url: 'http://www.tiloweb.com', // Link to redirect onclick (optional)
-            id: 'marker1', // Unique ID for your marker
-            title: 'Studio Torex' // Title
+        let map = new GMaps({
+            div: '#google_map',
+            lat: 42.69253730000001,
+            lng: 23.32633169999997,
+            zoom: 18
         });
+        map.addMarker({
+            lat: 42.69253730000001,
+            lng: 23.32633169999997,
+            title: 'Studio Torex',
+            infoWindow: {
+                content: '<p style="color: black">Studio Torex:<br>Open 24/7</p>'
+            }
+        })
     }, 200)
 }

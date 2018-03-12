@@ -57,7 +57,7 @@
           align-items: center;
           border-radius: 150px; }
         .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body img {
-          width: 350px;
+          max-width: 313px;
           height: 270px;
           cursor: pointer;
           border-radius: 140px; }
