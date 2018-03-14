@@ -3,22 +3,45 @@ $linkHoverColor: rgb(28, 160, 60);
 $mainHeaderColor: rgb(197, 197, 197);
 
 @keyframes mexicanWave {
-  0% { transform: scale(1.02, 1.02)}
-  10% { transform: scale(1.04, 1.04)}
-  20% { transform: scale(1.06, 1.06)}
-  30% { transform: scale(1.08, 1.08)}
-  40% { transform: scale(1.1, 1.1)}
-  50% { transform: scale(1.12, 1.12)}
-  60% { transform: scale(1.1, 1.1)}
-  70% { transform: scale(1.08, 1.08)}
-  80% { transform: scale(1.06, 1.06)}
-  90% { transform: scale(1.04, 1.04)}
-  100% { transform: scale(1.02, 1.02)}
+  0% {
+    transform: scale(1.02, 1.02)
+  }
+  10% {
+    transform: scale(1.04, 1.04)
+  }
+  20% {
+    transform: scale(1.06, 1.06)
+  }
+  30% {
+    transform: scale(1.08, 1.08)
+  }
+  40% {
+    transform: scale(1.1, 1.1)
+  }
+  50% {
+    transform: scale(1.12, 1.12)
+  }
+  60% {
+    transform: scale(1.1, 1.1)
+  }
+  70% {
+    transform: scale(1.08, 1.08)
+  }
+  80% {
+    transform: scale(1.06, 1.06)
+  }
+  90% {
+    transform: scale(1.04, 1.04)
+  }
+  100% {
+    transform: scale(1.02, 1.02)
+  }
 }
 
 html {
   cursor: default;
 }
+
 .contactpage_main_wrapper {
   position: relative;
   top: 150px;
@@ -29,7 +52,7 @@ html {
   background: $mainGradient;
   .contactpage_section_offers {
     background: rgba(120, 120, 120, 0.5);
-    padding: 30px;
+    padding: 30px 0;
     border-radius: 10%;
     .section_header {
       color: $mainHeaderColor;
@@ -50,7 +73,8 @@ html {
         color: rgb(122, 25, 25);
         font-size: 30px;
         font-weight: bold;
-        letter-spacing: 5px;      padding-top: 20px;
+        letter-spacing: 5px;
+        padding-top: 20px;
 
         img {
           width: 155px;
@@ -63,11 +87,6 @@ html {
         padding-top: 15px;
         letter-spacing: 2px;
         line-height: 27px;
-      }
-      &:hover {
-        img {
-          animation: mexicanWave 500ms infinite;
-        }
       }
     }
   }
@@ -89,7 +108,7 @@ html {
           background: indianred;
           transition: all ease-in-out 0.3s;
         }
-        &:hover hr{
+        &:hover hr {
           width: 130px;
         }
       }
@@ -108,7 +127,6 @@ html {
         justify-content: center;
         background: rgba(120, 120, 120, 0.5);
         width: 500px;
-        height: 530px;
         padding: 20px;
         border-radius: 10px;
         fieldset {
@@ -123,6 +141,7 @@ html {
             font-size: 30px;
             letter-spacing: 3px;
             text-align: center;
+            transition: all .5s;
           }
           label {
             font-size: 25px;
@@ -157,32 +176,39 @@ html {
             }
           }
         }
+        &:hover legend {
+          transform: scale(1.1, 1.1);
+        }
       }
+
     }
     #contact_google_map {
       color: $mainHeaderColor;
       display: flex;
-      flex-direction: column;
       padding: 25px;
       justify-content: center;
       #map_wrapper {
+        width: 500px;
         text-align: center;
         background: rgba(120, 120, 120, 0.5);
-        height: 530px;
         border-radius: 10px;
-        padding: 20px;
+        padding: 23px;
         h1 {
           font-size: 30px;
           font-weight: bold;
           letter-spacing: 3px;
           padding-top: 4px;
           margin: 0 0 55px 0;
+          transition: all .5s;
         }
         #google_map {
           height: 400px;
           width: 100%;
           color: white;
           background: greenyellow;
+        }
+        &:hover h1 {
+          transform: scale(1.1, 1.1);
         }
       }
     }
