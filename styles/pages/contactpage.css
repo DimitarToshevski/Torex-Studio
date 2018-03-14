@@ -1,3 +1,26 @@
+@keyframes mexicanWave {
+  0% {
+    transform: scale(1.02, 1.02); }
+  10% {
+    transform: scale(1.04, 1.04); }
+  20% {
+    transform: scale(1.06, 1.06); }
+  30% {
+    transform: scale(1.08, 1.08); }
+  40% {
+    transform: scale(1.1, 1.1); }
+  50% {
+    transform: scale(1.12, 1.12); }
+  60% {
+    transform: scale(1.1, 1.1); }
+  70% {
+    transform: scale(1.08, 1.08); }
+  80% {
+    transform: scale(1.06, 1.06); }
+  90% {
+    transform: scale(1.04, 1.04); }
+  100% {
+    transform: scale(1.02, 1.02); } }
 html {
   cursor: default; }
 
@@ -23,23 +46,26 @@ html {
     .contactpage_main_wrapper .contactpage_section_offers .section_body {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       text-align: center;
-      color: #c5c5c5;
-      transition: all ease-in-out 0.3s; }
+      color: #c5c5c5; }
       .contactpage_main_wrapper .contactpage_section_offers .section_body .offer_header {
         color: #7a1919;
         font-size: 30px;
         font-weight: bold;
-        letter-spacing: 5px; }
+        letter-spacing: 5px;
+        padding-top: 20px; }
         .contactpage_main_wrapper .contactpage_section_offers .section_body .offer_header img {
           width: 155px;
-          height: 130px; }
+          height: 130px;
+          transition: all ease-in-out 0.3s; }
       .contactpage_main_wrapper .contactpage_section_offers .section_body .offer_body {
         font-size: 20px;
         padding-top: 15px;
-        letter-spacing: 2px; }
+        letter-spacing: 2px;
+        line-height: 27px; }
       .contactpage_main_wrapper .contactpage_section_offers .section_body:hover img {
-        transform: scale(1.1, 1.1); }
+        animation: mexicanWave 500ms infinite; }
   .contactpage_main_wrapper .contactpage_section_working_time {
     display: flex;
     justify-content: center;
