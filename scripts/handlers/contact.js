@@ -20,6 +20,7 @@ handlers.contact = function () {
     }).then(function () {
         sticky.stickFooter();
         sticky.stickHeader();
+        adaptNav();
         scrollTop(true);
         googleMaps();
     })

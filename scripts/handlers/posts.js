@@ -26,6 +26,7 @@ handlers.posts = function (ctx) {
     }).then(function () {
         sticky.stickFooter();
         sticky.stickHeader();
+        adaptNav();
         scrollTop(true);
     })
 };

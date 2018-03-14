@@ -16,11 +16,12 @@ handlers.about = function (ctx) {
         contact_us_button: './templates/common/contact_us_button.hbs'
     }).then(function () {
         this.partial('./templates/common/page.hbs');
-    }).then(function () {
+    }).then(() => {
         sticky.stickFooter();
         sticky.stickHeader();
         hoverAboutpageSection();
         scrollTop(true);
         slickTeammate();
+        adaptNav();
     })
 };
