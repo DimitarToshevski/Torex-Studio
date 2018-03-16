@@ -64,6 +64,8 @@ html {
         padding-top: 15px;
         letter-spacing: 2px;
         line-height: 27px; }
+      .contactpage_main_wrapper .contactpage_section_offers .section_body:hover .offer_header {
+        transform: scale(1.1, 1.1); }
   .contactpage_main_wrapper .contactpage_section_working_time {
     display: flex;
     justify-content: center;
