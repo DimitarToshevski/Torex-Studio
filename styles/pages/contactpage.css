@@ -33,7 +33,7 @@ html {
   flex-direction: column;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 32, 0.5) 100%); }
   .contactpage_main_wrapper .contactpage_section_offers {
-    background: rgba(120, 120, 120, 0.5);
+    background: rgba(120, 120, 120, 0);
     padding: 30px 0;
     border-radius: 10%; }
     .contactpage_main_wrapper .contactpage_section_offers .section_header {
@@ -50,7 +50,7 @@ html {
       text-align: center;
       color: #c5c5c5; }
       .contactpage_main_wrapper .contactpage_section_offers .section_body .offer_header {
-        color: #7a1919;
+        color: #c5c5c5;
         font-size: 30px;
         font-weight: bold;
         letter-spacing: 5px;
@@ -59,13 +59,15 @@ html {
           width: 155px;
           height: 130px;
           transition: all ease-in-out 0.3s; }
+        .contactpage_main_wrapper .contactpage_section_offers .section_body .offer_header h4 {
+          transition: all ease-in-out 0.3s; }
       .contactpage_main_wrapper .contactpage_section_offers .section_body .offer_body {
         font-size: 20px;
         padding-top: 15px;
         letter-spacing: 2px;
         line-height: 27px; }
-      .contactpage_main_wrapper .contactpage_section_offers .section_body:hover .offer_header {
-        transform: scale(1.1, 1.1); }
+    .contactpage_main_wrapper .contactpage_section_offers #offer1:hover h4, .contactpage_main_wrapper .contactpage_section_offers #offer2:hover h4, .contactpage_main_wrapper .contactpage_section_offers #offer3:hover h4, .contactpage_main_wrapper .contactpage_section_offers #offer4:hover h4, .contactpage_main_wrapper .contactpage_section_offers #offer5:hover h4 {
+      transform: scale(1.1, 1.1); }
   .contactpage_main_wrapper .contactpage_section_working_time {
     display: flex;
     justify-content: center;
@@ -89,7 +91,8 @@ html {
       color: #c5c5c5;
       display: flex;
       padding: 25px;
-      justify-content: center; }
+      justify-content: center;
+      height: 585px; }
       .contactpage_main_wrapper .contactpage_section_form #contact_form form {
         display: flex;
         justify-content: center;
@@ -130,13 +133,12 @@ html {
             background: rgba(252, 60, 30, 0.6);
             border: 3px solid rgba(197, 197, 197, 0.6);
             border-radius: 20px;
-            box-shadow: 0 0 10px 5px rgba(153, 153, 153, 0.35);
-            transition: all .5s;
+            transition: all .3s;
             color: white; }
             .contactpage_main_wrapper .contactpage_section_form #contact_form form fieldset input[type="button"]:hover {
               background: rgba(33, 241, 33, 0.6);
               cursor: pointer;
-              font-size: 25px; }
+              box-shadow: 0 0 2px 2px #999999; }
         .contactpage_main_wrapper .contactpage_section_form #contact_form form:hover legend {
           transform: scale(1.1, 1.1); }
     .contactpage_main_wrapper .contactpage_section_form #contact_google_map {
