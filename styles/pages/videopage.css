@@ -49,12 +49,12 @@
         color: #0D0A0A;
         justify-content: center;
         align-items: center;
-        font-size: 33px;
+        font-size: 15px;
         font-weight: bold;
         border-radius: 10%; }
         .gallery_wrapper #gallery a .video_overlay span {
           opacity: 0; }
-        .gallery_wrapper #gallery a .video_overlay i {
+        .gallery_wrapper #gallery a .video_overlay svg {
           font-size: 40px; }
       .gallery_wrapper #gallery a:hover {
         transform: scale(1.04, 1.04); }

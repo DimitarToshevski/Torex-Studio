@@ -176,13 +176,31 @@ body {
     left: 45%;
     bottom: 42vh; }
 
+@media screen and (max-width: 1250px) {
+  .header_wrapper .header_video .contact_us_button {
+    position: relative;
+    top: -280px;
+    left: 45vw; }
+  .header_wrapper .header_video #video_pause_button {
+    position: relative;
+    top: -250px;
+    left: 50%; } }
+@media screen and (max-width: 1150px) {
+  .header_wrapper .header_video .contact_us_button {
+    position: relative;
+    top: -280px;
+    left: 44%; }
+  .header_wrapper .header_video #video_pause_button {
+    position: relative;
+    top: -250px;
+    left: 50%; } }
 @media screen and (max-width: 950px) {
   body {
     background-size: 100% 100%; }
 
   .header_row .header_menu {
     position: relative;
-    left: 50%;
+    left: 52%;
     margin-top: 180px;
     width: 20%; }
 
@@ -201,7 +219,21 @@ body {
 
   .header_wrapper .header_video .contact_us_button {
     position: relative;
-    left: 42%; } }
+    top: -120px;
+    left: 43%; }
+  .header_wrapper .header_video #video_pause_button {
+    position: relative;
+    top: -250px;
+    left: 50%; } }
+@media screen and (max-width: 840px) {
+  .header_wrapper .header_video .contact_us_button {
+    position: relative;
+    top: -120px;
+    left: 42%; }
+  .header_wrapper .header_video #video_pause_button {
+    position: relative;
+    top: -250px;
+    left: 50%; } }
 @media screen and (max-width: 710px) {
   .header_row .header_menu {
     position: relative;
@@ -209,8 +241,12 @@ body {
 
   .header_wrapper .header_video .contact_us_button {
     position: relative;
-    top: 4vh;
-    left: 38%; } }
+    top: 20px;
+    left: 35%; }
+  .header_wrapper .header_video #video_pause_button {
+    position: relative;
+    top: -150px;
+    left: 45%; } }
 @media screen and (max-width: 525px) {
   .header_row .header_menu {
     position: relative;
@@ -218,11 +254,11 @@ body {
 
   .header_wrapper .header_video .contact_us_button {
     position: relative;
-    top: 8vh;
-    left: 30%; }
+    top: 20px;
+    left: 27%; }
   .header_wrapper .header_video #video_pause_button {
     position: relative;
-    top: -20vh;
+    top: -120px;
     left: 45%; } }
 
 /*# sourceMappingURL=header.css.map */

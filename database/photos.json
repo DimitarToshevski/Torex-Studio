@@ -1,4 +1,5 @@
 {
+  //gone to Kinvey database
   "portrets": [
     {"url": "./images/Photography/1.jpg", "title": "Zaglavie 1", "type": "portrets"},
     {"url": "./images/Photography/2.jpg", "title": "Zaglavie 2", "type": "portrets"},

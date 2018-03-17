@@ -3,6 +3,8 @@ $mainHeaderColor: rgb(197, 197, 197);
 $mainBodyColor: rgb(163, 163, 163);
 $hrColor: indianred;
 $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 32, 0.5) 100%);
+$sliderWidth: 700px;
+$sliderHeight: 500px;
 @mixin pulseEffect() {
   animation-name: pulse_animation;
   animation-duration: 1500ms;
@@ -250,7 +252,7 @@ $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 
 }
 
 #slider_controls {
-  width: 800px;
+  width: calc(#{$sliderWidth} + 50px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -276,8 +278,8 @@ $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 
     margin-bottom: 50px;
     padding-left: 14%;
     img {
-      width: 700px;
-      height: 500px;
+      width: $sliderWidth;
+      height: $sliderHeight;
       border-radius: 30px;
     }
   }
@@ -287,5 +289,27 @@ $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 
       background: $mainHeaderColor;
       border-radius: 50%;
     }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  $sliderWidth: 496px;
+  $sliderHeight: 416px;
+  .container {
+    #teammate_slider {
+      img {
+        width: $sliderWidth;
+        height: $sliderHeight;
+      }
+    }
+  }
+  #slider_controls {
+    width: calc(#{$sliderWidth} + 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 9%;
+    bottom: 375px;
   }
 }

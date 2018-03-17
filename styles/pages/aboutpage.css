@@ -177,7 +177,7 @@
     animation-timing-function: linear; }
 
 #slider_controls {
-  width: 800px;
+  width: calc(700px + 50px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,5 +208,19 @@
     .container .slick-dots li button {
       background: #c5c5c5;
       border-radius: 50%; }
+
+@media screen and (max-width: 950px) {
+  .container #teammate_slider img {
+    width: 496px;
+    height: 416px; }
+
+  #slider_controls {
+    width: calc(496px + 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 9%;
+    bottom: 375px; } }
 
 /*# sourceMappingURL=aboutpage.css.map */

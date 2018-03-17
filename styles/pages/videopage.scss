@@ -58,13 +58,13 @@ $linkHoverColor: rgb(28, 160, 60);
         color: #0D0A0A;
         justify-content: center;
         align-items: center;
-        font-size: 33px;
+        font-size: 15px;
         font-weight: bold;
         border-radius: 10%;
         span {
           opacity: 0;
         }
-        i {
+        svg {
           font-size: 40px;
         }
       }
