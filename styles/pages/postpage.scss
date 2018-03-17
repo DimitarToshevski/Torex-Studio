@@ -216,12 +216,12 @@ $mainHeaderColor: rgb(197, 197, 197);
     text-align: center;
     display: flex;
     justify-content: center;
-    padding-bottom: 350px;
+    padding-bottom: 330px;
     a {
       width: 90%;
       text-decoration: none;
       color: $mainHeaderColor;
-      transition: all 0.1s ease-in-out;
+      transition: all 0.3s ease-in-out;
       border-radius: 15px;
       .single_post_header {
         padding: 10px 0;
@@ -229,7 +229,7 @@ $mainHeaderColor: rgb(197, 197, 197);
         flex-direction: column;
         h5 {
           width: 100%;
-          font-size: 35px;
+          font-size: 25px;
           font-weight: bold;
         }
       }
@@ -240,7 +240,7 @@ $mainHeaderColor: rgb(197, 197, 197);
         padding: 10px;
         p {
           padding: 10px;
-          font-size: 25px;
+          font-size: 20px;
         }
         img {
           width: 70%;
@@ -256,10 +256,8 @@ $mainHeaderColor: rgb(197, 197, 197);
         img {
           border: 3px solid #0D0A0A;
         }
+        transform: scale(1.05, 1.05);
       }
-    }
-    &:hover {
-    transform: scale(1.05, 1.05);
     }
   }
 }

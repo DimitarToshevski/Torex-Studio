@@ -29,8 +29,9 @@
         align-items: center;
         flex-direction: column; }
         .gallery_wrapper #gallery a .caption h4 {
-          margin-bottom: 45px;
-          letter-spacing: 2px; }
+          margin-bottom: 30px;
+          letter-spacing: 2px;
+          font-size: 17px; }
       .gallery_wrapper #gallery a img {
         margin-bottom: 10%;
         width: 100%;

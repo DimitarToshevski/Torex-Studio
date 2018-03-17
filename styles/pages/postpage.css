@@ -153,12 +153,12 @@
     text-align: center;
     display: flex;
     justify-content: center;
-    padding-bottom: 350px; }
+    padding-bottom: 330px; }
     .all_posts .post_slider_wrapper a {
       width: 90%;
       text-decoration: none;
       color: #c5c5c5;
-      transition: all 0.1s ease-in-out;
+      transition: all 0.3s ease-in-out;
       border-radius: 15px; }
       .all_posts .post_slider_wrapper a .single_post_header {
         padding: 10px 0;
@@ -166,7 +166,7 @@
         flex-direction: column; }
         .all_posts .post_slider_wrapper a .single_post_header h5 {
           width: 100%;
-          font-size: 35px;
+          font-size: 25px;
           font-weight: bold; }
       .all_posts .post_slider_wrapper a .single_post_body {
         display: flex;
@@ -175,7 +175,7 @@
         padding: 10px; }
         .all_posts .post_slider_wrapper a .single_post_body p {
           padding: 10px;
-          font-size: 25px; }
+          font-size: 20px; }
         .all_posts .post_slider_wrapper a .single_post_body img {
           width: 70%;
           border-radius: 2px;
@@ -184,10 +184,9 @@
         opacity: 1;
         background: rgba(255, 255, 255, 0.5);
         color: #0D0A0A;
-        -webkit-text-stroke: 1px black; }
+        -webkit-text-stroke: 1px black;
+        transform: scale(1.05, 1.05); }
         .all_posts .post_slider_wrapper a:hover img {
           border: 3px solid #0D0A0A; }
-    .all_posts .post_slider_wrapper:hover {
-      transform: scale(1.05, 1.05); }
 
 /*# sourceMappingURL=postpage.css.map */

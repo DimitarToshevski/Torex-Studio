@@ -1,6 +1,5 @@
 @font-face {
-  font-family: Arkam;
-  src: url(""); }
+  font-family: "Open Sans"; }
 @keyframes pulse_animation {
   0% {
     transform: scale(1); }
@@ -37,7 +36,6 @@
   96% {
     transform: scale(1); } }
 .homepage_main_wrapper {
-  font-family: Arkam;
   text-align: center; }
   .homepage_main_wrapper .homepage_main_header {
     display: flex;
@@ -45,14 +43,14 @@
     align-items: center; }
     .homepage_main_wrapper .homepage_main_header h1 {
       color: #c5c5c5;
-      font-size: 50px;
-      width: 500px;
+      font-size: 40px;
+      width: 650px;
       text-align: center;
       letter-spacing: 6px;
       text-shadow: 3px 3px #0D0A0A; }
     .homepage_main_wrapper .homepage_main_header h3 {
       color: #c5c5c5;
-      font-size: 30px;
+      font-size: 20px;
       width: 450px;
       text-align: center; }
     .homepage_main_wrapper .homepage_main_header hr {
@@ -84,7 +82,7 @@
       flex-wrap: wrap;
       justify-content: center; }
       .homepage_main_wrapper .homepage_main_body section .section_header {
-        font-size: 30px;
+        font-size: 20px;
         font-weight: bold; }
         .homepage_main_wrapper .homepage_main_body section .section_header .section_image {
           display: flex;
@@ -110,34 +108,41 @@
         color: #1ca03c; }
     .homepage_main_wrapper .homepage_main_body .homepage_section_offers .section_body h4 {
       color: #c5c5c5;
-      font-size: 30px;
-      line-height: 44px; }
+      font-size: 20px;
+      line-height: 23px;
+      padding: 10px; }
     .homepage_main_wrapper .homepage_main_body .homepage_section_offers .section_body p {
       display: none;
       color: #c5c5c5;
-      font-size: 20px;
+      font-size: 16px;
       text-align: left;
-      text-decoration: none; }
+      text-decoration: none;
+      padding: 10px; }
     .homepage_main_wrapper .homepage_main_body .homepage_section_about p {
       color: #c5c5c5;
-      font-size: 24px;
-      line-height: 30px;
-      letter-spacing: 2px; }
+      font-size: 17px;
+      line-height: 25px;
+      letter-spacing: 2px;
+      padding-top: 4px; }
+    .homepage_main_wrapper .homepage_main_body .homepage_section_posts .section_header h1 {
+      margin-bottom: 17px; }
     .homepage_main_wrapper .homepage_main_body .homepage_section_posts .section_body {
-      height: 270px;
+      height: 225px;
       overflow-x: hidden; }
+      .homepage_main_wrapper .homepage_main_body .homepage_section_posts .section_body .posts {
+        margin-top: -33px; }
     .homepage_main_wrapper .homepage_main_body .post_wrapper {
       padding-left: 25px; }
       .homepage_main_wrapper .homepage_main_body .post_wrapper .post_header {
         color: #c5c5c5;
         text-align: left; }
         .homepage_main_wrapper .homepage_main_body .post_wrapper .post_header h5 {
-          font-size: 22px; }
+          font-size: 20px; }
         .homepage_main_wrapper .homepage_main_body .post_wrapper .post_header span {
           float: right; }
       .homepage_main_wrapper .homepage_main_body .post_wrapper .post_body {
         color: #a3a3a3;
-        font-size: 16px;
+        font-size: 14px;
         text-align: left;
         margin: 5px 0 18px 0; }
       .homepage_main_wrapper .homepage_main_body .post_wrapper:hover {

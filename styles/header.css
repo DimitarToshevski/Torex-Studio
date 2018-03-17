@@ -17,7 +17,8 @@ body {
   top: 0;
   z-index: 2000;
   width: 100%;
-  height: 100px; }
+  height: 100px;
+  font-family: "Europe_Ext", arial; }
   .header_row #btn_menu {
     color: white;
     font-size: 2em;
@@ -59,7 +60,7 @@ body {
         border-top: 1px solid indianred;
         position: absolute;
         display: none;
-        width: 170px;
+        width: 200px;
         margin-top: 10px;
         background-color: rgba(4, 4, 4, 0.8); }
         .header_row .header_menu li .videos_dropdown li, .header_row .header_menu li .photography_dropdown li {
@@ -145,7 +146,8 @@ body {
   border: 3px solid rgba(197, 197, 197, 0.6);
   border-radius: 20px;
   box-shadow: 0 0 10px 5px rgba(153, 153, 153, 0.35);
-  transition: all .5s; }
+  transition: all .5s;
+  font-family: "Europe_Ext", arial; }
   .contact_us_button a {
     display: flex;
     justify-content: center;
@@ -154,7 +156,7 @@ body {
     height: 100%;
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: bold;
     transition: all .5s; }
   .contact_us_button:hover {
@@ -163,10 +165,12 @@ body {
     .contact_us_button:hover a {
       transform: scale(1.1, 1.1); }
   .contact_us_button:nth-last-child(1) {
-    margin: 15px 0 0 80px; }
+    margin: 15px 0 0 80px;
+    position: relative;
+    left: 4%; }
   .contact_us_button:nth-last-child(2) {
     position: relative;
-    left: 45.5%;
+    left: 45%;
     bottom: 42vh; }
 
 @media screen and (max-width: 950px) {

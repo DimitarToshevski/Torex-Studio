@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: "Europe_Ext", arial; }
 
 .footer_wrapper {
   background-color: #252525;
@@ -18,14 +19,18 @@
       display: flex;
       justify-content: center;
       font-size: 25px;
-      margin: 25px 0 25px 0; }
+      margin: 25px 0 25px 0;
+      font-family: "Europe_Ext", arial; }
     .footer_wrapper .footer_row .footer_section_body {
       color: #a3a3a3;
+      font-family: "Europe_Ext", arial;
       font-size: 27px;
       text-align: center;
       line-height: 45px; }
+      .footer_wrapper .footer_row .footer_section_body h6 {
+        font-size: 20px; }
       .footer_wrapper .footer_row .footer_section_body h5 {
-        font-size: 15px;
+        font-size: 14px;
         float: right; }
       .footer_wrapper .footer_row .footer_section_body .partner {
         display: flex;
@@ -33,7 +38,7 @@
         flex-direction: row;
         flex-wrap: nowrap;
         height: 70px;
-        width: 287px; }
+        width: 350px; }
         .footer_wrapper .footer_row .footer_section_body .partner a {
           color: #c5c5c5; }
           .footer_wrapper .footer_row .footer_section_body .partner a:hover {
@@ -41,7 +46,7 @@
             color: #1ca03c; }
         .footer_wrapper .footer_row .footer_section_body .partner.aqua {
           margin-bottom: 25px;
-          margin-top: -20px; }
+          margin-top: -2px; }
           .footer_wrapper .footer_row .footer_section_body .partner.aqua h5 {
             margin-top: 28px; }
           .footer_wrapper .footer_row .footer_section_body .partner.aqua img {
@@ -55,11 +60,13 @@
           .footer_wrapper .footer_row .footer_section_body .partner.food img {
             width: 80px;
             height: 40px; }
-        .footer_wrapper .footer_row .footer_section_body .partner.sofia h5 {
-          margin: 12px 0 0 20px; }
-        .footer_wrapper .footer_row .footer_section_body .partner.sofia img {
-          width: 60px;
-          height: 60px; }
+        .footer_wrapper .footer_row .footer_section_body .partner.sofia {
+          margin-left: -8px; }
+          .footer_wrapper .footer_row .footer_section_body .partner.sofia h5 {
+            margin: 12px 0 0 20px; }
+          .footer_wrapper .footer_row .footer_section_body .partner.sofia img {
+            width: 60px;
+            height: 60px; }
         .footer_wrapper .footer_row .footer_section_body .partner:hover {
           transition: all .3s ease-in-out;
           transform: scale(1.1, 1.1); }
