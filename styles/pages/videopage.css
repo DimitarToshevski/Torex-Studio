@@ -65,4 +65,8 @@
           .gallery_wrapper #gallery a:hover .video_overlay span {
             opacity: 1; }
 
+@media screen and (max-width: 950px) {
+  .gallery_wrapper #gallery {
+    justify-content: space-around; } }
+
 /*# sourceMappingURL=videopage.css.map */

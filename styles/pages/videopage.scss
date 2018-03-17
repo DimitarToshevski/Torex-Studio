@@ -82,3 +82,11 @@ $linkHoverColor: rgb(28, 160, 60);
     }
   }
 }
+
+@media screen and (max-width: 950px) {
+  .gallery_wrapper {
+    #gallery {
+      justify-content: space-around;
+    }
+  }
+}
