@@ -1,3 +1,6 @@
+@font-face {
+  font-family: Europe_Ext;
+  src: url("./custom_fonts.ttf"); }
 body {
   background-color: black;
   background-image: url("../images/background.jpg");
@@ -18,7 +21,7 @@ body {
   z-index: 2000;
   width: 100%;
   height: 100px;
-  font-family: "Europe_Ext", arial; }
+  font-family: Europe_Ext, arial; }
   .header_row #btn_menu {
     color: white;
     font-size: 2em;
@@ -147,7 +150,7 @@ body {
   border-radius: 20px;
   box-shadow: 0 0 10px 5px rgba(153, 153, 153, 0.35);
   transition: all .5s;
-  font-family: "Europe_Ext", arial; }
+  font-family: Europe_Ext, arial; }
   .contact_us_button a {
     display: flex;
     justify-content: center;

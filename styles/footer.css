@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: "Europe_Ext", arial; }
+  font-family: Europe_Ext, arial; }
 
 .footer_wrapper {
   background-color: #252525;
@@ -20,15 +20,18 @@
       justify-content: center;
       font-size: 25px;
       margin: 25px 0 25px 0;
-      font-family: "Europe_Ext", arial; }
+      font-family: Europe_Ext, arial; }
     .footer_wrapper .footer_row .footer_section_body {
       color: #a3a3a3;
-      font-family: "Europe_Ext", arial;
+      font-family: Europe_Ext, arial;
       font-size: 27px;
       text-align: center;
       line-height: 45px; }
       .footer_wrapper .footer_row .footer_section_body h6 {
         font-size: 20px; }
+        .footer_wrapper .footer_row .footer_section_body h6:hover {
+          transition: all .3s ease-in-out;
+          transform: scale(1.1, 1.1); }
       .footer_wrapper .footer_row .footer_section_body h5 {
         font-size: 14px;
         float: right; }

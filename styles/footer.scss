@@ -1,7 +1,7 @@
 $linkHoverColor: rgb(28, 160, 60);
 $mainHeaderColor: rgb(197, 197, 197);
 $mainBodyColor: rgb(163, 163, 163);
-$mainFontFamily: 'Europe_Ext', arial;
+$mainFontFamily: Europe_Ext, arial;
 * {
   box-sizing: border-box;
   font-family: $mainFontFamily;
@@ -35,6 +35,10 @@ $mainFontFamily: 'Europe_Ext', arial;
       line-height: 45px;
       h6 {
         font-size: 20px;
+        &:hover {
+          transition: all .3s ease-in-out;
+          transform: scale(1.1, 1.1);
+        }
       }
       h5 {
         font-size: 14px;

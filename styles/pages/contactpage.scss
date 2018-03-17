@@ -1,7 +1,7 @@
 $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 32, 0.5) 100%);
 $linkHoverColor: rgb(28, 160, 60);
 $mainHeaderColor: rgb(197, 197, 197);
-$mainFontFamily: 'President Cyr', arial;
+$mainFontFamily: Europe_Ext, arial;
 
 @keyframes mexicanWave {
   0% {
@@ -111,16 +111,19 @@ html {
       div {
         h5 {
           text-align: center;
+          svg {
+            margin-right: 5px;
+          }
 
         }
         hr {
-          width: 70px;
+          width: 100px;
           height: 1px;
           background: indianred;
           transition: all ease-in-out 0.3s;
         }
         &:hover hr {
-          width: 130px;
+          width: 170px;
         }
       }
     }

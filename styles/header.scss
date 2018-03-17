@@ -1,5 +1,9 @@
 $mainHeaderColor: rgb(197, 197, 197);
-$mainFontFamily: 'Europe_Ext', arial;
+$mainFontFamily: Europe_Ext, arial;
+@font-face {
+  font-family: Europe_Ext;
+  src: url('./custom_fonts.ttf')
+}
 
 body {
   background-color: black;

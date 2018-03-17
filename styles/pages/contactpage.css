@@ -80,13 +80,15 @@ html {
       letter-spacing: 5px; }
       .contactpage_main_wrapper .contactpage_section_working_time .section_header div h5 {
         text-align: center; }
+        .contactpage_main_wrapper .contactpage_section_working_time .section_header div h5 svg {
+          margin-right: 5px; }
       .contactpage_main_wrapper .contactpage_section_working_time .section_header div hr {
-        width: 70px;
+        width: 100px;
         height: 1px;
         background: indianred;
         transition: all ease-in-out 0.3s; }
       .contactpage_main_wrapper .contactpage_section_working_time .section_header div:hover hr {
-        width: 130px; }
+        width: 170px; }
   .contactpage_main_wrapper .contactpage_section_form {
     display: flex;
     flex-wrap: wrap; }
