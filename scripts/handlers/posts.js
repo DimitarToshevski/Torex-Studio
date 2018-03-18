@@ -1,4 +1,5 @@
-handlers.posts = function (ctx) {
+import { myData } from "../router";
+let posts = function (ctx) {
     this.post_page = true; //If this is true - posts are rendering for post page
 
     this.offers = myData['offers'];
@@ -30,3 +31,4 @@ handlers.posts = function (ctx) {
         scrollTop(true);
     })
 };
+export { posts };

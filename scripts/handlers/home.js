@@ -1,4 +1,5 @@
-handlers.home = function (ctx) {
+import { myData } from "../router";
+let home = function (ctx) {
     this.home_page = true; //If this is true - posts are rendering for homepage
     this.video_source = './images/Homepage/STUDIO-TOREX-2015-SHOWREEL.mp4';
     //adding additional condition statement for img so i can use offers in footer also
@@ -41,3 +42,4 @@ handlers.home = function (ctx) {
         videoPlayPause();
     })
 };
+export { home };

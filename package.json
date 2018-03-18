@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "bootstrap": "^4.0.0-beta.2",
+    "gmaps": "^0.4.24",
     "handlebars": "^4.0.11",
     "jquery": "^3.2.1",
     "jquery-googlemap": "^1.5.0",
@@ -14,5 +15,13 @@
     "popper.js": "^1.12.9",
     "sammy": "^0.7.6",
     "slick-carousel": "^1.8.1"
+  },
+  "scripts": {
+    "start": "webpack"
+  },
+  "devDependencies": {
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.1.1"
   }
 }

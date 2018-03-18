@@ -1,4 +1,5 @@
-handlers.postDetails = function (ctx) {
+import { myData } from "../router";
+let postDetails = function (ctx) {
     this.single_post = true; //If this is true - all posts are being rendered in a slider on each single post
     let id = Number(this.params['id']) - 1;
     this.redirect('#/posts', this.params['id']);
@@ -39,3 +40,4 @@ handlers.postDetails = function (ctx) {
         scrollTop(true);
     })
 };
+export { postDetails };

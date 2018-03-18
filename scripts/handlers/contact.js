@@ -1,4 +1,5 @@
-handlers.contact = function () {
+import { myData } from "../router";
+let contact = function () {
     this.contact_page = true;
     this.offers = myData['offers'];
     this.loadPartials({
@@ -25,3 +26,4 @@ handlers.contact = function () {
         googleMaps();
     })
 };
+export { contact };

@@ -1,4 +1,5 @@
-handlers.about = function (ctx) {
+import { myData } from "../router";
+let about = function (ctx) {
     this.teammates = myData['teammates'];
     this.image = myData['slider_images'];
     this.offers = myData['offers'];
@@ -25,3 +26,4 @@ handlers.about = function (ctx) {
         adaptNav();
     })
 };
+export { about };

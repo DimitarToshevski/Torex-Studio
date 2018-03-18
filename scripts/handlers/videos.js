@@ -1,4 +1,6 @@
-handlers.videos = function (ctx) {
+import { myData } from "../router";
+
+let videos = function (ctx) {
     let route = this.params['route'];
 
 
@@ -55,3 +57,4 @@ handlers.videos = function (ctx) {
         lightGallery();
     })
 };
+export { videos };

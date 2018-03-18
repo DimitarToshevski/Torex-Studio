@@ -1,4 +1,5 @@
-handlers.photos = function (ctx) {
+import { myData } from "../router";
+let photos = function (ctx) {
     let route = this.params['route'];
 
 
@@ -64,3 +65,4 @@ handlers.photos = function (ctx) {
         scrollTop(true);
     })
 };
+export { photos };
