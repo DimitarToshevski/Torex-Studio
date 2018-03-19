@@ -322,17 +322,37 @@ $sliderHeight: 500px;
       text-align: center;
     }
     #teammate_1_p {
-      height: 250px;
+      height: 300px;
+      width: 240px;
       padding-right: 0;
       line-height: 25px;
       #row1, #row2, #row3, #row4, #row5, #row6, #row7, #row8, #row9, #row10{
         margin-left: 0;
       }
     }
+    #teammate_2_p {
+      height: 270px;
+      width: 240px;
+      padding-right: 0;
+      line-height: 25px;
+      #row1, #row2, #row3, #row4, #row5, #row6, #row7, #row8, #row9, #row10{
+        margin: 0;
+      }
+    }
     #teammate_3_p {
-      height: 250px;
+      height: 240px;
+      width: 250px;
       padding-right: 0;
       line-height: 29px;
+      #row1, #row2, #row3, #row4, #row5, #row6, #row7, #row8, #row9, #row10{
+        margin: 0;
+      }
+    }
+    #teammate_4_p {
+      height: 320px;
+      width: 290px;
+      padding-right: 0;
+      line-height: 25px;
       #row1, #row2, #row3, #row4, #row5, #row6, #row7, #row8, #row9, #row10{
         margin: 0;
       }

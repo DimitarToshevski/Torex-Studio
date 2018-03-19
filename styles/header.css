@@ -173,27 +173,30 @@ body {
     left: 4%; }
   .contact_us_button:nth-last-child(2) {
     position: relative;
-    left: 45%;
+    left: calc(50% - 65px);
     bottom: 42vh; }
 
+@media screen and (min-width: 1450px) {
+  .header_wrapper .header_video .contact_us_button {
+    position: relative;
+    top: -280px; }
+  .header_wrapper .header_video #video_pause_button {
+    position: relative;
+    top: -250px; } }
 @media screen and (max-width: 1250px) {
   .header_wrapper .header_video .contact_us_button {
     position: relative;
-    top: -280px;
-    left: 45vw; }
+    top: -280px; }
   .header_wrapper .header_video #video_pause_button {
     position: relative;
-    top: -250px;
-    left: 50%; } }
+    top: -250px; } }
 @media screen and (max-width: 1150px) {
   .header_wrapper .header_video .contact_us_button {
     position: relative;
-    top: -280px;
-    left: 44%; }
+    top: -280px; }
   .header_wrapper .header_video #video_pause_button {
     position: relative;
-    top: -250px;
-    left: 50%; } }
+    top: -250px; } }
 @media screen and (max-width: 950px) {
   body {
     background-size: 100% 100%; }
@@ -219,21 +222,17 @@ body {
 
   .header_wrapper .header_video .contact_us_button {
     position: relative;
-    top: -120px;
-    left: 43%; }
+    top: -120px; }
   .header_wrapper .header_video #video_pause_button {
     position: relative;
-    top: -250px;
-    left: 50%; } }
+    top: -250px; } }
 @media screen and (max-width: 840px) {
   .header_wrapper .header_video .contact_us_button {
     position: relative;
-    top: -120px;
-    left: 42%; }
+    top: -120px; }
   .header_wrapper .header_video #video_pause_button {
     position: relative;
-    top: -250px;
-    left: 50%; } }
+    top: -250px; } }
 @media screen and (max-width: 710px) {
   .header_row .header_menu {
     position: relative;
@@ -241,12 +240,10 @@ body {
 
   .header_wrapper .header_video .contact_us_button {
     position: relative;
-    top: 20px;
-    left: 35%; }
+    top: 20px; }
   .header_wrapper .header_video #video_pause_button {
     position: relative;
-    top: -150px;
-    left: 45%; } }
+    top: -150px; } }
 @media screen and (max-width: 525px) {
   .header_row .header_menu {
     position: relative;
@@ -254,11 +251,9 @@ body {
 
   .header_wrapper .header_video .contact_us_button {
     position: relative;
-    top: 20px;
-    left: 27%; }
+    top: 20px; }
   .header_wrapper .header_video #video_pause_button {
     position: relative;
-    top: -120px;
-    left: 45%; } }
+    top: -120px; } }
 
 /*# sourceMappingURL=header.css.map */

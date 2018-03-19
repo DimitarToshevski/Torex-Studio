@@ -225,23 +225,33 @@ body {
   }
   &:nth-last-child(2) {
     position: relative;
-    left: 45%;
+    left: calc(50% - 65px);
     bottom: 42vh;
   }
 }
 
+@media screen and (min-width: 1450px) {
+  .header_wrapper .header_video {
+    .contact_us_button {
+      position: relative;
+      top: -280px;
+    }
+    #video_pause_button {
+      position: relative;
+      top: -250px;
+    }
+  }
+}
 
 @media screen and (max-width: 1250px) {
   .header_wrapper .header_video {
     .contact_us_button {
       position: relative;
       top: -280px;
-      left: 45vw;
     }
     #video_pause_button {
       position: relative;
       top: -250px;
-      left: 50%;
     }
   }
 }
@@ -251,12 +261,10 @@ body {
     .contact_us_button {
       position: relative;
       top: -280px;
-      left: 44%;
     }
     #video_pause_button {
       position: relative;
       top: -250px;
-      left: 50%;
     }
   }
 }
@@ -288,12 +296,10 @@ body {
     .contact_us_button {
       position: relative;
       top: -120px;
-      left: 43%;
     }
     #video_pause_button {
       position: relative;
       top: -250px;
-      left: 50%;
     }
   }
 }
@@ -302,12 +308,10 @@ body {
     .contact_us_button {
       position: relative;
       top: -120px;
-      left: 42%;
     }
     #video_pause_button {
       position: relative;
       top: -250px;
-      left: 50%;
     }
   }
 }
@@ -321,12 +325,10 @@ body {
     .contact_us_button {
       position: relative;
       top: 20px;
-      left: 35%;
     }
     #video_pause_button {
       position: relative;
       top: -150px;
-      left: 45%;
     }
   }
 }
@@ -340,12 +342,10 @@ body {
     .contact_us_button {
       position: relative;
       top: 20px;
-      left: 27%;
     }
     #video_pause_button {
       position: relative;
       top: -120px;
-      left: 45%;
     }
   }
 }

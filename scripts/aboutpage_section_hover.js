@@ -27,7 +27,12 @@ function hoverAboutpageSection() {
                 });
             }
         });
-        $(radiusedDiv[1]).css({'flex-direction': 'row-reverse', 'text-align': 'right'});
-        $(radiusedDiv[3]).css({'flex-direction': 'row-reverse', 'text-align': 'right', 'margin-left': '15px'});
+        if($(window).innerWidth() <= "700") {
+            $(radiusedDiv[1]).css({'flex-direction': 'column', 'text-align': 'center'});
+            $(radiusedDiv[3]).css({'flex-direction': 'column', 'text-align': 'center', 'margin-left': '0'});
+        } else {
+            $(radiusedDiv[1]).css({'flex-direction': 'row-reverse', 'text-align': 'right'});
+            $(radiusedDiv[3]).css({'flex-direction': 'row-reverse', 'text-align': 'right', 'margin-left': '15px'});
+        }
     }, 500)
 }
