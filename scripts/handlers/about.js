@@ -1,4 +1,5 @@
 import { myData } from "../router";
+import { hoverAboutpageSection } from "../aboutpage_section_hover"
 let about = function (ctx) {
     this.teammates = myData['teammates'];
     this.image = myData['slider_images'];

@@ -1,4 +1,4 @@
-function hoverAboutpageSection() {
+let hoverAboutpageSection = function () {
     setTimeout(() => {
         let sectionHeader = $('.aboutpage_section_teammate_wrapper').find($('.aboutpage_section_teammate_header'));
         let sectionTeammateBody = $('.aboutpage_section_teammate_body');
@@ -36,3 +36,4 @@ function hoverAboutpageSection() {
         }
     }, 500)
 }
+export { hoverAboutpageSection }
