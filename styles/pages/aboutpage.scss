@@ -80,7 +80,7 @@ $sliderHeight: 500px;
           border-radius: 150px;
         }
         img {
-          max-width: 313px;
+          max-width: 293px;
           height: 270px;
           cursor: pointer;
           border-radius: 140px;
@@ -311,5 +311,31 @@ $sliderHeight: 500px;
     position: relative;
     left: 9%;
     bottom: 375px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body {
+    .radiused {
+      flex-direction: column;
+      text-align: center;
+    }
+    #teammate_1_p {
+      height: 250px;
+      padding-right: 0;
+      line-height: 25px;
+      #row1, #row2, #row3, #row4, #row5, #row6, #row7, #row8, #row9, #row10{
+        margin-left: 0;
+      }
+    }
+    #teammate_3_p {
+      height: 250px;
+      padding-right: 0;
+      line-height: 29px;
+      #row1, #row2, #row3, #row4, #row5, #row6, #row7, #row8, #row9, #row10{
+        margin: 0;
+      }
+    }
   }
 }

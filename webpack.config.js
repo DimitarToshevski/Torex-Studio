@@ -3,6 +3,5 @@ module.exports = {
     output: {
         filename: "build.js"
     },
-    watch: true,
-
+    watch: true
 };
