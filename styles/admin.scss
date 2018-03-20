@@ -18,18 +18,19 @@ $mainHeaderColor: rgb(197, 197, 197);
     display: flex;
     flex-direction: column;
     width: 90%;
-    padding: 50px;
+    padding: 0 50px 50px 50px;
     border: 3px solid $mainHeaderColor;
     border-radius: 20px;
     legend {
       color: $mainHeaderColor;
-      margin-bottom: 80px;
+      margin-bottom: 50px;
       font-size: 36px;
     }
     label {
       color: $mainHeaderColor;
       margin-bottom: 10px;
-      font-size: 25px;
+      font-size: 20px;
+      font-weight: bold;
 
       width: 100%;
     }
@@ -38,6 +39,24 @@ $mainHeaderColor: rgb(197, 197, 197);
       width: 100%;
       border-radius: 5px;
       font-size: 14px;
+    }
+    input[type='submit'] {
+      width: 30%;
+      min-width: 100px;
+      height: 10%;
+      margin: 35px auto 0 auto;
+      font-size: 17px;
+      font-weight: bold;
+      background: rgba(252, 60, 30, 0.6);
+      border: 3px solid rgba(197, 197, 197, 0.6);
+      border-radius: 20px;
+      transition: all .3s;
+      color: white;
+      &:hover {
+        background: rgba(33, 241, 33, 0.6);
+        cursor: pointer;
+        box-shadow: 0 0 2px 2px rgba(153, 153, 153, 1 );
+      }
     }
   }
 }
