@@ -120,32 +120,27 @@ import { photos } from '../scripts/handlers/photos.js';
 import { postDetails } from '../scripts/handlers/postDetails.js';
 import { posts } from '../scripts/handlers/posts.js';
 import { videos } from '../scripts/handlers/videos.js';
+import { admin } from '../scripts/handlers/admin.js';
 $(() => {
     const router = Sammy('#wrapper', function () {
 
-        handlers.home = home;
-        handlers.about = about;
-        handlers.contact = contact;
-        handlers.photos = photos;
-        handlers.postDetails = postDetails;
-        handlers.posts = posts;
-        handlers.videos = videos;
-
         this.use('Handlebars', 'hbs');
 //for deployment we must put this.get('#/') and on home links - /#/ - logo and Nachalo
-        this.get('index.html', handlers.home);
+        this.get('index.html', home);
 
-        this.get('#/about', handlers.about);
+        this.get('#/about', about);
 
-        this.get('#/videos/:route', handlers.videos);
+        this.get('#/videos/:route', videos);
 
-        this.get('#/photography/:route', handlers.photos);
+        this.get('#/photography/:route', photos);
 
-        this.get('#/posts', handlers.posts);
+        this.get('#/posts', posts);
 
-        this.get('#/posts/:id', handlers.postDetails);
+        this.get('#/posts/:id', postDetails);
 
-        this.get('#/contact', handlers.contact);
+        this.get('#/contact', contact);
+
+        this.get('#/admin', admin);
 
     });//for deployment we must put router.run('#/')
     router.run();
