@@ -3,8 +3,8 @@ $mainHeaderColor: rgb(197, 197, 197);
 $mainBodyColor: rgb(163, 163, 163);
 $hrColor: indianred;
 $mainGradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 32, 0.5) 100%);
-$sliderWidth: 700px;
-$sliderHeight: 500px;
+$sliderWidth: 50vw;
+$sliderHeight: 40vw;
 @mixin pulseEffect() {
   animation-name: pulse_animation;
   animation-duration: 1500ms;
@@ -257,7 +257,7 @@ $sliderHeight: 500px;
   justify-content: center;
   align-items: center;
   position: relative;
-  left: 9%;
+  left: 11%;
   bottom: 375px;
 }
 
@@ -293,29 +293,10 @@ $sliderHeight: 500px;
 }
 
 @media screen and (max-width: 950px) {
-  $sliderWidth: 496px;
-  $sliderHeight: 416px;
-  .container {
-    #teammate_slider {
-      img {
-        width: $sliderWidth;
-        height: $sliderHeight;
-      }
-    }
-  }
-  #slider_controls {
-    width: calc(#{$sliderWidth} + 50px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    left: 9%;
-    bottom: 375px;
-  }
+
 }
 
 @media screen and (max-width: 700px) {
-
   .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body {
     .radiused {
       flex-direction: column;
@@ -356,6 +337,24 @@ $sliderHeight: 500px;
       #row1, #row2, #row3, #row4, #row5, #row6, #row7, #row8, #row9, #row10{
         margin: 0;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .container {
+    width: 100%;
+  }
+  #slider_controls {
+    width: calc(#{$sliderWidth} + 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 6%;
+    bottom: 375px;
+    span {
+      font-size: 40px;
     }
   }
 }
