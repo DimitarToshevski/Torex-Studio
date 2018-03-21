@@ -1,4 +1,5 @@
 import { myData } from "../router";
+
 let home = function (ctx) {
     this.home_page = true; //If this is true - posts are rendering for homepage
     this.video_source = './images/Homepage/STUDIO-TOREX-2015-SHOWREEL.mp4';
@@ -42,4 +43,4 @@ let home = function (ctx) {
         videoPlayPause();
     })
 };
-export { home };
+export {home};

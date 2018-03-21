@@ -1,3 +1,5 @@
+import { login } from '../user_session/login';
+
 let admin = function (ctx) {
     this.loadPartials({
         header_wrapper: './templates/common/header/header_wrapper.hbs',
@@ -17,6 +19,7 @@ let admin = function (ctx) {
         sticky.stickHeader();
         scrollTop(true);
         adaptNav();
+        login();
     })
 };
 export { admin };
