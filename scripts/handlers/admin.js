@@ -19,7 +19,7 @@ let admin = function (ctx) {
         sticky.stickHeader();
         scrollTop(true);
         adaptNav();
-        login();
+        login(ctx);
     })
 };
 export { admin };
