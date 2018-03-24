@@ -1,3 +1,14 @@
+import { home } from '../scripts/handlers/home.js';
+import { about } from '../scripts/handlers/about.js';
+import { contact } from '../scripts/handlers/contact.js';
+import { photos } from '../scripts/handlers/photos.js';
+import { postDetails } from '../scripts/handlers/postDetails.js';
+import { posts } from '../scripts/handlers/posts.js';
+import { videos } from '../scripts/handlers/videos.js';
+import { admin } from '../scripts/handlers/admin.js';
+import { toasterOptions } from "./toastrOptions";
+
+
 const myData = {};
 myData.offers = [
     {
@@ -112,15 +123,9 @@ myData.slider_images = [
 ];
 export { myData };
 
-import { home } from '../scripts/handlers/home.js';
-import { about } from '../scripts/handlers/about.js';
-import { contact } from '../scripts/handlers/contact.js';
-import { photos } from '../scripts/handlers/photos.js';
-import { postDetails } from '../scripts/handlers/postDetails.js';
-import { posts } from '../scripts/handlers/posts.js';
-import { videos } from '../scripts/handlers/videos.js';
-import { admin } from '../scripts/handlers/admin.js';
-import { toasterOptions } from "./toastrOptions";
+const role = '9a915413-ab00-41f5-a216-13a6854ffb62';
+export { role };
+
 
 $(() => {
     const router = Sammy('#wrapper', function () {

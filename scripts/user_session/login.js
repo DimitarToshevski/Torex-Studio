@@ -3,7 +3,7 @@ const url = 'https://baas.kinvey.com/user/kid_ByC4Pz0wz/login';
 const secretAnswer = 'numler';
 
 function setStorage(data) {
-    localStorage.setItem('authtoken', data._kmd.authtoken);lo
+    localStorage.setItem('authtoken', data._kmd.authtoken);
     localStorage.setItem('username', data.username);
     localStorage.setItem('id', data._id);
     localStorage.setItem('role', data._kmd.roles[0].roleId);

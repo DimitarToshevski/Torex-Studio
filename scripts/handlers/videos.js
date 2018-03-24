@@ -1,14 +1,20 @@
-import { myData } from "../router";
+import { myData, role } from "../router";
+import { adaptNav } from "../headerNav";
 
 let videos = function (ctx) {
     let route = this.params['route'];
 
-
+    if (localStorage.getItem('role') === role) {
+        this.role = localStorage.getItem('name');
+    } else {
+        this.role = 'user';
+    }
     this.offers = myData['offers'];
     this.loadPartials({
         header_wrapper: './templates/common/header/header_wrapper.hbs',
         header_logo: './templates/common/header/header_logo.hbs',
         header_menu: './templates/common/header/header_menu.hbs',
+        header_greeting: './templates/common/header/header_greeting.hbs',
         main: './templates/common/photo_video gallery/gallery_main_wrapper.hbs',
         single_video: './templates/video_page/single_video_partial.hbs',
         footer_wrapper: './templates/common/footer/footer_wrapper.hbs',
@@ -52,7 +58,7 @@ let videos = function (ctx) {
     }).then(function () {
         sticky.stickFooter();
         sticky.stickHeader();
-        adaptNav();
+        adaptNav(ctx);
         scrollTop(true);
         lightGallery();
     })

@@ -1,6 +1,13 @@
-import { myData } from "../router";
+import { myData, role } from "../router";
 import { hoverAboutpageSection } from "../aboutpage_section_hover"
+import { adaptNav } from "../headerNav";
+
 let about = function (ctx) {
+    if (localStorage.getItem('role') === role) {
+        this.role = localStorage.getItem('name');
+    } else {
+        this.role = 'user';
+    }
     this.teammates = myData['teammates'];
     this.image = myData['slider_images'];
     this.offers = myData['offers'];
@@ -8,6 +15,7 @@ let about = function (ctx) {
         header_wrapper: './templates/common/header/header_wrapper.hbs',
         header_logo: './templates/common/header/header_logo.hbs',
         header_menu: './templates/common/header/header_menu.hbs',
+        header_greeting: './templates/common/header/header_greeting.hbs',
         main: './templates/about_page/aboutpage_main_wrapper.hbs',
         aboutpage_section_teammate: './templates/about_page/aboutpage_main_section_teammate.hbs',
         footer_wrapper: './templates/common/footer/footer_wrapper.hbs',
@@ -24,7 +32,7 @@ let about = function (ctx) {
         hoverAboutpageSection();
         scrollTop(true);
         slickTeammate();
-        adaptNav();
+        adaptNav(ctx);
     })
 };
-export { about };
+export {about};

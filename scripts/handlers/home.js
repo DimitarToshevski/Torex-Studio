@@ -1,6 +1,12 @@
-import { myData } from "../router";
+import { myData, role } from "../router";
+import { adaptNav } from "../headerNav";
 
 let home = function (ctx) {
+    if (localStorage.getItem('role') === role) {
+        this.role = localStorage.getItem('name');
+    } else {
+        this.role = 'user';
+    }
     this.home_page = true; //If this is true - posts are rendering for homepage
     this.video_source = './images/Homepage/STUDIO-TOREX-2015-SHOWREEL.mp4';
     //adding additional condition statement for img so i can use offers in footer also
@@ -10,6 +16,7 @@ let home = function (ctx) {
         header_wrapper: './templates/common/header/header_wrapper.hbs',
         header_logo: './templates/common/header/header_logo.hbs',
         header_menu: './templates/common/header/header_menu.hbs',
+        header_greeting: './templates/common/header/header_greeting.hbs',
         header_video: './templates/common/header/header_video.hbs',
         contact_us_button: './templates/common/contact_us_button.hbs',
         main: './templates/home_page/homepage_main_wrapper.hbs',
@@ -32,13 +39,13 @@ let home = function (ctx) {
             })
         })
             .then(() => {
-            sticky.stickFooter();
-            sticky.stickHeader();
-            accordeon();
-            hoverHomepageSection();
-            adaptNav();
-        })
-    }).then(()=>{
+                sticky.stickFooter();
+                sticky.stickHeader();
+                accordeon();
+                hoverHomepageSection();
+                adaptNav(ctx);
+            })
+    }).then(() => {
         scrollTop(true);
         videoPlayPause();
     })

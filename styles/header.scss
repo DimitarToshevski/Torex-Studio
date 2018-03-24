@@ -116,6 +116,18 @@ body {
         }
       }
     }
+    #greeting {
+      display: none;
+      position: absolute;
+      top: 70%;
+      right: 15%;
+      color: $mainHeaderColor;
+      font-weight: bold;
+      z-index: -1;
+      #logout {
+        cursor: pointer;
+      }
+    }
   }
 
   .header_logo {

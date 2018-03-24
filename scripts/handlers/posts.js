@@ -1,12 +1,21 @@
-import { myData } from "../router";
-let posts = function (ctx) {
-    this.post_page = true; //If this is true - posts are rendering for post page
+import { myData, role } from "../router";
+import { adaptNav } from "../headerNav";
 
+let posts = function (ctx) {
+    if (localStorage.getItem('role') === role) {
+        this.role = localStorage.getItem('name');
+    } else {
+        this.role = 'user';
+    }
+
+    this.post_page = true; //If this is true - posts are rendering for post page
     this.offers = myData['offers'];
+
     this.loadPartials({
         header_wrapper: './templates/common/header/header_wrapper.hbs',
         header_logo: './templates/common/header/header_logo.hbs',
         header_menu: './templates/common/header/header_menu.hbs',
+        header_greeting: './templates/common/header/header_greeting.hbs',
         main: './templates/post_page/postpage_main_wrapper.hbs',
         posts: './templates/common/posts/posts.hbs',
         footer_wrapper: './templates/common/footer/footer_wrapper.hbs',
@@ -27,7 +36,7 @@ let posts = function (ctx) {
     }).then(function () {
         sticky.stickFooter();
         sticky.stickHeader();
-        adaptNav();
+        adaptNav(ctx);
         scrollTop(true);
     })
 };

@@ -1,11 +1,19 @@
-import { myData } from "../router";
-let contact = function () {
+import { myData, role } from "../router";
+import { adaptNav } from "../headerNav";
+
+let contact = function (ctx) {
+    if (localStorage.getItem('role') === role) {
+        this.role = localStorage.getItem('name');
+    } else {
+        this.role = 'user';
+    }
     this.contact_page = true;
     this.offers = myData['offers'];
     this.loadPartials({
         header_wrapper: './templates/common/header/header_wrapper.hbs',
         header_logo: './templates/common/header/header_logo.hbs',
         header_menu: './templates/common/header/header_menu.hbs',
+        header_greeting: './templates/common/header/header_greeting.hbs',
         main: './templates/contact_page/contactpage_main_wrapper.hbs',
         contactpage_main_section_offers: './templates/contact_page/contactpage_main_section_offers.hbs',
         footer_offers: './templates/common/footer/single_offer.hbs',
@@ -21,7 +29,7 @@ let contact = function () {
     }).then(function () {
         sticky.stickFooter();
         sticky.stickHeader();
-        adaptNav();
+        adaptNav(ctx);
         scrollTop(true);
         googleMaps();
     })
