@@ -124,8 +124,18 @@ body {
       color: $mainHeaderColor;
       font-weight: bold;
       z-index: -1;
-      #logout {
-        cursor: pointer;
+    }
+    #logout {
+      display: none;
+      position: absolute;
+      top: 70%;
+      right: 4%;
+      color: $mainHeaderColor;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1;
+      &:hover {
+        text-decoration: underline;
       }
     }
   }

@@ -93,8 +93,17 @@ body {
       color: #c5c5c5;
       font-weight: bold;
       z-index: -1; }
-      .header_row .header_menu #greeting #logout {
-        cursor: pointer; }
+    .header_row .header_menu #logout {
+      display: none;
+      position: absolute;
+      top: 70%;
+      right: 4%;
+      color: #c5c5c5;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1; }
+      .header_row .header_menu #logout:hover {
+        text-decoration: underline; }
   .header_row .header_logo {
     margin-left: 10%;
     transition: all .3s ease-in-out; }
