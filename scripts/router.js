@@ -120,6 +120,8 @@ import { postDetails } from '../scripts/handlers/postDetails.js';
 import { posts } from '../scripts/handlers/posts.js';
 import { videos } from '../scripts/handlers/videos.js';
 import { admin } from '../scripts/handlers/admin.js';
+import { toasterOptions } from "./toastrOptions";
+
 $(() => {
     const router = Sammy('#wrapper', function () {
 

@@ -6,7 +6,7 @@ const role = '9a915413-ab00-41f5-a216-13a6854ffb62';
 let admin = function (ctx) {
     if(localStorage.getItem('role') === role) {
         this.redirect('#');
-        alert('veche si lognat');
+        toastr.info(`Вече си логнат, ${localStorage.getItem('name')}`);
     }
     this.offers = myData['offers'];
     this.loadPartials({

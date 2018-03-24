@@ -3,10 +3,11 @@ const url = 'https://baas.kinvey.com/user/kid_ByC4Pz0wz/login';
 const secretAnswer = 'numler';
 
 function setStorage(data) {
-    localStorage.setItem('authtoken', data._kmd.authtoken);
+    localStorage.setItem('authtoken', data._kmd.authtoken);lo
     localStorage.setItem('username', data.username);
     localStorage.setItem('id', data._id);
     localStorage.setItem('role', data._kmd.roles[0].roleId);
+    localStorage.setItem('name', data.name);
 };
 
 let login = function (ctx) {
@@ -37,15 +38,16 @@ let login = function (ctx) {
                     secretAnswer: secretAnswer
                 }),
                 success: (data) => {
-                    if(data.secretAnswer !== secretAnswer) { //Security question check because the
-                        alert("Въведи правилен никнейм");   // server is configured to check only username and password
+                    if (data.secretAnswer !== secretAnswer) { //Security question check because the
+                        toastr.error('Въведи правилен никнейм');   // server is configured to check only username and password
                         return;
                     }
                     ctx.redirect('#');
                     setStorage(data);
+                    toastr.success(`Добре дошъл, ${data.name}`);
                 },
                 error: (err) => {
-                    console.log(err.responseJSON.description);
+                    toastr.error(err.responseJSON.description);
                     return;
                 },
                 complete: () => {
