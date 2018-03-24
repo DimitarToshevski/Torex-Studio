@@ -6,11 +6,19 @@ function setStorage(data) {
     localStorage.setItem('authtoken', data._kmd.authtoken);
     localStorage.setItem('username', data.username);
     localStorage.setItem('id', data._id);
-}
+    localStorage.setItem('role', data._kmd.roles[0].roleId);
+};
 
 let login = function (ctx) {
+    setTimeout(() => {      //Attaching event listener on form
+        let loadingAdminPanel = $('#loadingAdminPanel');
+        let loginSubmitButton = $('#loginSubmit');
 
-    setTimeout(() => {
+        $(document).ajaxStart(() => {
+            loadingAdminPanel.show();
+            loginSubmitButton.prop('disabled', 'true');
+        });
+
         $('#admin_form').on('submit', (e) => {
             e.preventDefault();
             let username = $('#username').val();
@@ -29,8 +37,8 @@ let login = function (ctx) {
                     secretAnswer: secretAnswer
                 }),
                 success: (data) => {
-                    if(data.secretAnswer != secretAnswer) {
-                        throw new Error("Въведи правилен никнейм");
+                    if(data.secretAnswer !== secretAnswer) { //Security question check because the
+                        alert("Въведи правилен никнейм");   // server is configured to check only username and password
                         return;
                     }
                     ctx.redirect('#');
@@ -38,11 +46,17 @@ let login = function (ctx) {
                 },
                 error: (err) => {
                     console.log(err.responseJSON.description);
+                    return;
+                },
+                complete: () => {
+                    loadingAdminPanel.hide();
+                    loginSubmitButton.prop('disabled', '');
                 }
             };
             $.ajax(req);
             return false;
         })
+
     }, 100)
 };
-export {login};
+export { login };

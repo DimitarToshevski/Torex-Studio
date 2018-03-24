@@ -1,4 +1,3 @@
-const handlers = {};
 const myData = {};
 myData.offers = [
     {

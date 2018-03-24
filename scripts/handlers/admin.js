@@ -1,6 +1,14 @@
 import { login } from '../user_session/login';
+import { myData } from "../router";
+
+const role = '9a915413-ab00-41f5-a216-13a6854ffb62';
 
 let admin = function (ctx) {
+    if(localStorage.getItem('role') === role) {
+        this.redirect('#');
+        alert('veche si lognat');
+    }
+    this.offers = myData['offers'];
     this.loadPartials({
         header_wrapper: './templates/common/header/header_wrapper.hbs',
         header_logo: './templates/common/header/header_logo.hbs',
