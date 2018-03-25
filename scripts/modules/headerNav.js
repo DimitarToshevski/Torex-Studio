@@ -1,4 +1,4 @@
-import { role } from "./router";
+import { role } from "../router";
 
 let adaptNav = function (ctx) {
     setTimeout(() => {

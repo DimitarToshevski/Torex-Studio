@@ -1,8 +1,9 @@
 import { myData, role } from "../router";
-import { adaptNav } from "../headerNav";
-import { lightGallery } from "../loadLightgallery";
-import { scrollTop } from "../scroll_top_button";
-import { stickHeader, stickFooter } from "../stickyHeaderFooter";
+import { adaptNav } from "../modules/headerNav";
+import { lightGallery } from "../modules/loadLightgallery";
+import { scrollTop } from "../modules/scroll_top_button";
+import { stickHeader, stickFooter } from "../modules/stickyHeaderFooter";
+import { requestData } from "../modules/requester";
 
 let photos = function (ctx) {
     let route = this.params['route'];
@@ -30,7 +31,7 @@ let photos = function (ctx) {
         this.partial('./templates/common/page.hbs');
         switch(route) {
             case 'portrets':
-                requester.get('photos', '?query={"type":"portrets"}').then((photos) => {
+                requestData('appdata', 'photos', '?query={"type":"portrets"}', 'GET').then((photos) => {
                     ctx.photo = photos;
                     console.log(ctx.photo);
                     this.render('./templates/photo_page/single_photo_partial.hbs')
@@ -40,7 +41,7 @@ let photos = function (ctx) {
                 });
                 break;
             case 'weddings':
-                requester.get('photos', '?query={"type":"weddings"}').then((photos) => {
+                requestData('appdata', 'photos', '?query={"type":"weddings"}', 'GET').then((photos) => {
                     ctx.photo = photos;
                     this.render('./templates/photo_page/single_photo_partial.hbs')
                         .then(() => {
@@ -49,7 +50,7 @@ let photos = function (ctx) {
                 });
                 break;
             case 'behind':
-                requester.get('photos', '?query={"type":"behind"}').then((photos) => {
+                requestData('appdata', 'photos', '?query={"type":"behind"}', 'GET').then((photos) => {
                     ctx.photo = photos;
                     this.render('./templates/photo_page/single_photo_partial.hbs')
                         .then(() => {
@@ -58,7 +59,7 @@ let photos = function (ctx) {
                 });
                 break;
             case 'boudoir':
-                requester.get('photos', '?query={"type":"boudoir"}').then((photos) => {
+                requestData('appdata', 'photos', '?query={"type":"boudoir"}', 'GET').then((photos) => {
                     ctx.photo = photos;
                     this.render('./templates/photo_page/single_photo_partial.hbs')
                         .then(() => {

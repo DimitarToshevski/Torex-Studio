@@ -1,12 +1,12 @@
-import { home } from '../scripts/handlers/home.js';
-import { about } from '../scripts/handlers/about.js';
-import { contact } from '../scripts/handlers/contact.js';
-import { photos } from '../scripts/handlers/photos.js';
-import { postDetails } from '../scripts/handlers/postDetails.js';
-import { posts } from '../scripts/handlers/posts.js';
-import { videos } from '../scripts/handlers/videos.js';
-import { admin } from '../scripts/handlers/admin.js';
-import { toasterOptions } from "./toastrOptions";
+import { home } from './handlers/home.js';
+import { about } from './handlers/about.js';
+import { contact } from './handlers/contact.js';
+import { photos } from './handlers/photos.js';
+import { postDetails } from './handlers/postDetails.js';
+import { posts } from './handlers/posts.js';
+import { videos } from './handlers/videos.js';
+import { admin } from './handlers/admin.js';
+import { toasterOptions } from "./modules/toastrOptions";
 
 
 const myData = {};

@@ -1,9 +1,9 @@
 import { myData, role } from "../router";
-import { hoverAboutpageSection } from "../aboutpage_section_hover"
-import { adaptNav } from "../headerNav";
-import { slickTeammate } from "../aboutpage_teammates_slider"
-import { scrollTop } from "../scroll_top_button";
-import { stickHeader, stickFooter } from "../stickyHeaderFooter";
+import { hoverAboutpageSection } from "../modules/aboutpage_section_hover"
+import { adaptNav } from "../modules/headerNav";
+import { slickTeammate } from "../modules/aboutpage_teammates_slider"
+import { scrollTop } from "../modules/scroll_top_button";
+import { stickHeader, stickFooter } from "../modules/stickyHeaderFooter";
 
 let about = function (ctx) {
     if (localStorage.getItem('role') === role) {
@@ -38,4 +38,4 @@ let about = function (ctx) {
         adaptNav(ctx);
     })
 };
-export {about};
+export { about };

@@ -1,7 +1,8 @@
 import { myData, role } from "../router";
-import { adaptNav } from "../headerNav";
-import { scrollTop } from "../scroll_top_button";
-import { stickHeader, stickFooter } from "../stickyHeaderFooter";
+import { adaptNav } from "../modules/headerNav";
+import { scrollTop } from "../modules/scroll_top_button";
+import { stickHeader, stickFooter } from "../modules/stickyHeaderFooter";
+import { requestData } from "../modules/requester";
 
 let posts = function (ctx) {
     if (localStorage.getItem('role') === role) {
@@ -28,7 +29,7 @@ let posts = function (ctx) {
         contact_us_button: './templates/common/contact_us_button.hbs'
     }).then(function () {
         this.partial('./templates/common/page.hbs');
-        requester.get('posts', '').then((posts) => {
+        requestData('appdata', 'posts', '', 'GET').then((posts) => {
             ctx.posts = posts;
             this.render('./templates/common/posts/posts.hbs')
                 .then(() => {

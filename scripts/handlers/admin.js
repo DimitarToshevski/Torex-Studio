@@ -1,8 +1,8 @@
 import { login } from '../user_session/login';
 import { myData, role } from "../router";
-import { adaptNav } from "../headerNav";
-import { scrollTop } from "../scroll_top_button";
-import { stickHeader, stickFooter } from "../stickyHeaderFooter";
+import { adaptNav } from "../modules/headerNav";
+import { scrollTop } from "../modules/scroll_top_button";
+import { stickHeader, stickFooter } from "../modules/stickyHeaderFooter";
 
 let admin = function (ctx) {
     if(localStorage.getItem('role') === role) {

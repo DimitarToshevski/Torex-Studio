@@ -1,11 +1,12 @@
 import { myData, role } from "../router";
-import { adaptNav } from "../headerNav";
+import { adaptNav } from "../modules/headerNav";
 import { logout } from "../user_session/logout";
-import { accordeon } from "../homepage_dropdown";
-import { videoPlayPause } from "../pauseButton";
-import { hoverHomepageSection } from "../homepage_section_hover";
-import { scrollTop } from "../scroll_top_button";
-import { stickHeader, stickFooter } from "../stickyHeaderFooter";
+import { accordeon } from "../modules/homepage_dropdown";
+import { videoPlayPause } from "../modules/pauseButton";
+import { hoverHomepageSection } from "../modules/homepage_section_hover";
+import { scrollTop } from "../modules/scroll_top_button";
+import { stickHeader, stickFooter } from "../modules/stickyHeaderFooter";
+import { requestData } from "../modules/requester";
 
 let home = function (ctx) {
     if (localStorage.getItem('role') === role) {
@@ -37,7 +38,7 @@ let home = function (ctx) {
         footer_section_follow: './templates/common/footer/footer_section_follow.hbs'
     }).then(function () {
         this.partial('./templates/common/page.hbs').then(() => {
-            requester.get('posts', '').then((posts) => {
+            requestData('appdata', 'posts', '', 'GET').then((posts) => {
                 ctx.posts = posts;
                 this.render('./templates/common/posts/posts.hbs').then(() => {
                     this.replace('.posts');
@@ -57,4 +58,4 @@ let home = function (ctx) {
         videoPlayPause();
     })
 };
-export {home};
+export { home };

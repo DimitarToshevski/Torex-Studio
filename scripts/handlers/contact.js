@@ -1,8 +1,8 @@
 import { myData, role } from "../router";
-import { adaptNav } from "../headerNav";
-import { googleMaps } from "../google_maps";
-import { scrollTop } from "../scroll_top_button";
-import { stickHeader, stickFooter } from "../stickyHeaderFooter";
+import { adaptNav } from "../modules/headerNav";
+import { googleMaps } from "../modules/google_maps";
+import { scrollTop } from "../modules/scroll_top_button";
+import { stickHeader, stickFooter } from "../modules/stickyHeaderFooter";
 
 let contact = function (ctx) {
     if (localStorage.getItem('role') === role) {

@@ -1,8 +1,9 @@
 import { myData, role } from "../router";
-import { adaptNav } from "../headerNav";
-import { lightGallery } from "../loadLightgallery";
-import { scrollTop } from "../scroll_top_button";
-import { stickHeader, stickFooter } from "../stickyHeaderFooter";
+import { adaptNav } from "../modules/headerNav";
+import { lightGallery } from "../modules/loadLightgallery";
+import { scrollTop } from "../modules/scroll_top_button";
+import { stickHeader, stickFooter } from "../modules/stickyHeaderFooter";
+import { requestData } from "../modules/requester";
 
 let videos = function (ctx) {
     let route = this.params['route'];
@@ -30,7 +31,7 @@ let videos = function (ctx) {
         this.partial('./templates/common/page.hbs');
         switch(route) {
             case 'ads':
-                requester.get('videos', '?query={"type":"ads"}').then((videos) => {
+                requestData('appdata', 'videos', '?query={"type":"ads"}', 'GET').then((videos) => {
                     ctx.video = videos;
                     this.render('./templates/video_page/single_video_partial.hbs')
                         .then(() => {
@@ -39,7 +40,7 @@ let videos = function (ctx) {
                 });
                 break;
             case 'music':
-                requester.get('videos', '?query={"type":"music"}').then((videos) => {
+                requestData('appdata', 'videos', '?query={"type":"music"}', 'GET').then((videos) => {
                     ctx.video = videos;
                     this.render('./templates/video_page/single_video_partial.hbs')
                         .then(() => {
@@ -48,7 +49,7 @@ let videos = function (ctx) {
                 });
                 break;
             case 'weddings':
-                requester.get('videos', '?query={"type":"weddings"}').then((videos) => {
+                requestData('appdata', 'videos', '?query={"type":"weddings"}', 'GET').then((videos) => {
                     ctx.video = videos;
                     this.render('./templates/video_page/single_video_partial.hbs')
                         .then(() => {

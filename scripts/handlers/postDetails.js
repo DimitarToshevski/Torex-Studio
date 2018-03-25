@@ -1,7 +1,8 @@
 import { myData, role } from "../router";
-import { adaptNav } from "../headerNav";
-import { scrollTop } from "../scroll_top_button";
-import { stickHeader, stickFooter } from "../stickyHeaderFooter";
+import { adaptNav } from "../modules/headerNav";
+import { scrollTop } from "../modules/scroll_top_button";
+import { stickHeader, stickFooter } from "../modules/stickyHeaderFooter";
+import { requestData } from "../modules/requester";
 
 let postDetails = function (ctx) {
     let id = Number(this.params['id']) - 1;
@@ -29,7 +30,7 @@ let postDetails = function (ctx) {
         contact_us_button: './templates/common/contact_us_button.hbs'
     }).then(function () {
         this.partial('./templates/common/page.hbs');
-        requester.get('posts', '').then((posts) => {
+        requestData('appdata', 'posts', '', 'GET').then((posts) => {
             ctx.post = posts[id];
             ctx.posts = posts;
             this.render('./templates/post_page/single_post.hbs')
