@@ -1,5 +1,7 @@
 import { myData, role } from "../router";
 import { adaptNav } from "../headerNav";
+import { scrollTop } from "../scroll_top_button";
+import { stickHeader, stickFooter } from "../stickyHeaderFooter";
 
 let postDetails = function (ctx) {
     let id = Number(this.params['id']) - 1;
@@ -42,8 +44,8 @@ let postDetails = function (ctx) {
                 });
         });
     }).then(function () {
-        sticky.stickFooter();
-        sticky.stickHeader();
+        stickFooter();
+        stickHeader();
         adaptNav(ctx);
         scrollTop(true);
     })

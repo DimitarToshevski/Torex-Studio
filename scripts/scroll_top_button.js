@@ -1,4 +1,4 @@
-function scrollTop(now) {
+let scrollTop = function (now) {
     if(now) {
         $(window).scrollTop(0);
     }
@@ -18,4 +18,5 @@ function scrollTop(now) {
             $('html').animate({ scrollTop: 0 }, 'slow');
             })
     }, 500)
-}
+};
+export { scrollTop }

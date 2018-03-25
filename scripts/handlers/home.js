@@ -1,6 +1,11 @@
 import { myData, role } from "../router";
 import { adaptNav } from "../headerNav";
 import { logout } from "../user_session/logout";
+import { accordeon } from "../homepage_dropdown";
+import { videoPlayPause } from "../pauseButton";
+import { hoverHomepageSection } from "../homepage_section_hover";
+import { scrollTop } from "../scroll_top_button";
+import { stickHeader, stickFooter } from "../stickyHeaderFooter";
 
 let home = function (ctx) {
     if (localStorage.getItem('role') === role) {
@@ -40,8 +45,8 @@ let home = function (ctx) {
             })
         })
             .then(() => {
-                sticky.stickFooter();
-                sticky.stickHeader();
+                stickFooter();
+                stickHeader();
                 accordeon();
                 hoverHomepageSection();
                 adaptNav(ctx);

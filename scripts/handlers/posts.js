@@ -1,5 +1,7 @@
 import { myData, role } from "../router";
 import { adaptNav } from "../headerNav";
+import { scrollTop } from "../scroll_top_button";
+import { stickHeader, stickFooter } from "../stickyHeaderFooter";
 
 let posts = function (ctx) {
     if (localStorage.getItem('role') === role) {
@@ -34,8 +36,8 @@ let posts = function (ctx) {
                 })
         });
     }).then(function () {
-        sticky.stickFooter();
-        sticky.stickHeader();
+        stickFooter();
+        stickHeader();
         adaptNav(ctx);
         scrollTop(true);
     })

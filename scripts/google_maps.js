@@ -1,4 +1,4 @@
-function googleMaps() {
+let googleMaps = function () {
     setTimeout(()=> {
         let map = new GMaps({
             div: '#google_map',
@@ -15,4 +15,5 @@ function googleMaps() {
             }
         })
     }, 200)
-}
+};
+export { googleMaps }

@@ -1,6 +1,8 @@
 import { login } from '../user_session/login';
 import { myData, role } from "../router";
 import { adaptNav } from "../headerNav";
+import { scrollTop } from "../scroll_top_button";
+import { stickHeader, stickFooter } from "../stickyHeaderFooter";
 
 let admin = function (ctx) {
     if(localStorage.getItem('role') === role) {
@@ -28,8 +30,8 @@ let admin = function (ctx) {
     }).then(function () {
         this.partial('./templates/common/page.hbs');
     }).then(() => {
-        sticky.stickFooter();
-        sticky.stickHeader();
+        stickFooter();
+        stickHeader();
         scrollTop(true);
         adaptNav();
         login(ctx);

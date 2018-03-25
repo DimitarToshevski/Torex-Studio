@@ -1,4 +1,4 @@
-function hoverHomepageSection() {
+let hoverHomepageSection = function () {
     setTimeout(() => {
         let sectionOffersHeader = $('.homepage_section_offers').find($('.section_header'));
         let accordeonDropdownLinks = $('.body_offer_1').find('a');
@@ -13,4 +13,5 @@ function hoverHomepageSection() {
             })
         })
     }, 1000)
-}
+};
+export { hoverHomepageSection }

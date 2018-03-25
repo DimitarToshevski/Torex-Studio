@@ -1,5 +1,8 @@
 import { myData, role } from "../router";
 import { adaptNav } from "../headerNav";
+import { lightGallery } from "../loadLightgallery";
+import { scrollTop } from "../scroll_top_button";
+import { stickHeader, stickFooter } from "../stickyHeaderFooter";
 
 let videos = function (ctx) {
     let route = this.params['route'];
@@ -56,8 +59,8 @@ let videos = function (ctx) {
         }
 
     }).then(function () {
-        sticky.stickFooter();
-        sticky.stickHeader();
+        stickFooter();
+        stickHeader();
         adaptNav(ctx);
         scrollTop(true);
         lightGallery();

@@ -1,4 +1,4 @@
-function accordeon() {
+let accordeon = function () {
     let sectionOffersHeader = $('.homepage_section_offers').find($('.section_header'));
     let accordeonDropdownLinks = $('.body_offer_1').find('a');
     $('.header_offer_1').find('h4').click(function (event) {
@@ -24,4 +24,5 @@ function accordeon() {
             })
         })
     })
-}
+};
+export { accordeon }

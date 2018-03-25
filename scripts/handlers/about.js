@@ -1,6 +1,9 @@
 import { myData, role } from "../router";
 import { hoverAboutpageSection } from "../aboutpage_section_hover"
 import { adaptNav } from "../headerNav";
+import { slickTeammate } from "../aboutpage_teammates_slider"
+import { scrollTop } from "../scroll_top_button";
+import { stickHeader, stickFooter } from "../stickyHeaderFooter";
 
 let about = function (ctx) {
     if (localStorage.getItem('role') === role) {
@@ -27,8 +30,8 @@ let about = function (ctx) {
     }).then(function () {
         this.partial('./templates/common/page.hbs');
     }).then(() => {
-        sticky.stickFooter();
-        sticky.stickHeader();
+        stickFooter();
+        stickHeader();
         hoverAboutpageSection();
         scrollTop(true);
         slickTeammate();

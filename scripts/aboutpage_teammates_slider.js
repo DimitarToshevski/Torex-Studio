@@ -1,4 +1,4 @@
-function slickTeammate() {
+let slickTeammate = function () {
     setTimeout(()=>{
         $('#teammate_slider').slick({
             arrows: true,
@@ -19,4 +19,5 @@ function slickTeammate() {
         });
     }, 550)
 }
+export { slickTeammate }
 

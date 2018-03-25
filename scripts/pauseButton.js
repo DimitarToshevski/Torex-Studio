@@ -1,4 +1,4 @@
-function videoPlayPause() {
+let videoPlayPause = function () {
     setTimeout(() => {
         if ($('#video_pause_button').hasClass('paused')) {
             playVideo();
@@ -23,3 +23,4 @@ function playVideo() {
         pauseVideo(); //adding pause functionality on click event
     })
 }
+export { videoPlayPause }
