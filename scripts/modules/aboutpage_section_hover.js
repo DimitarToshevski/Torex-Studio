@@ -35,5 +35,5 @@ let hoverAboutpageSection = function () {
             $(radiusedDiv[3]).css({'flex-direction': 'row-reverse', 'text-align': 'right', 'margin-left': '15px'});
         }
     }, 500)
-}
+};
 export { hoverAboutpageSection }
