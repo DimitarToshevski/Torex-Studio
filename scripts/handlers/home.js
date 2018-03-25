@@ -1,5 +1,6 @@
 import { myData, role } from "../router";
 import { adaptNav } from "../headerNav";
+import { logout } from "../user_session/logout";
 
 let home = function (ctx) {
     if (localStorage.getItem('role') === role) {
@@ -44,6 +45,7 @@ let home = function (ctx) {
                 accordeon();
                 hoverHomepageSection();
                 adaptNav(ctx);
+                logout(ctx);
             })
     }).then(() => {
         scrollTop(true);

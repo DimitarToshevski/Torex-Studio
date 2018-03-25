@@ -42,8 +42,8 @@ let login = function (ctx) {
                         toastr.error('Въведи правилен никнейм');   // server is configured to check only username and password
                         return;
                     }
-                    ctx.redirect('#');
                     setStorage(data);
+                    ctx.redirect('#');
                     toastr.success(`Добре дошъл, ${data.name}`);
                 },
                 error: (err) => {

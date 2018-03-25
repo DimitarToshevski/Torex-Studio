@@ -13,13 +13,10 @@ let adaptNav = function (ctx) {
             }
         });
         if(localStorage.getItem('role') === role) {
-            ctx.role = localStorage.getItem('name');
-            ctx.render('./templates/common/header/header_menu.hbs')
-                .replace('#greeting, #logout');
             setTimeout(()=> {
                 $('#greeting, #logout').show()
             },100);
         } else { $('#greeting, #logout').hide(); }
-    }, 100)
+    }, 100);
 };
 export { adaptNav }

@@ -7,6 +7,11 @@ let admin = function (ctx) {
         this.redirect('#');
         toastr.info(`Вече си логнат, ${localStorage.getItem('name')}`);
     }
+    if (localStorage.getItem('role') === role) {
+        this.role = localStorage.getItem('name');
+    } else {
+        this.role = 'user';
+    }
     this.offers = myData['offers'];
     this.loadPartials({
         header_wrapper: './templates/common/header/header_wrapper.hbs',
