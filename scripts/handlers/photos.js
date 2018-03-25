@@ -10,8 +10,10 @@ let photos = function (ctx) {
 
     if (localStorage.getItem('role') === role) {
         this.role = localStorage.getItem('name');
+        this.photosAuthed = true;
     } else {
         this.role = 'user';
+        this.photosAuthed = false;
     }
     this.offers = myData['offers'];
     this.loadPartials({
@@ -21,6 +23,7 @@ let photos = function (ctx) {
         header_greeting: './templates/common/header/header_greeting.hbs',
         main: './templates/common/photo_video gallery/gallery_main_wrapper.hbs',
         single_photo: './templates/photo_page/single_photo_partial.hbs',
+        photo_input: './templates/admin/photo_input.hbs',
         footer_wrapper: './templates/common/footer/footer_wrapper.hbs',
         footer_section_offers: './templates/common/footer/footer_section_offers.hbs',
         footer_section_partners: './templates/common/footer/footer_section_partners.hbs',

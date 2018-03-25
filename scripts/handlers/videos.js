@@ -4,14 +4,17 @@ import { lightGallery } from "../modules/loadLightgallery";
 import { scrollTop } from "../modules/scroll_top_button";
 import { stickHeader, stickFooter } from "../modules/stickyHeaderFooter";
 import { requestData } from "../modules/requester";
+import {logout} from "../user_session/logout";
 
 let videos = function (ctx) {
     let route = this.params['route'];
 
     if (localStorage.getItem('role') === role) {
         this.role = localStorage.getItem('name');
+        this.videosAuthed = true;
     } else {
         this.role = 'user';
+        this.videosAuthed = false;
     }
     this.offers = myData['offers'];
     this.loadPartials({
@@ -21,6 +24,7 @@ let videos = function (ctx) {
         header_greeting: './templates/common/header/header_greeting.hbs',
         main: './templates/common/photo_video gallery/gallery_main_wrapper.hbs',
         single_video: './templates/video_page/single_video_partial.hbs',
+        video_input: './templates/admin/video_input.hbs',
         footer_wrapper: './templates/common/footer/footer_wrapper.hbs',
         footer_section_offers: './templates/common/footer/footer_section_offers.hbs',
         footer_section_partners: './templates/common/footer/footer_section_partners.hbs',
@@ -65,6 +69,7 @@ let videos = function (ctx) {
         adaptNav(ctx);
         scrollTop(true);
         lightGallery();
+        logout(ctx);
     })
 };
 export { videos };

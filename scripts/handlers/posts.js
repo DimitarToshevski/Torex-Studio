@@ -7,8 +7,10 @@ import { requestData } from "../modules/requester";
 let posts = function (ctx) {
     if (localStorage.getItem('role') === role) {
         this.role = localStorage.getItem('name');
+        this.postsAuthed = true;
     } else {
         this.role = 'user';
+        this.postsAuthed = false;
     }
 
     this.post_page = true; //If this is true - posts are rendering for post page
@@ -21,6 +23,7 @@ let posts = function (ctx) {
         header_greeting: './templates/common/header/header_greeting.hbs',
         main: './templates/post_page/postpage_main_wrapper.hbs',
         posts: './templates/common/posts/posts.hbs',
+        post_input: './templates/admin/post_input.hbs',
         footer_wrapper: './templates/common/footer/footer_wrapper.hbs',
         footer_section_offers: './templates/common/footer/footer_section_offers.hbs',
         footer_offers: './templates/common/footer/single_offer.hbs',
