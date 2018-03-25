@@ -3,6 +3,7 @@ import { adaptNav } from "../modules/headerNav";
 import { googleMaps } from "../modules/google_maps";
 import { scrollTop } from "../modules/scroll_top_button";
 import { stickHeader, stickFooter } from "../modules/stickyHeaderFooter";
+import {logout} from "../user_session/logout";
 
 let contact = function (ctx) {
     if (localStorage.getItem('role') === role) {
@@ -35,6 +36,7 @@ let contact = function (ctx) {
         adaptNav(ctx);
         scrollTop(true);
         googleMaps();
+        logout(ctx);
     })
 };
 export { contact };

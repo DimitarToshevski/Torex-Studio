@@ -3,6 +3,8 @@ import { adaptNav } from "../modules/headerNav";
 import { scrollTop } from "../modules/scroll_top_button";
 import { stickHeader, stickFooter } from "../modules/stickyHeaderFooter";
 import { requestData } from "../modules/requester";
+import { logout } from "../user_session/logout";
+import { attachPostsFormEvents } from "../modules/admin_modules/posts_form_module";
 
 let posts = function (ctx) {
     if (localStorage.getItem('role') === role) {
@@ -44,6 +46,8 @@ let posts = function (ctx) {
         stickHeader();
         adaptNav(ctx);
         scrollTop(true);
+        logout(ctx);
+        attachPostsFormEvents();
     })
 };
 export { posts };

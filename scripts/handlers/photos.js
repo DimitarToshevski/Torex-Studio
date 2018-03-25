@@ -4,6 +4,7 @@ import { lightGallery } from "../modules/loadLightgallery";
 import { scrollTop } from "../modules/scroll_top_button";
 import { stickHeader, stickFooter } from "../modules/stickyHeaderFooter";
 import { requestData } from "../modules/requester";
+import {logout} from "../user_session/logout";
 
 let photos = function (ctx) {
     let route = this.params['route'];
@@ -77,6 +78,7 @@ let photos = function (ctx) {
         stickHeader();
         adaptNav(ctx);
         scrollTop(true);
+        logout(ctx);
     })
 };
 export { photos };

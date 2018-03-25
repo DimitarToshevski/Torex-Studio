@@ -16,7 +16,7 @@ let logout = function (ctx) {
                 }
             };
             $.ajax(req);
-        })
+        });
 
         function logoutSuccess(data) {
             let name = localStorage.getItem('name');

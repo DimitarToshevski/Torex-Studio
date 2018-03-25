@@ -4,7 +4,8 @@ import { lightGallery } from "../modules/loadLightgallery";
 import { scrollTop } from "../modules/scroll_top_button";
 import { stickHeader, stickFooter } from "../modules/stickyHeaderFooter";
 import { requestData } from "../modules/requester";
-import {logout} from "../user_session/logout";
+import { logout } from "../user_session/logout";
+import { attachVideosFormEvents } from "../modules/admin_modules/videos_form_module";
 
 let videos = function (ctx) {
     let route = this.params['route'];
@@ -70,6 +71,7 @@ let videos = function (ctx) {
         scrollTop(true);
         lightGallery();
         logout(ctx);
+        attachVideosFormEvents();
     })
 };
 export { videos };

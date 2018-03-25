@@ -3,9 +3,10 @@ import { adaptNav } from "../modules/headerNav";
 import { scrollTop } from "../modules/scroll_top_button";
 import { stickHeader, stickFooter } from "../modules/stickyHeaderFooter";
 import { requestData } from "../modules/requester";
+import {logout} from "../user_session/logout";
 
 let postDetails = function (ctx) {
-    let id = Number(this.params['id']) - 1;
+    let id = Number(this.params['id']);
     if (localStorage.getItem('role') === role) {
         this.role = localStorage.getItem('name');
     } else {
@@ -49,6 +50,7 @@ let postDetails = function (ctx) {
         stickHeader();
         adaptNav(ctx);
         scrollTop(true);
+        logout(ctx);
     })
 };
 export { postDetails };

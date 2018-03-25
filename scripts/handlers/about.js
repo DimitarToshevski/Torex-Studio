@@ -4,6 +4,7 @@ import { adaptNav } from "../modules/headerNav";
 import { slickTeammate } from "../modules/aboutpage_teammates_slider"
 import { scrollTop } from "../modules/scroll_top_button";
 import { stickHeader, stickFooter } from "../modules/stickyHeaderFooter";
+import {logout} from "../user_session/logout";
 
 let about = function (ctx) {
     if (localStorage.getItem('role') === role) {
@@ -36,6 +37,7 @@ let about = function (ctx) {
         scrollTop(true);
         slickTeammate();
         adaptNav(ctx);
+        logout(ctx);
     })
 };
 export { about };

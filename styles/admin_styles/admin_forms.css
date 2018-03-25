@@ -38,11 +38,11 @@
       cursor: pointer;
       box-shadow: 0 0 5px 5px #999999; }
 
-#post_form {
+#submit_post {
   height: 560px; }
-  #post_form textarea {
+  #submit_post textarea {
     resize: none;
     width: 50%;
     text-align: center; }
 
-/*# sourceMappingURL=admin_video.css.map */
+/*# sourceMappingURL=admin_forms.css.map */
