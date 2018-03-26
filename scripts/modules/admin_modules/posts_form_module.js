@@ -4,8 +4,8 @@ let attachPostsFormEvents = () => {
     setTimeout(() => {
         $('#submit_post').on('submit', (e) => {
             e.preventDefault();
-            let title = $('#title').val();
-            let subtitle = $('#subtitle').val();
+            let title = $('#post_title').val();
+            let subtitle = $('#post_subtitle').val();
             let postImg = $('#post_img').val();
             let postVideo = $('#post_video').val();
             let postBody = $('#post_body').val();
