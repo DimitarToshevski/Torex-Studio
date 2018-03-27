@@ -4,10 +4,15 @@ let attachVideosFormEvents = () => {
     setTimeout(() => {
         $('#submit_video').on('submit', (e) => {
             e.preventDefault();
-            let title = $('#video_title').val();
+            let video_url = $('#video_url').val();
+            let video_title = $('#video_title').val();
+            let img_url = $('#video_img').val();
             let reqBody = JSON.stringify({
+                video_url,
+                video_title,
+                img_url
             });
-            requestData('appdata', 'posts', '', 'POST', reqBody).then((data) => {
+            requestData('appdata', 'videos', '', 'POST', reqBody).then((data) => {
                 console.log(data);
             });
             return false;
