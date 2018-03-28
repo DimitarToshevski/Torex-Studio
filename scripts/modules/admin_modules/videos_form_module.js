@@ -1,4 +1,4 @@
-import {requestData} from "../requester";
+import { requestData } from "../requester";
 
 let attachVideosFormEvents = () => {
     setTimeout(() => {
@@ -7,10 +7,12 @@ let attachVideosFormEvents = () => {
             let video_url = $('#video_url').val();
             let video_title = $('#video_title').val();
             let img_url = $('#video_img').val();
+            let collection = $('#video_collection:selected');
             let reqBody = JSON.stringify({
                 video_url,
                 video_title,
-                img_url
+                img_url,
+                "type": collection
             });
             requestData('appdata', 'videos', '', 'POST', reqBody).then((data) => {
                 console.log(data);
