@@ -14,8 +14,8 @@ let attachVideosFormEvents = () => {
                 img_url,
                 "type": collection
             });
-            requestData('appdata', 'videos', '', 'POST', reqBody).then((data) => {
-                console.log(data);
+            requestData('appdata', 'videos', '', 'POST', reqBody).then((videos) => {
+                console.log(videos);
             });
             return false;
         })
