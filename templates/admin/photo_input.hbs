@@ -1,10 +1,14 @@
+<div class="form_control">
+    <input type="button" id="show_photo_form" value="Публикувай нова снимка">
+</div>
 <form class="input" id="submit_photo">
+    <span class="close_form" id="close_photo_form">[X]</span>
     <label for="photo_url">URL на снимката:<span class="required_field">(Задължително)</span></label>
-    <input id="photo_url" type="text" placeholder="Въведи URL на видеото" required>
+    <input id="photo_url" type="text" placeholder="Въведи URL на снимка" required>
     <label for="photo_title">Заглавие:<span class="required_field">(Задължително)</span></label>
-    <input id="photo_title" type="text" placeholder="Въведи Заглавие на видеото" required>
+    <input id="photo_title" type="text" placeholder="Въведи Заглавие на снимка" required>
     <label for="photo_collection">Раздел:<span class="required_field">(Задължително)</span></label>
-    <select id="photo_collection" type="text" required>
+    <select id="photo_type" type="text" required>
         <option value="portrets">Портретна</option>
         <option value="weddings">Сватбена</option>
         <option value="boudoir">Boudoir</option>

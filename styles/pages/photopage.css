@@ -2,7 +2,8 @@
   top: 87px; }
 
 .lg-image {
-  margin-top: 135px; }
+  margin-top: 135px;
+  padding-bottom: 15%; }
 
 #gallery .photos {
   height: 270px;

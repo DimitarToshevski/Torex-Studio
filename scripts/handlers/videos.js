@@ -70,7 +70,7 @@ let videos = function (ctx) {
         scrollTop(true);
         lightGallery();
         logout(ctx);
-        attachVideosFormEvents(ctx);
+        attachVideosFormEvents();
     })
 };
 export { videos };
