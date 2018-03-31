@@ -5,6 +5,12 @@
   margin-top: 135px;
   padding-bottom: 15%; }
 
+#gallery .photo_controls {
+  right: -50%;
+  top: -16%;
+  font-size: 20px; }
+  #gallery .photo_controls .edit {
+    right: 102%; }
 #gallery .photos {
   height: 270px;
   border-radius: 10%; }

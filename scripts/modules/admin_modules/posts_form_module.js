@@ -1,5 +1,12 @@
 import {requestData} from "../requester";
 
+let regexVideoUrl = /\/\/www.youtube.com\/embed\/\w*/g;
+let months =
+    [
+        'Януари', 'Февруари', 'Март', 'Април', 'Май', 'Юни',
+        'Юли', 'Август', 'Септември', 'Октомври', 'Ноември', 'Декември'
+    ];
+
 let attachPostsFormEvents = () => {
     setTimeout(() => {
         $('#show_post_form').click(() => {
@@ -13,20 +20,23 @@ let attachPostsFormEvents = () => {
             $('#submit_post').on('submit', (e) => {
                 e.preventDefault();
                 $('.submitData').attr('disabled', 'true'); //disabling button so there are no multiple requests
+
+                let newDate = new Date();
+                let postDate = `${newDate.getDate()} ${months[newDate.getMonth()]} ${newDate.getFullYear()}`;
                 let title = $('#post_title').val();
                 let subtitle = $('#post_subtitle').val();
                 let postImg = $('#post_img').val();
-                let postVideo = $('#post_video').val();
+                let postVideo = $('#post_video').val().match(regexVideoUrl)[0];
                 let postBody = $('#post_body').val();
                 let postBody2 = $('#post_body2').val();
                 let reqBody = JSON.stringify({
-                    "id": "18",
                     title,
                     subtitle,
                     "img_src": postImg,
                     "video_url": postVideo,
                     "body": postBody,
-                    "body2": postBody2
+                    "body2": postBody2,
+                    "date": postDate
                 });
                 requestData('appdata', 'posts', '', 'POST', reqBody).then((post) => {
                     toastr.success(`Успешно качен пост: ${post.title} <br> ${post.subtitle}`);

@@ -11,6 +11,14 @@ $linkHoverColor: rgb(28, 160, 60);
 }
 
 #gallery {
+  .photo_controls {
+    right: -50%;
+    top: -16%;
+    font-size: 20px;
+    .edit {
+      right: 102%;
+    }
+  }
   .photos {
     height: 270px;
     border-radius: 10%;

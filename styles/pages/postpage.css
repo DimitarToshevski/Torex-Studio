@@ -8,11 +8,17 @@
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 31%, rgba(173, 61, 32, 0.5) 100%);
   flex-wrap: wrap; }
   .postpage_main_wrapper .post_wrapper {
+    position: relative;
     width: 90%;
     text-align: center;
     display: flex;
     justify-content: center;
     margin: 0 5px 30px 5px; }
+    .postpage_main_wrapper .post_wrapper .post_controls {
+      right: -83%;
+      top: -5%; }
+      .postpage_main_wrapper .post_wrapper .post_controls .edit {
+        right: 2%; }
     .postpage_main_wrapper .post_wrapper a {
       width: 90%;
       text-decoration: none;

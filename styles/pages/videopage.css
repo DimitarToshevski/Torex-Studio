@@ -32,6 +32,11 @@
           margin-bottom: 30px;
           letter-spacing: 2px;
           font-size: 17px; }
+        .gallery_wrapper #gallery a .caption .video_controls {
+          right: -37%;
+          top: -200%; }
+          .gallery_wrapper #gallery a .caption .video_controls .edit {
+            right: 2%; }
       .gallery_wrapper #gallery a img {
         margin-bottom: 10%;
         width: 100%;

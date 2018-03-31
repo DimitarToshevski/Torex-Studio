@@ -60,4 +60,20 @@
   background: rgba(7, 7, 7, 0.8);
   display: none; }
 
+.admin_edit_controls {
+  position: relative;
+  display: flex;
+  color: #c5c5c5; }
+
+.delete, .edit {
+  cursor: pointer;
+  margin: 0 5px;
+  position: absolute; }
+
+.edit:hover {
+  color: #662fde; }
+
+.delete:hover {
+  color: indianred; }
+
 /*# sourceMappingURL=admin.css.map */

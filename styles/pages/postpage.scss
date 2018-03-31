@@ -12,11 +12,19 @@ $mainHeaderColor: rgb(197, 197, 197);
   background: $mainGradient;
   flex-wrap: wrap;
   .post_wrapper {
+    position: relative;
     width: 90%;
     text-align: center;
     display: flex;
     justify-content: center;
     margin: 0 5px 30px 5px;
+    .post_controls {
+      right: -83%;
+      top: -5%;
+      .edit {
+        right: 2%;
+      }
+    }
     a {
       width: 90%;
       text-decoration: none;

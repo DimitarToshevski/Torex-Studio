@@ -55,7 +55,7 @@ $mainHeaderColor: rgb(197, 197, 197);
       &:hover {
         background: rgba(33, 241, 33, 0.6);
         cursor: pointer;
-        box-shadow: 0 0 2px 2px rgba(153, 153, 153, 1 );
+        box-shadow: 0 0 2px 2px rgba(153, 153, 153, 1);
       }
     }
   }
@@ -70,4 +70,24 @@ $mainHeaderColor: rgb(197, 197, 197);
   padding: 50% 0 0 50%;
   background: rgba(7, 7, 7, 0.8);
   display: none;
+}
+
+.admin_edit_controls {
+  position: relative;
+  display: flex;
+  color: $mainHeaderColor;
+
+}
+.delete, .edit {
+   cursor: pointer;
+   margin: 0 5px;
+  position: absolute;
+ }
+.edit {
+  &:hover {
+    color: #662fde;
+  }
+}
+.delete:hover {
+  color: indianred;
 }

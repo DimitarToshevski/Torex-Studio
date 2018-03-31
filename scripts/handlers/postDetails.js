@@ -6,7 +6,7 @@ import { requestData } from "../modules/requester";
 import {logout} from "../user_session/logout";
 
 let postDetails = function (ctx) {
-    let id = Number(this.params['id']);
+    let id = this.params['id'];
     if (localStorage.getItem('role') === role) {
         this.role = localStorage.getItem('name');
     } else {
@@ -32,7 +32,11 @@ let postDetails = function (ctx) {
     }).then(function () {
         this.partial('./templates/common/page.hbs');
         requestData('appdata', 'posts', '', 'GET').then((posts) => {
-            ctx.post = posts[id];
+            for(let post in posts) {
+                if(posts[post]._id === id) {
+                    ctx.post = posts[post];
+                }
+            }
             ctx.posts = posts;
             this.render('./templates/post_page/single_post.hbs')
                 .then(() => {

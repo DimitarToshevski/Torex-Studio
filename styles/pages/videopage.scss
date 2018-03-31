@@ -38,6 +38,13 @@ $linkHoverColor: rgb(28, 160, 60);
           letter-spacing: 2px;
           font-size: 17px;
         }
+        .video_controls {
+          right: -37%;
+          top: -200%;
+          .edit {
+            right: 2%;
+          }
+        }
       }
 
       img {

@@ -1,23 +1,43 @@
 {{#if post_page}}
-    {{#each posts}}
-        <div class="post_wrapper" title="{{subtitle}}">
-            <a href="#/posts/{{id}}">
-                <div class="post_header">
-                    <h5>{{title}}</h5>
+    {{#if postsAuthed}}
+        {{#each posts}}
+            <div class="post_wrapper" title="{{subtitle}}">
+                <div class="admin_edit_controls post_controls">
+                    <span class="edit" id="{{_id}}"><i class="fas fa-pencil-alt"></i></span>
+                    <span class="delete" id="{{_id}}">[X]</span>
                 </div>
-                <div class="post_body">
-                    <img src="{{img_src}}">
+                <a href="#/posts/{{_id}}">
+                    <div class="post_header">
+                        <h5>{{title}}</h5>
+                    </div>
+                    <div class="post_body">
+                        <img src="{{img_src}}">
+                        <p>{{subtitle}}</p>
+                    </div>
+                </a>
+            </div>
+        {{/each}}
+    {{else}}
+        {{#each posts}}
+            <div class="post_wrapper" title="{{subtitle}}">
+                <a href="#/posts/{{_id}}">
+                    <div class="post_header">
+                        <h5>{{title}}</h5>
+                    </div>
+                    <div class="post_body">
+                        <img src="{{img_src}}">
+                        <p>{{subtitle}}</p>
+                    </div>
+                </a>
+            </div>
+        {{/each}}
+    {{/if}}
 
-                    <p>{{subtitle}}</p>
-                </div>
-            </a>
-        </div>
-    {{/each}}
 {{/if}}
 {{#if home_page}}
     {{#each posts}}
         <div class="post_wrapper" title="{{subtitle}}">
-            <a href="#/posts/{{id}}">
+            <a href="#/posts/{{_id}}">
                 <div class="post_header">
                     <h5>{{title}}</h5>
                     <span>{{date}}</span>
@@ -36,7 +56,7 @@
 {{#if single_post}}
     {{#each posts}}
         <div class="post_slider_wrapper" title="{{subtitle}}">
-            <a href="#/posts/{{id}}">
+            <a href="#/posts/{{_id}}">
                 <div class="single_post_header">
                     <h5>{{title}}</h5>
                 </div>

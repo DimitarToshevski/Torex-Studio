@@ -1,11 +1,29 @@
-{{#each video}}
-    <a href="{{video_url}}"
-       data-poster="{{img_url}}"
-       data-sub-html="<h4>{{video_title}}</h4>">
-        <div class="caption">
-            <h4>{{video_title}}</h4>
-        </div>
-        <img src="{{img_url}}" alt="No image preview"/>
-        <div class="video_overlay"><span>Watch now</span><i class="fab fa-youtube" aria-hidden="true"></i></div>
-    </a>
-{{/each}}
+{{#if videosAuthed}}
+    {{#each video}}
+        <a href="{{video_url}}"
+           data-poster="{{img_url}}"
+           data-sub-html="<h4>{{video_title}}</h4>">
+            <div class="caption">
+                <h4>{{video_title}}</h4>
+                <div class="admin_edit_controls video_controls">
+                    <span class="edit" id="{{_id}}"><i class="fas fa-pencil-alt"></i></span>
+                    <span class="delete" id="{{_id}}">[X]</span>
+                </div>
+            </div>
+            <img src="{{img_url}}" alt="No image preview"/>
+            <div class="video_overlay"><span>Watch now</span><i class="fab fa-youtube" aria-hidden="true"></i></div>
+        </a>
+    {{/each}}
+{{else}}
+    {{#each video}}
+        <a href="{{video_url}}"
+           data-poster="{{img_url}}"
+           data-sub-html="<h4>{{video_title}}</h4>">
+            <div class="caption">
+                <h4>{{video_title}}</h4>
+            </div>
+            <img src="{{img_url}}" alt="No image preview"/>
+            <div class="video_overlay"><span>Watch now</span><i class="fab fa-youtube" aria-hidden="true"></i></div>
+        </a>
+    {{/each}}
+{{/if}}
