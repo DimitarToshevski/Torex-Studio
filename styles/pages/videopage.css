@@ -35,6 +35,7 @@
       .gallery_wrapper #gallery a img {
         margin-bottom: 10%;
         width: 100%;
+        height: 157px;
         border-radius: 10%; }
       .gallery_wrapper #gallery a .video_overlay {
         display: flex;

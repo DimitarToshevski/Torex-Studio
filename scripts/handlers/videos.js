@@ -9,7 +9,6 @@ import { attachVideosFormEvents } from "../modules/admin_modules/videos_form_mod
 
 let videos = function (ctx) {
     let route = this.params['route'];
-
     if (localStorage.getItem('role') === role) {
         this.role = localStorage.getItem('name');
         this.videosAuthed = true;
@@ -71,7 +70,7 @@ let videos = function (ctx) {
         scrollTop(true);
         lightGallery();
         logout(ctx);
-        attachVideosFormEvents();
+        attachVideosFormEvents(ctx);
     })
 };
 export { videos };
