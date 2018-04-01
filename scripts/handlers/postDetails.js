@@ -37,6 +37,9 @@ let postDetails = function (ctx) {
                     ctx.post = posts[post];
                 }
             }
+            posts = posts.sort((a, b) => {
+                return (a.date.localeCompare( b.date));
+            });
             ctx.posts = posts;
             this.render('./templates/post_page/single_post.hbs')
                 .then(() => {

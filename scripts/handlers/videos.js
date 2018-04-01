@@ -7,6 +7,7 @@ import { requestData } from "../modules/requester";
 import { logout } from "../user_session/logout";
 import { attachVideosFormEvents } from "../modules/admin_modules/videos_form_module";
 import { adminControls } from "../modules/admin_modules/admin_controls_module";
+import {sortElements} from "../modules/sort_elements";
 
 let videos = function (ctx) {
     let route = this.params['route'];
@@ -38,6 +39,7 @@ let videos = function (ctx) {
         switch(route) {
             case 'ads':
                 requestData('appdata', 'videos', '?query={"type":"ads"}', 'GET').then((videos) => {
+                    sortElements(videos);
                     ctx.video = videos;
                     this.render('./templates/video_page/single_video_partial.hbs')
                         .then(() => {
@@ -47,6 +49,7 @@ let videos = function (ctx) {
                 break;
             case 'music':
                 requestData('appdata', 'videos', '?query={"type":"music"}', 'GET').then((videos) => {
+                    sortElements(videos);
                     ctx.video = videos;
                     this.render('./templates/video_page/single_video_partial.hbs')
                         .then(() => {
@@ -56,6 +59,7 @@ let videos = function (ctx) {
                 break;
             case 'weddings':
                 requestData('appdata', 'videos', '?query={"type":"weddings"}', 'GET').then((videos) => {
+                    sortElements(videos);
                     ctx.video = videos;
                     this.render('./templates/video_page/single_video_partial.hbs')
                         .then(() => {

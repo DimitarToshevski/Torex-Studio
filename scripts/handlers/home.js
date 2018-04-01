@@ -39,6 +39,9 @@ let home = function (ctx) {
     }).then(function () {
         this.partial('./templates/common/page.hbs').then(() => {
             requestData('appdata', 'posts', '', 'GET').then((posts) => {
+                posts = posts.sort((a, b) => {
+                    return (a.date.localeCompare( b.date));
+                });
                 ctx.posts = posts;
                 this.render('./templates/common/posts/posts.hbs').then(() => {
                     this.replace('.posts');

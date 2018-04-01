@@ -23,6 +23,7 @@ let attachPostsFormEvents = () => {
 
                 let newDate = new Date();
                 let postDate = `${newDate.getDate()} ${months[newDate.getMonth()]} ${newDate.getFullYear()}`;
+                let exactTime = `${newDate.getHours()} ${newDate.getMinutes()} ${newDate.getSeconds()}`;
                 let title = $('#post_title').val();
                 let subtitle = $('#post_subtitle').val();
                 let postImg = $('#post_img').val();
@@ -36,7 +37,8 @@ let attachPostsFormEvents = () => {
                     "video_url": postVideo,
                     "body": postBody,
                     "body2": postBody2,
-                    "date": postDate
+                    "date": postDate,
+                    "exact_time": exactTime
                 });
                 requestData('appdata', 'posts', '', 'POST', reqBody).then((post) => {
                     toastr.success(`Успешно качен пост: ${post.title} <br> ${post.subtitle}`);
@@ -49,4 +51,4 @@ let attachPostsFormEvents = () => {
         })
     }, 100);
 };
-export { attachPostsFormEvents }
+export { attachPostsFormEvents, months }

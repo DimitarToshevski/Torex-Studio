@@ -7,6 +7,7 @@ import { requestData } from "../modules/requester";
 import { logout } from "../user_session/logout";
 import { attachPhotosFormEvents } from "../modules/admin_modules/photos_form_module";
 import { adminControls } from "../modules/admin_modules/admin_controls_module";
+import {sortElements} from "../modules/sort_elements";
 
 let photos = function (ctx) {
     let route = this.params['route'];
@@ -39,6 +40,7 @@ let photos = function (ctx) {
         switch(route) {
             case 'portrets':
                 requestData('appdata', 'photos', '?query={"type":"portrets"}', 'GET').then((photos) => {
+                    sortElements(photos);
                     ctx.photo = photos;
                     console.log(ctx.photo);
                     this.render('./templates/photo_page/single_photo_partial.hbs')
@@ -49,6 +51,7 @@ let photos = function (ctx) {
                 break;
             case 'weddings':
                 requestData('appdata', 'photos', '?query={"type":"weddings"}', 'GET').then((photos) => {
+                    sortElements(photos);
                     ctx.photo = photos;
                     this.render('./templates/photo_page/single_photo_partial.hbs')
                         .then(() => {
@@ -58,6 +61,7 @@ let photos = function (ctx) {
                 break;
             case 'behind':
                 requestData('appdata', 'photos', '?query={"type":"behind"}', 'GET').then((photos) => {
+                    sortElements(photos);
                     ctx.photo = photos;
                     this.render('./templates/photo_page/single_photo_partial.hbs')
                         .then(() => {
@@ -67,6 +71,7 @@ let photos = function (ctx) {
                 break;
             case 'boudoir':
                 requestData('appdata', 'photos', '?query={"type":"boudoir"}', 'GET').then((photos) => {
+                    sortElements(photos);
                     ctx.photo = photos;
                     this.render('./templates/photo_page/single_photo_partial.hbs')
                         .then(() => {

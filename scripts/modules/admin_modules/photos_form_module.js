@@ -1,4 +1,5 @@
 import { requestData } from "../requester";
+import {months} from "./posts_form_module";
 
 let attachPhotosFormEvents = () => {
     setTimeout(() => {
@@ -12,13 +13,18 @@ let attachPhotosFormEvents = () => {
             $('#submit_photo').on('submit', (e) => { //attaching event listener to upload button
                 e.preventDefault();
                 $('.submitData').attr('disabled', 'true'); //disabling button so there are no multiple requests
+                let newDate = new Date();
                 let url = $('#photo_url').val();
                 let title = $('#photo_title').val();
                 let type = $('#photo_type option:selected').val();
+                let photoDate = `${newDate.getDate()} ${months[newDate.getMonth()]} ${newDate.getFullYear()}`;
+                let exactTime = `${newDate.getHours()} ${newDate.getMinutes()} ${newDate.getSeconds()}`;
                 let reqBody = JSON.stringify({
                     url,
                     title,
-                    type
+                    type,
+                    "date": photoDate,
+                    "exact_time": exactTime
                 });
                 requestData('appdata', 'photos', '', 'POST', reqBody).then((photo) => {
                     toastr.success(`Успешно качена  снимка: ${photo.title}`);
