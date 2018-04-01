@@ -6,6 +6,7 @@ import { stickHeader, stickFooter } from "../modules/stickyHeaderFooter";
 import { requestData } from "../modules/requester";
 import { logout } from "../user_session/logout";
 import { attachPhotosFormEvents } from "../modules/admin_modules/photos_form_module";
+import { adminControls } from "../modules/admin_modules/admin_controls_module";
 
 let photos = function (ctx) {
     let route = this.params['route'];
@@ -32,7 +33,8 @@ let photos = function (ctx) {
         footer_offers: './templates/common/footer/single_offer.hbs',
         footer_section_follow: './templates/common/footer/footer_section_follow.hbs',
         contact_us_button: './templates/common/contact_us_button.hbs'
-    }).then(function () {
+    })
+        .then(function () {
         this.partial('./templates/common/page.hbs');
         switch(route) {
             case 'portrets':
@@ -74,13 +76,15 @@ let photos = function (ctx) {
                 break;
         }
 
-    }).then(function () {
+    })
+        .then(function () {
         stickFooter();
         stickHeader();
         adaptNav(ctx);
         scrollTop(true);
         logout(ctx);
         attachPhotosFormEvents();
+        adminControls();
     })
 };
 export { photos };

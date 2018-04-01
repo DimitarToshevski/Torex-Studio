@@ -5,6 +5,7 @@ import { stickHeader, stickFooter } from "../modules/stickyHeaderFooter";
 import { requestData } from "../modules/requester";
 import { logout } from "../user_session/logout";
 import { attachPostsFormEvents } from "../modules/admin_modules/posts_form_module";
+import { adminControls } from "../modules/admin_modules/admin_controls_module";
 
 let posts = function (ctx) {
     if (localStorage.getItem('role') === role) {
@@ -48,6 +49,7 @@ let posts = function (ctx) {
         scrollTop(true);
         logout(ctx);
         attachPostsFormEvents();
+        adminControls();
     })
 };
 export { posts };

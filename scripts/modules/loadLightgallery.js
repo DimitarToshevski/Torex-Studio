@@ -5,11 +5,5 @@ let lightGallery = function () {
             download: false
         });
     },50);
-    setTimeout(() => {
-        $('.delete').click((e) => {
-            e.preventDefault();
-            alert('clicked')
-        });
-    }, 2000)
 };
 export { lightGallery }
