@@ -8,6 +8,21 @@ import { videos } from './handlers/videos.js';
 import { admin } from './handlers/admin.js';
 import { toasterOptions } from "./modules/toastrOptions";
 
+import css from '../styles/reset.css'
+import loadingSpinner from '../styles/loading_spinner.css'
+import footer from '../styles/footer.css'
+import admin_styles from '../styles/admin_styles/admin.css'
+import admin_forms from '../styles/admin_styles/admin_forms.css'
+import homepage from '../styles/pages/homepage.css'
+import aboutpage from '../styles/pages/aboutpage.css'
+import videopage from '../styles/pages/videopage.css'
+import photopage from '../styles/pages/photopage.css'
+import postpage from '../styles/pages/postpage.css'
+import contactpage from '../styles/pages/contactpage.css'
+
+import slick from '../node_modules/slick-carousel/slick/slick.css'
+import toastr from '../node_modules/toastr/build/toastr.css'
+
 
 const myData = {};
 myData.offers = [
