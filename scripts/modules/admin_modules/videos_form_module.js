@@ -31,6 +31,7 @@ let attachVideosFormEvents = (ctx) => {
                     "exact_time": exactTime
                 });
                 requestData('appdata', 'videos', '', 'POST', reqBody).then((videos) => {
+                    $('#submit_video').find('input[type=text], textarea').val('');
                     toastr.success(`Успешно качен клип: ${videos.video_title}`);
                     setTimeout(() => {
                         $('.submitData').removeAttr('disabled'); //enabling submit button

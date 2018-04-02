@@ -7,7 +7,8 @@ let attachPhotosFormEvents = () => {
             $('#submit_photo').css('display', 'flex'); //showing form
 
             $('#close_photo_form').click(() => { //attaching event listener for close button on form action = hide form
-                $('#submit_photo').css('display', 'none')
+                $('#submit_photo').css('display', 'none');
+                $('#submit_photo').find('input[type=text], textarea').val('');
             });
 
             $('#submit_photo').on('submit', (e) => { //attaching event listener to upload button
@@ -27,7 +28,8 @@ let attachPhotosFormEvents = () => {
                     "exact_time": exactTime
                 });
                 requestData('appdata', 'photos', '', 'POST', reqBody).then((photo) => {
-                    toastr.success(`Успешно качена  снимка: ${photo.title}`);
+                    $('#submit_photo').find('input[type=text], textarea').val('');
+                    toastr.success(`Успешно качена снимка: ${photo.title}. <br>НАТИСНИ F5`);
                     setTimeout(() => {
                         $('.submitData').removeAttr('disabled'); //enabling submit button
                     }, 2000)

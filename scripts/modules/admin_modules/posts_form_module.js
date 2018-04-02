@@ -41,6 +41,7 @@ let attachPostsFormEvents = () => {
                     "exact_time": exactTime
                 });
                 requestData('appdata', 'posts', '', 'POST', reqBody).then((post) => {
+                    $('#submit_post').find('input[type=text], textarea').val('');
                     toastr.success(`Успешно качен пост: ${post.title} <br> ${post.subtitle}`);
                     setTimeout(() => {
                         $('.submitData').removeAttr('disabled'); //enabling submit button
