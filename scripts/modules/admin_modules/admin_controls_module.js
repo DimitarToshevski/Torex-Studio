@@ -4,7 +4,7 @@ let adminControls = () => {
     setTimeout(() => {
         $('.delete').click((e) => {
             e.preventDefault();
-            let id = $(event.target).prop('id');
+            let id = $(event.target).attr('data-id');
             let collection = $(event.target).attr('data-collection');
             requestData('appdata', collection, `/${id}`, 'DELETE').then((res) => {
                 toastr.success('Успешно изтрит елемент. ' +
@@ -20,9 +20,16 @@ let adminControls = () => {
                 $('#submit_photo').off('submit');
             });
 
+            let id = $(event.target).closest('span').attr('data-id');
+            let element = $(`#${id}`);
+
+            let photo_title = element.attr('data-sub-html').match(/[^<h4>].*[^<\/h4>]/g);
+            let photo_url = element.attr('data-url');
+            let type = element.attr('data-type');
+
+            
             $('#submit_photo').on('submit', (e) => { //attaching event listener to upload button
                 e.preventDefault();
-               alert('works');
                 return false;
             })
         });

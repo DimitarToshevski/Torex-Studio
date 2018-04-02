@@ -1,13 +1,13 @@
 {{#if videosAuthed}}
     {{#each video}}
-        <a href="{{video_url}}"
+        <a id="{{_id}}" href="{{video_url}}"
            data-poster="{{img_url}}"
            data-sub-html="<h4>{{video_title}}</h4>">
             <div class="caption">
                 <h4>{{video_title}}</h4>
                 <div class="admin_edit_controls video_controls">
-                    <span class="edit" id="{{_id}}"><i class="fas fa-pencil-alt"></i></span>
-                    <span class="delete" id="{{_id}}" data-collection="videos">[X]</span>
+                    <span class="edit" data-id="{{_id}}"><i class="fas fa-pencil-alt"></i></span>
+                    <span class="delete" data-id="{{_id}}" data-collection="videos">[X]</span>
                 </div>
             </div>
             <img src="{{img_url}}" alt="No image preview"/>

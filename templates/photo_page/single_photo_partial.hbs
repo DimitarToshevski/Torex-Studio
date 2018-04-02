@@ -1,9 +1,15 @@
 {{#if photosAuthed}}
     {{#each photo}}
-        <a href="{{url}}" data-sub-html="<h4>{{title}}</h4>">
+        <a id="{{_id}}"
+           href="{{url}}"
+           data-sub-html="<h4>{{title}}</h4>"
+           data-url="{{url}}"
+           data-type="{{type}}"
+        >
+
             <div class="admin_edit_controls photo_controls">
-                <span class="edit" id="{{_id}}"><i class="fas fa-pencil-alt"></i></span>
-                <span class="delete" id="{{_id}}" data-collection="photos">[X]</span>
+                <span class="edit" data-id="{{_id}}" data-collection="photos"><i class="fas fa-pencil-alt"></i></span>
+                <span class="delete" data-id="{{_id}}" data-collection="photos">[X]</span>
             </div>
             <img class="photos" src="{{url}}" alt="No image preview"/>
             <div class="photo_overlay"><i class="fa fa-plus-circle" aria-hidden="true"></i></div>
