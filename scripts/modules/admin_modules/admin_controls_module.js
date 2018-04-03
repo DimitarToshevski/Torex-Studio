@@ -37,6 +37,7 @@ let adminControls = () => {
 
             $('#submit_photo').on('submit', (e) => { //attaching event listener to upload button
                 e.preventDefault();
+                //editing photos
                 if(photo_title && photo_url) {//if it has photo data - we make a request body with photo data
                     $('.submitData').attr('disabled', 'true'); //disabling button so there are no multiple requests
                     let newDate = new Date();
