@@ -27,9 +27,12 @@ let attachPostsFormEvents = () => {
                 let title = $('#post_title').val();
                 let subtitle = $('#post_subtitle').val();
                 let postImg = $('#post_img').val();
-                let postVideo = $('#post_video').val().match(regexVideoUrl)[0];
+                let postVideo = $('#post_video').val();
                 let postBody = $('#post_body').val();
                 let postBody2 = $('#post_body2').val();
+                if(postVideo) {
+                    postVideo = postVideo.match(regexVideoUrl)[0];
+                }
                 let reqBody = JSON.stringify({
                     title,
                     subtitle,
