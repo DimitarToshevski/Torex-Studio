@@ -17,7 +17,7 @@ let adminControls = () => {
             $('.submitData').val('Промени');
             $('.input').css('display', 'flex'); //showing form
 
-            $('#close_photo_form').click(() => { //attaching event listener for close button on form action = hide form
+            $('.close_form').click(() => { //attaching event listener for close button on form action = hide form
                 $('.input').css('display', 'none');
                 $('.input').off('submit');
                 $('.input').find('input[type=text], textarea').val('');
@@ -61,7 +61,7 @@ let adminControls = () => {
                         toastr.success(`Успешно променена снимка: ${photo.title}. <br> НАТИСНИ F5`);
                         setTimeout(() => {
                             $('.submitData').removeAttr('disabled'); //enabling submit button
-                        }, 2000)
+                        }, 1000)
                     });
                 } //if it has video data - we make a request body with video data
                 return false;
