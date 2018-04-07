@@ -186,7 +186,7 @@ html {
             &:hover {
               background: rgba(33, 241, 33, 0.6);
               cursor: pointer;
-              box-shadow: 0 0 2px 2px rgba(153, 153, 153, 1 );
+              box-shadow: 0 0 2px 2px rgba(153, 153, 153, 1);
             }
           }
         }
@@ -223,6 +223,47 @@ html {
         }
         &:hover h1 {
           transform: scale(1.1, 1.1);
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 400px) {
+  .contactpage_main_wrapper {
+    align-content: center;
+
+    .contactpage_section_offers .section_body {
+      .offer_header {
+        font-size: 18px;
+      }
+      .offer_body {
+        padding: 15px;
+      }
+    }
+
+    .contactpage_section_working_time {
+      padding: 0;
+      .section_header {
+        font-size: 17px;
+        h5 {
+          line-height: 25px;
+        }
+      }
+    }
+    .contactpage_section_form {
+      #contact_form form {
+        padding: 7px;
+        width: 250px;
+        input[type="button"] {
+          font-size: 14px;
+        }
+      }
+      #contact_google_map #map_wrapper {
+        width: 250px;
+        margin-bottom: 20px;
+        #google_map {
+          height: 200px;
         }
       }
     }

@@ -172,4 +172,28 @@ html {
         .contactpage_main_wrapper .contactpage_section_form #contact_google_map #map_wrapper:hover h1 {
           transform: scale(1.1, 1.1); }
 
+@media all and (max-width: 400px) {
+  .contactpage_main_wrapper {
+    align-content: center; }
+    .contactpage_main_wrapper .contactpage_section_offers .section_body .offer_header {
+      font-size: 18px; }
+    .contactpage_main_wrapper .contactpage_section_offers .section_body .offer_body {
+      padding: 15px; }
+    .contactpage_main_wrapper .contactpage_section_working_time {
+      padding: 0; }
+      .contactpage_main_wrapper .contactpage_section_working_time .section_header {
+        font-size: 17px; }
+        .contactpage_main_wrapper .contactpage_section_working_time .section_header h5 {
+          line-height: 25px; }
+    .contactpage_main_wrapper .contactpage_section_form #contact_form form {
+      padding: 7px;
+      width: 250px; }
+      .contactpage_main_wrapper .contactpage_section_form #contact_form form input[type="button"] {
+        font-size: 14px; }
+    .contactpage_main_wrapper .contactpage_section_form #contact_google_map #map_wrapper {
+      width: 250px;
+      margin-bottom: 20px; }
+      .contactpage_main_wrapper .contactpage_section_form #contact_google_map #map_wrapper #google_map {
+        height: 200px; } }
+
 /*# sourceMappingURL=contactpage.css.map */
