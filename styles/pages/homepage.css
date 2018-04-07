@@ -55,8 +55,11 @@
       text-align: center; }
     .homepage_main_wrapper .homepage_main_header hr {
       height: 2px;
-      width: 300px;
+      width: 200px;
       background-color: indianred; }
+    .homepage_main_wrapper .homepage_main_header:hover hr {
+      transition: all .3s ease-in-out;
+      width: 300px; }
   .homepage_main_wrapper .homepage_main_body {
     display: inline-flex;
     flex-wrap: wrap;
@@ -161,6 +164,8 @@
 
 @media screen and (max-width: 710px) {
   .homepage_main_wrapper .homepage_main_header h1 {
-    font-size: 6.5vw; } }
+    font-size: 6.5vw; }
+  .homepage_main_wrapper .homepage_main_header h1, .homepage_main_wrapper .homepage_main_header h3 {
+    width: -10px; } }
 
 /*# sourceMappingURL=homepage.css.map */

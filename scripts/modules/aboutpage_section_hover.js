@@ -24,7 +24,7 @@ let hoverAboutpageSection = function () {
                 $(event.target).parent().find('p').addClass('shown').animate({
                     width: 'toggle',
                     height: 'toggle'
-                });
+                }).css({'display': 'flex', 'flex-direction': 'column'});
             }
         });
         if($(window).innerWidth() <= "700") {

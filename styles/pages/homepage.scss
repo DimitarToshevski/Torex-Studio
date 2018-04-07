@@ -85,8 +85,14 @@ $mainFontFamily: 'Europe_Ext', arial;
     }
     hr {
       height: 2px;
-      width: 300px;
+      width: 200px;
       background-color: $hrColor;
+    }
+    &:hover {
+      hr {
+        transition: all .3s ease-in-out;
+        width: 300px;
+      }
     }
   }
 
@@ -243,6 +249,9 @@ $mainFontFamily: 'Europe_Ext', arial;
     .homepage_main_header {
       h1 {
         font-size: 6.5vw;
+      }
+      h1, h3 {
+        width: -10px;
       }
     }
   }

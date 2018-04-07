@@ -5,8 +5,8 @@ let adminControls = () => {
     setTimeout(() => {
         $('.delete').click((e) => {
             e.preventDefault();
-            let id = $(event.target).attr('data-id');
-            let collection = $(event.target).attr('data-collection');
+            let id = $(e.target).attr('data-id');
+            let collection = $(e.target).attr('data-collection');
             requestData('appdata', collection, `/${id}`, 'DELETE').then((res) => {
                 toastr.success('Успешно изтрит елемент. ' +
                     'НАТИСНИ F5');
@@ -24,7 +24,7 @@ let adminControls = () => {
                 $('.submitData').val('Качи');
             });
 
-            let id = $(event.target).closest('span').attr('data-id'); //finding the edit button data-id so I can
+            let id = $(e.target).closest('span').attr('data-id'); //finding the edit button data-id so I can
             let element = $(`#${id}`);                               //use it to find the element that I want to edit
             let photo_title = element.attr('data-sub-html').match(/[^<h4>].*[^<\/h4>]/g);
             let photo_url = element.attr('data-url');

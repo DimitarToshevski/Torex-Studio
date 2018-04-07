@@ -274,5 +274,17 @@ body {
   .header_wrapper .header_video #video_pause_button {
     position: relative;
     top: -120px; } }
+@media screen and (max-width: 400px) {
+  .header_wrapper .header_video #video_pause_button {
+    position: relative;
+    left: 45%; }
+
+  .contact_us_button:nth-last-child(1) {
+    position: relative;
+    left: calc(50% - 165px); }
+  .contact_us_button:nth-last-child(2) {
+    position: relative;
+    left: calc(50% - 80px);
+    bottom: 42vh; } }
 
 /*# sourceMappingURL=header.css.map */
