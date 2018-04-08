@@ -18,7 +18,16 @@ let attachVideosFormEvents = (ctx) => {
                 let newDate = new Date();
                 let video_date = `${newDate.getDate()} ${months[newDate.getMonth()]} ${newDate.getFullYear()}`;
                 let exactTime = `${newDate.getHours()} ${newDate.getMinutes()} ${newDate.getSeconds()}`;
-                let video_url = $('#video_url').val().match(regexVideoUrl)[0];
+                let video_url = $('#video_url').val();
+                try {
+                    video_url = video_url.match(regexVideoUrl)[0]
+                } catch (err) {
+                    toastr.error('Въведи валиден EMBED URL на видео от YOUTUBE.');
+                    setTimeout(() => {
+                        $('.submitData').removeAttr('disabled'); //enabling submit button
+                    }, 1000);
+                    return;
+                }
                 let video_title = $('#video_title').val();
                 let img_url = $('#video_img').val();
                 let type = $('#video_type option:selected').val();

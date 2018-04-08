@@ -1,6 +1,7 @@
 import { requestData } from "../requester";
-import { months } from "./posts_form_module";
-import { regexVideoUrl } from "./videos_form_module";
+import { editPhoto } from "./edit_modules/edit_photos";
+import { editVideo } from "./edit_modules/edit_videos";
+import { editPost } from "./edit_modules/edit_posts";
 
 let adminControls = () => {
     setTimeout(() => {
@@ -33,25 +34,47 @@ let adminControls = () => {
             let element = $(`#${id}`);                           //use it to find the element that I want to edit
 
             //PHOTOS
-            let photo_title = element.attr('data-sub-html').match(/[^<h4>].*[^<\/h4>]/g);
+            let photo_title= element.attr('data-sub-html');
             let photo_url = element.attr('data-url');
             let type = element.attr('data-type');
             if(photo_title && photo_url) {
                 $('#photo_url').val(photo_url);
-                $('#photo_title').val(photo_title);
+                $('#photo_title').val(photo_title.match(/[^<h4>].*[^<\/h4>]/g));
                 $(`#photo_type option[value="${type}"]`).prop('selected', true); //changing selected option to the already selected on create
             }
 
             //VIDEOS
-            let video_title = element.attr('data-sub-html').match(/[^<h4>].*[^<\/h4>]/g);
+            let video_title = element.attr('data-sub-html');
             let video_url = element.prop('href');
             let video_img_url = element.attr('data-poster');
             let video_type = element.attr('data-type');
             if(video_title && video_url && video_img_url) {
-                $('#video_title').val(video_title);
+                $('#video_title').val(video_title.match(/[^<h4>].*[^<\/h4>]/g));
                 $('#video_url').val(video_url);
                 $('#video_img').val(video_img_url);
                 $(`#video_type option[value="${type}"]`).prop('selected', true); //changing selected option to the already selected on create
+            }
+
+            //POSTS
+            let post_title = element.attr('data-title');
+            let post_subtitle = element.prop('title');
+            let post_img = element.attr('data-img-url');
+            let post_video = element.attr('data-video-url');
+            let post_body = element.attr('data-body');
+            let post_body2 = element.attr('data-body2');
+            if (post_title && post_body) {
+                $('#post_title').val(post_title);
+                $('#post_subtitle').val(post_subtitle);
+                if(post_img) {
+                    $('#post_img').val(post_img);
+                }
+                if(post_video) {
+                    $('#post_video').val(post_video);
+                }
+                if(post_body2) {
+                    $('#post_body2').val(post_body2);
+                }
+                $('#post_body').val(post_body);
             }
 
             $('.input').on('submit', (e) => { //attaching event listener to upload button
@@ -60,59 +83,14 @@ let adminControls = () => {
                 if(photo_title && photo_url) {//if it has photo data - we make a request body with photo data
 
                     //SUBMITING PHOTOS
-                    $('.submitData').attr('disabled', 'true'); //disabling button so there are no multiple requests
-                    let newDate = new Date();
-                    let url = $('#photo_url').val();
-                    let title = $('#photo_title').val();
-                    let type = $('#photo_type option:selected').val();
-                    let photoDate = `${newDate.getDate()} ${months[newDate.getMonth()]} ${newDate.getFullYear()}`;
-                    let exactTime = `${newDate.getHours()} ${newDate.getMinutes()} ${newDate.getSeconds()}`;
-                    let reqBody = JSON.stringify({
-                        url,
-                        title,
-                        type,
-                        "date": photoDate,
-                        "exact_time": exactTime
-                    });
-                    requestData('appdata', 'photos', `/${id}`, 'PUT', reqBody).then((photo) => {
-                        $('.input').css('display', 'none');
-                        $('.input').off('submit');
-                        $('.input').find('input[type=text], textarea').val('');
-                        $('.submitData').val('Качи');
-                        toastr.success(`Успешно променена снимка: ${photo.title}. <br> НАТИСНИ F5`);
-                        setTimeout(() => {
-                            $('.submitData').removeAttr('disabled'); //enabling submit button
-                        }, 1000)
-                    });
+                    editPhoto(id);
+
                 } else if (video_title && video_url && video_img_url) {//if it has video data - we make a request body with video data
+
                     //SUBMITING VIDEOS
-                    $('.submitData').attr('disabled', 'true'); //disabling button so there are no multiple requests
-                    let newDate = new Date();
-                    let video_date = `${newDate.getDate()} ${months[newDate.getMonth()]} ${newDate.getFullYear()}`;
-                    let exactTime = `${newDate.getHours()} ${newDate.getMinutes()} ${newDate.getSeconds()}`;
-                    let video_url = $('#video_url').val().match(regexVideoUrl)[0];
-                    let video_title = $('#video_title').val();
-                    let img_url = $('#video_img').val();
-                    let type = $('#video_type option:selected').val();
-                    let reqBody = JSON.stringify({
-                        video_url,
-                        video_title,
-                        img_url,
-                        type,
-                        "date": video_date,
-                        "exact_time": exactTime
-                    });
-                    requestData('appdata', 'videos', `/${id}`, 'PUT', reqBody).then((video) => {
-                        console.log(video);
-                        $('.input').css('display', 'none');
-                        $('.input').off('submit');
-                        $('.input').find('input[type=text], textarea').val('');
-                        $('.submitData').val('Качи');
-                        toastr.success(`Успешно промененo видео: ${video.video_title}. <br> НАТИСНИ F5`);
-                        setTimeout(() => {
-                            $('.submitData').removeAttr('disabled'); //enabling submit button
-                        }, 1000)
-                    });
+                    editVideo(id);
+                } else if (post_title && post_body) {
+                    editPost(id);
                 }
                 return false;
             })

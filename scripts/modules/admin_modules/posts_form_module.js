@@ -1,4 +1,4 @@
-import {requestData} from "../requester";
+import { requestData } from "../requester";
 
 let regexVideoUrl = /\/\/www.youtube.com\/embed\/\w*/g;
 let months =
@@ -31,7 +31,15 @@ let attachPostsFormEvents = () => {
                 let postBody = $('#post_body').val();
                 let postBody2 = $('#post_body2').val();
                 if(postVideo) {
-                    postVideo = postVideo.match(regexVideoUrl)[0];
+                    try {
+                        postVideo = postVideo.match(regexVideoUrl)[0];
+                    } catch (err) {
+                        toastr.error('Въведи валиден EMBED URL на видео от YOUTUBE.');
+                        setTimeout(() => {
+                            $('.submitData').removeAttr('disabled'); //enabling submit button
+                        }, 1000);
+                        return;
+                    }
                 }
                 let reqBody = JSON.stringify({
                     title,
@@ -48,7 +56,7 @@ let attachPostsFormEvents = () => {
                     toastr.success(`Успешно качен пост: ${post.title} <br> ${post.subtitle}`);
                     setTimeout(() => {
                         $('.submitData').removeAttr('disabled'); //enabling submit button
-                    }, 2000)
+                    }, 1000)
                 });
                 return false;
             })

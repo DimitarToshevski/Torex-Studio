@@ -11,14 +11,14 @@
             <p id="first_paragraph">{{post.body}}</p>
         </div>
 
-        {{#if post.video_url}}
-            <div class="second_section">
+        <div class="second_section">
+            {{#if post.video_url}}
                 <iframe src="{{post.video_url}}"></iframe>
-                {{#if post.body2}}
-                    <p id="second_paragraph">{{post.body2}}</p>
-                {{/if}}
-            </div>
-        {{/if}}
+            {{/if}}
+            {{#if post.body2}}
+                <p id="second_paragraph">{{post.body2}}</p>
+            {{/if}}
+        </div>
     </div>
 </div>
 

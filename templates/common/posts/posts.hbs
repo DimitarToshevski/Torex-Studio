@@ -1,7 +1,14 @@
 {{#if post_page}}
     {{#if postsAuthed}}
         {{#each posts}}
-            <div class="post_wrapper" id="{{_id}}" title="{{subtitle}}">
+            <div class="post_wrapper" id="{{_id}}"
+                 title="{{subtitle}}"
+                 data-title="{{title}}"
+                 data-img-url="{{img_src}}"
+                 data-video-url="{{video_url}}"
+                 data-body="{{body}}"
+                 data-body2="{{body2}}"
+            >
                 <div class="admin_edit_controls post_controls">
                     <span class="edit" data-id="{{_id}}"><i class="fas fa-pencil-alt"></i></span>
                     <span class="delete" data-id="{{_id}}" data-collection="posts">[X]</span>
