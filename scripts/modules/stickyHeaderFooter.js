@@ -11,7 +11,7 @@ let stickFooter = function () {
             footer.css('margin-top', 10 + (docHeight - footerTop) + 'px');
         }
     }, 100)
-}
+};
 
 //adding a disappearing functionality on the header on the home page only
 let stickHeader = function () {
@@ -33,5 +33,5 @@ let stickHeader = function () {
             $(window).off('scroll')
         }
     }, 150)
-}
+};
 export { stickHeader, stickFooter }

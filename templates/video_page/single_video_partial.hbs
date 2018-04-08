@@ -1,6 +1,7 @@
 {{#if videosAuthed}}
     {{#each video}}
         <a id="{{_id}}" href="{{video_url}}"
+           data-type="{{type}}"
            data-poster="{{img_url}}"
            data-sub-html="<h4>{{video_title}}</h4>">
             <div class="caption">

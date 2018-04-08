@@ -35,11 +35,11 @@ let attachVideosFormEvents = (ctx) => {
                     toastr.success(`Успешно качен клип: ${videos.video_title}`);
                     setTimeout(() => {
                         $('.submitData').removeAttr('disabled'); //enabling submit button
-                    }, 2000)
+                    }, 1000)
                 });
                 return false;
             })
         })
     }, 100)
 };
-export { attachVideosFormEvents }
+export { attachVideosFormEvents, regexVideoUrl }

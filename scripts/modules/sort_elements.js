@@ -3,7 +3,7 @@ let sortElements = (elements) => {
         if(a.date.localeCompare( b.date) === 0) {
             return (b.exact_time.localeCompare( a.exact_time))
         } else {
-            return (a.date.localeCompare( b.date));
+            return (b.date.localeCompare( a.date));
         }
     });
 };
