@@ -4,6 +4,7 @@ import { googleMaps } from "../modules/google_maps";
 import { scrollTop } from "../modules/scroll_top_button";
 import { stickHeader, stickFooter } from "../modules/stickyHeaderFooter";
 import {logout} from "../user_session/logout";
+import { contactFormSubmit } from "../modules/contact_form_submit";
 
 let contact = function (ctx) {
     if (localStorage.getItem('role') === role) {
@@ -37,6 +38,7 @@ let contact = function (ctx) {
         scrollTop(true);
         googleMaps();
         logout(ctx);
+        contactFormSubmit();
     })
 };
 export { contact };
