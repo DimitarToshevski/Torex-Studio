@@ -102,7 +102,7 @@ $mainFontFamily: 'Europe_Ext', arial;
     width: 90%;
     background: $mainGradient;
     margin: 60px 0 50px 0;
-    padding-top: 50px;
+    padding: 50px 0 170px 0;
     justify-content: center;
     h1 {
       color: $mainHeaderColor;
@@ -139,7 +139,8 @@ $mainFontFamily: 'Europe_Ext', arial;
       }
       .section_body {
         width: 100%;
-        padding-top: 30px;
+        padding-top: 32px;
+        margin-bottom: 30px;
       }
       hr {
         height: 2px;
@@ -178,7 +179,7 @@ $mainFontFamily: 'Europe_Ext', arial;
           font-size: 16px;
           text-align: left;
           text-decoration: none;
-          padding: 10px;
+          margin: 10px;
         }
       }
     }
@@ -198,7 +199,7 @@ $mainFontFamily: 'Europe_Ext', arial;
         }
       }
       .section_body {
-        height: 225px;
+        height: 198px;
         overflow-x: hidden;
         .posts {
           margin-top: -33px;
@@ -206,7 +207,7 @@ $mainFontFamily: 'Europe_Ext', arial;
       }
     }
     .post_wrapper {
-      padding-left: 25px;
+      padding: 0 10px 0 25px;
       .post_header {
         color: $mainHeaderColor;
         h5 {
@@ -254,5 +255,18 @@ $mainFontFamily: 'Europe_Ext', arial;
         width: -10px;
       }
     }
+  }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1195px) {
+  .homepage_main_body section {
+    height: 520px;
+  }
+}
+
+
+@media screen and (min-width: 1196px) {
+  .homepage_main_body section {
+    height: 442px;
   }
 }

@@ -258,7 +258,7 @@ $sliderHeight: 40vw;
   align-items: center;
   position: relative;
   left: 11%;
-  bottom: 375px;
+  bottom: 30vw;
 }
 
 #prev {
@@ -292,10 +292,6 @@ $sliderHeight: 40vw;
   }
 }
 
-@media screen and (max-width: 950px) {
-
-}
-
 @media screen and (max-width: 700px) {
   .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body {
     .radiused {
@@ -303,8 +299,8 @@ $sliderHeight: 40vw;
       text-align: center;
     }
     #teammate_1_p {
-      height: 300px;
-      width: 240px;
+      height: 305px;
+      width: 250px;
       padding-right: 0;
       line-height: 25px;
       #row1, #row2, #row3, #row4, #row5, #row6, #row7, #row8, #row9, #row10{
@@ -312,7 +308,7 @@ $sliderHeight: 40vw;
       }
     }
     #teammate_2_p {
-      height: 270px;
+      height: 315px;
       width: 240px;
       padding-right: 0;
       line-height: 25px;
@@ -321,7 +317,7 @@ $sliderHeight: 40vw;
       }
     }
     #teammate_3_p {
-      height: 240px;
+      height: 270px;
       width: 250px;
       padding-right: 0;
       line-height: 29px;
@@ -351,10 +347,52 @@ $sliderHeight: 40vw;
     justify-content: center;
     align-items: center;
     position: relative;
-    left: 6%;
-    bottom: 375px;
     span {
       font-size: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .container {
+    width: 100%;
+    margin-top: -170px;
+    padding: 11vw;
+    #teammate_slider {
+      margin-bottom: 50px;
+      padding-left: 0;
+      img {
+        width: calc(#{$sliderWidth} + 28vw);
+        height: calc(#{$sliderHeight} + 15vw);
+        border-radius: 30px;
+      }
+    }
+  }
+  #slider_controls {
+    width: calc(#{$sliderWidth} + 58px + 6vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 3vw;
+    bottom: 45vw;
+    span {
+      font-size: 36px;
+    }
+  }
+}
+
+@media screen and (max-width: 340px) {
+  #slider_controls {
+    width: calc(#{$sliderWidth} + 58px + 2vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 4vw;
+    bottom: 45vw;
+    span {
+      font-size: 36px;
     }
   }
 }

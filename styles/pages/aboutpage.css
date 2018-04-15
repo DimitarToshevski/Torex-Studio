@@ -183,7 +183,7 @@
   align-items: center;
   position: relative;
   left: 11%;
-  bottom: 375px; }
+  bottom: 30vw; }
 
 #prev {
   z-index: 1000;
@@ -214,21 +214,21 @@
     flex-direction: column;
     text-align: center; }
   .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_1_p {
-    height: 300px;
-    width: 240px;
+    height: 305px;
+    width: 250px;
     padding-right: 0;
     line-height: 25px; }
     .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_1_p #row1, .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_1_p #row2, .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_1_p #row3, .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_1_p #row4, .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_1_p #row5, .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_1_p #row6, .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_1_p #row7, .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_1_p #row8, .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_1_p #row9, .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_1_p #row10 {
       margin-left: 0; }
   .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_2_p {
-    height: 270px;
+    height: 315px;
     width: 240px;
     padding-right: 0;
     line-height: 25px; }
     .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_2_p #row1, .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_2_p #row2, .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_2_p #row3, .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_2_p #row4, .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_2_p #row5, .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_2_p #row6, .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_2_p #row7, .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_2_p #row8, .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_2_p #row9, .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_2_p #row10 {
       margin: 0; }
   .aboutpage_main_wrapper .aboutpage_main_body .aboutpage_section_teammate_wrapper .aboutpage_section_teammate_body #teammate_3_p {
-    height: 240px;
+    height: 270px;
     width: 250px;
     padding-right: 0;
     line-height: 29px; }
@@ -250,10 +250,42 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    left: 6%;
-    bottom: 375px; }
+    position: relative; }
     #slider_controls span {
       font-size: 40px; } }
+@media screen and (max-width: 430px) {
+  .container {
+    width: 100%;
+    margin-top: -170px;
+    padding: 11vw; }
+    .container #teammate_slider {
+      margin-bottom: 50px;
+      padding-left: 0; }
+      .container #teammate_slider img {
+        width: calc(50vw + 28vw);
+        height: calc(40vw + 15vw);
+        border-radius: 30px; }
+
+  #slider_controls {
+    width: calc(50vw + 58px + 6vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 3vw;
+    bottom: 45vw; }
+    #slider_controls span {
+      font-size: 36px; } }
+@media screen and (max-width: 340px) {
+  #slider_controls {
+    width: calc(50vw + 58px + 2vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 4vw;
+    bottom: 45vw; }
+    #slider_controls span {
+      font-size: 36px; } }
 
 /*# sourceMappingURL=aboutpage.css.map */
