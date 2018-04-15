@@ -45,13 +45,13 @@ let adminControls = () => {
 
             //VIDEOS
             let video_title = element.attr('data-sub-html');
-            let video_url = element.prop('href');
+            let video_id = element.prop('href').slice(29);
+            let video_url = `https://www.youtube.com/watch?v=${video_id}`;
             let video_img_url = element.attr('data-poster');
             let video_type = element.attr('data-type');
             if(video_title && video_url && video_img_url) {
                 $('#video_title').val(video_title.match(/[^<h4>].*[^<\/h4>]/g));
                 $('#video_url').val(video_url);
-                $('#video_img').val(video_img_url);
                 $(`#video_type option[value="${type}"]`).prop('selected', true); //changing selected option to the already selected on create
             }
 

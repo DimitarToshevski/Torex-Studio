@@ -8,8 +8,13 @@ let editVideo = (id) => {
     let video_date = `${newDate.getDate()} ${months[newDate.getMonth()]} ${newDate.getFullYear()}`;
     let exactTime = `${newDate.getHours()} ${newDate.getMinutes()} ${newDate.getSeconds()}`;
     let video_url = $('#video_url').val();
+    let video_id = '';
+    let img_url = `https://img.youtube.com/vi/${video_id}/0.jpg`;
     try {
-        video_url = video_url.match(regexVideoUrl)[0]
+        video_url = video_url.match(regexVideoUrl)[0];
+        video_id = video_url.slice(26);
+        video_url = 'https://www.youtube.com/embed/' + video_id;
+        img_url = `https://img.youtube.com/vi/${video_id}/0.jpg`;
     } catch (err) {
         toastr.error('Въведи валиден EMBED URL на видео от YOUTUBE.');
         setTimeout(() => {
@@ -18,7 +23,6 @@ let editVideo = (id) => {
         return;
     }
     let video_title = $('#video_title').val();
-    let img_url = $('#video_img').val();
     let type = $('#video_type option:selected').val();
     let reqBody = JSON.stringify({
         video_url,

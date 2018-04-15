@@ -43,7 +43,7 @@ let login = function (ctx) {
                         return;
                     }
                     setStorage(data);
-                    ctx.redirect('#');
+                    ctx.redirect('#/');
                     toastr.success(`Добре дошъл, ${data.name}`);
                 },
                 error: (err) => {

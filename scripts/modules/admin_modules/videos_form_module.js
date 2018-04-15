@@ -1,7 +1,7 @@
 import { requestData } from "../requester";
 import {months} from "./posts_form_module";
 
-let regexVideoUrl = /\/\/www.youtube.com\/embed\/\w*/g;
+let regexVideoUrl = /\/\/www.youtube.com\/watch\?v=\w*/g;
 let attachVideosFormEvents = (ctx) => {
     setTimeout(() => {
         $('#show_video_form').click(() => {
@@ -19,17 +19,20 @@ let attachVideosFormEvents = (ctx) => {
                 let video_date = `${newDate.getDate()} ${months[newDate.getMonth()]} ${newDate.getFullYear()}`;
                 let exactTime = `${newDate.getHours()} ${newDate.getMinutes()} ${newDate.getSeconds()}`;
                 let video_url = $('#video_url').val();
+                let video_id = '';
                 try {
-                    video_url = video_url.match(regexVideoUrl)[0]
+                    video_url = video_url.match(regexVideoUrl)[0];
+                    video_id = video_url.slice(26);
+                    video_url = 'https://www.youtube.com/embed/' + video_id;
                 } catch (err) {
-                    toastr.error('Въведи валиден EMBED URL на видео от YOUTUBE.');
+                    toastr.error('Въведи валиден URL на видео от YOUTUBE.');
                     setTimeout(() => {
                         $('.submitData').removeAttr('disabled'); //enabling submit button
                     }, 1000);
                     return;
                 }
                 let video_title = $('#video_title').val();
-                let img_url = $('#video_img').val();
+                let img_url = `https://img.youtube.com/vi/${video_id}/0.jpg`;
                 let type = $('#video_type option:selected').val();
                 let reqBody = JSON.stringify({
                     video_url,

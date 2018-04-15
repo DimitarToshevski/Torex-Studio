@@ -1,5 +1,5 @@
-import { months } from "../posts_form_module";
-import { requestData } from "../../requester";
+import {months} from "../posts_form_module";
+import {requestData} from "../../requester";
 import {regexVideoUrl} from "../videos_form_module";
 
 let editPost = (id) => {
@@ -13,14 +13,16 @@ let editPost = (id) => {
     let postVideo = $('#post_video').val();
     let postBody = $('#post_body').val();
     let postBody2 = $('#post_body2').val();
-    try {
-        postVideo = postVideo.match(regexVideoUrl)[0]
-    } catch (err) {
-        toastr.error('Въведи валиден EMBED URL на видео от YOUTUBE.');
-        setTimeout(() => {
-            $('.submitData').removeAttr('disabled'); //enabling submit button
-        }, 1000);
-        return;
+    if (postVideo) {
+        try {
+            postVideo = postVideo.match(regexVideoUrl)[0]
+        } catch (err) {
+            toastr.error('Въведи валиден EMBED URL на видео от YOUTUBE.');
+            setTimeout(() => {
+                $('.submitData').removeAttr('disabled'); //enabling submit button
+            }, 1000);
+            return;
+        }
     }
     let reqBody = JSON.stringify({
         title,
@@ -43,4 +45,4 @@ let editPost = (id) => {
         }, 1000)
     });
 };
-export { editPost }
+export {editPost}

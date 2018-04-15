@@ -147,7 +147,7 @@ $(() => {
 
         this.use('Handlebars', 'hbs');
 //for deployment we must put this.get('#/') and on home links - /#/ - logo and Nachalo
-        this.get('index.html', home);
+        this.get('#/', home);
 
         this.get('#/about', about);
 
@@ -164,5 +164,5 @@ $(() => {
         this.get('#/admin', admin);
 
     });//for deployment we must put router.run('#/')
-    router.run();
+    router.run('#/');
 });
