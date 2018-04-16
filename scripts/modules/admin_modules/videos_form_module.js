@@ -23,7 +23,7 @@ let attachVideosFormEvents = (ctx) => {
                 try {
                     video_url = video_url.match(regexVideoUrl)[0];
                     video_id = video_url.slice(26);
-                    video_url = 'https://www.youtube.com/embed/' + video_id;
+                    video_url = `https://www.youtube.com/embed/${video_id}`;
                 } catch (err) {
                     toastr.error('Въведи валиден URL на видео от YOUTUBE.');
                     setTimeout(() => {

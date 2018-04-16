@@ -15,9 +15,10 @@ let editPost = (id) => {
     let postBody2 = $('#post_body2').val();
     if (postVideo) {
         try {
-            postVideo = postVideo.match(regexVideoUrl)[0]
+            let post_video_id = postVideo.match(regexVideoUrl)[0].slice(26);
+            postVideo = 'https://www.youtube.com/embed/' + post_video_id;
         } catch (err) {
-            toastr.error('Въведи валиден EMBED URL на видео от YOUTUBE.');
+            toastr.error('Въведи валиден URL на видео от YOUTUBE.');
             setTimeout(() => {
                 $('.submitData').removeAttr('disabled'); //enabling submit button
             }, 1000);

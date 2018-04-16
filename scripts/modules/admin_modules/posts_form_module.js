@@ -1,6 +1,6 @@
 import { requestData } from "../requester";
+import { regexVideoUrl } from "./videos_form_module";
 
-let regexVideoUrl = /\/\/www.youtube.com\/embed\/\w*/g;
 let months =
     [
         'Януари', 'Февруари', 'Март', 'Април', 'Май', 'Юни',
@@ -33,8 +33,10 @@ let attachPostsFormEvents = () => {
                 if(postVideo) {
                     try {
                         postVideo = postVideo.match(regexVideoUrl)[0];
+                        let post_video_id = postVideo.slice(26);
+                        postVideo = 'https://www.youtube.com/embed/' + post_video_id;
                     } catch (err) {
-                        toastr.error('Въведи валиден EMBED URL на видео от YOUTUBE.');
+                        toastr.error('Въведи валиден URL на видео от YOUTUBE.');
                         setTimeout(() => {
                             $('.submitData').removeAttr('disabled'); //enabling submit button
                         }, 1000);

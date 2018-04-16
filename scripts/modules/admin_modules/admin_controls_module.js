@@ -45,8 +45,11 @@ let adminControls = () => {
 
             //VIDEOS
             let video_title = element.attr('data-sub-html');
-            let video_id = element.prop('href').slice(29);
-            let video_url = `https://www.youtube.com/watch?v=${video_id}`;
+            let video_url = element.prop('href');
+            if(video_url) {
+                let video_id = video_url.slice(30);
+                video_url = `https://www.youtube.com/watch?v=${video_id}`;
+            }
             let video_img_url = element.attr('data-poster');
             let video_type = element.attr('data-type');
             if(video_title && video_url && video_img_url) {
@@ -69,6 +72,8 @@ let adminControls = () => {
                     $('#post_img').val(post_img);
                 }
                 if(post_video) {
+                    let post_video_id = post_video.slice(30);
+                    post_video = `https://www.youtube.com/watch?v=${post_video_id}`;
                     $('#post_video').val(post_video);
                 }
                 if(post_body2) {
