@@ -1,7 +1,7 @@
 import { requestData } from "../requester";
 import {months} from "./posts_form_module";
 
-let regexVideoUrl = /\/\/www.youtube.com\/watch\?v=\w*/g;
+let regexVideoUrl = /\/\/www.youtube.com\/watch\?v=\w*\W*\w*/g;
 let attachVideosFormEvents = (ctx) => {
     setTimeout(() => {
         $('#show_video_form').click(() => {
