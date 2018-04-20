@@ -72,7 +72,8 @@ $mainFontFamily: 'Europe_Ext', arial;
     h1 {
       color: $mainHeaderColor;
       font-size: 40px;
-      width: 650px;
+      width: 100%;
+      margin-bottom: 25px;
       text-align: center;
       letter-spacing: 6px;
       text-shadow: 3px 3px #0D0A0A;
@@ -80,7 +81,7 @@ $mainFontFamily: 'Europe_Ext', arial;
     h3 {
       color: $mainHeaderColor;
       font-size: 20px;
-      width: 450px;
+      width: 50%;
       text-align: center;
     }
     hr {
