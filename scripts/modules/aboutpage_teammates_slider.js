@@ -18,6 +18,6 @@ let slickTeammate = function () {
             cssEase: 'linear'
         });
     }, 550)
-}
+};
 export { slickTeammate }
 

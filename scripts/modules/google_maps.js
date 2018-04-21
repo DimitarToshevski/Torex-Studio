@@ -14,6 +14,6 @@ let googleMaps = function () {
                 content: '<p style="color: black">Studio Torex:<br>Open 24/7</p>'
             }
         })
-    }, 200)
+    }, 500)
 };
 export { googleMaps }

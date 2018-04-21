@@ -17,6 +17,6 @@ let adaptNav = function (ctx) {
                 $('#greeting, #logout').show()
             },100);
         } else { $('#greeting, #logout').hide(); }
-    }, 100);
+    }, 500);
 };
 export { adaptNav }

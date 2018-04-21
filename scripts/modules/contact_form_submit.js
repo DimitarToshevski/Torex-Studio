@@ -53,6 +53,6 @@ let contactFormSubmit = () => {
             return false;
 
         })
-    }, 150);
+    }, 500);
 };
 export { contactFormSubmit }
