@@ -110,8 +110,7 @@
       text-align: center; }
       .single_post_wrapper .post_body .first_section img {
         border-radius: 5px;
-        max-width: 100%;
-        max-height: 100%; }
+        width: 65vw; }
       .single_post_wrapper .post_body .first_section p {
         font-size: 20px;
         margin: 15px 0;
