@@ -46,6 +46,7 @@ let videos = function (ctx) {
                         .then(() => {
                             this.replace('#gallery');
                         })
+                        .then( searchVideosEngine() )
                 });
                 break;
             case 'music':
@@ -56,6 +57,7 @@ let videos = function (ctx) {
                         .then(() => {
                             this.replace('#gallery');
                         })
+                        .then( searchVideosEngine() )
                 });
                 break;
             case 'weddings':
