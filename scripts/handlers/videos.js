@@ -7,7 +7,8 @@ import { requestData } from "../modules/requester";
 import { logout } from "../user_session/logout";
 import { attachVideosFormEvents } from "../modules/admin_modules/videos_form_module";
 import { adminControls } from "../modules/admin_modules/admin_controls_module";
-import {sortElements} from "../modules/sort_elements";
+import { sortElements } from "../modules/sort_elements";
+import { searchVideosEngine } from "../modules/search_videos_engine";
 
 let videos = function (ctx) {
     let route = this.params['route'];
@@ -65,6 +66,7 @@ let videos = function (ctx) {
                         .then(() => {
                             this.replace('#gallery');
                         })
+                        .then( searchVideosEngine() )
                 });
                 break;
         }
