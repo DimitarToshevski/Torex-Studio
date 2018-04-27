@@ -9,8 +9,11 @@ let postDetails = function (ctx) {
     let id = this.params['id'];
     if (localStorage.getItem('role') === role) {
         this.role = localStorage.getItem('name');
+        this.unreadMessages = localStorage.getItem('messages');
+        this.showGreetAuthed = true;
     } else {
         this.role = 'user';
+        this.showGreetAuthed = false;
     }
     this.single_post = true; //If this is true - all posts are being rendered in a slider on each single post
     this.redirect('#/posts', this.params['id']);
@@ -52,6 +55,22 @@ let postDetails = function (ctx) {
                         })
                 });
         });
+        //Getting messages so if you click F5 they will still load without loging in and they will
+        // render again with new count if they change dynamically
+        if(ctx.showGreetAuthed) {
+            requestData('appdata', 'messages', '', 'GET').then((messages) => {
+                ctx.unreadMessages = messages.length;
+                if(localStorage.getItem('messages') !== messages.length.toString()) {
+                    localStorage.setItem('messages', messages.length);
+                    ctx.unreadMessages = messages.length;
+                    this.render('./templates/common/header/header_messages.hbs')
+                        .then(() => {
+                            this.replace('#messages');
+                            toastr.info('Имате ново съобщение');
+                        })
+                }
+            });
+        }
     }).then(function () {
         stickFooter();
         stickHeader();

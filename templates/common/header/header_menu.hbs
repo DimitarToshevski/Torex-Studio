@@ -23,5 +23,9 @@
         <li><a href="#/posts">За Вас</a></li>
         <li><a href="#/contact">Контакти</a></li>
     </ul>
-    {{>header_greeting}}
+    {{#if showGreetAuthed}}
+        <div id="greet">
+            {{>header_greeting}}
+        </div>
+    {{/if}}
 </div>

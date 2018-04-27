@@ -11,6 +11,7 @@ let contactFormSubmit = () => {
             let newDate = new Date();
             let date = `${newDate.getDate()} ${months[newDate.getMonth()]} ${newDate.getFullYear()}`;
             let exactTime = `${newDate.getHours()} ${newDate.getMinutes()} ${newDate.getSeconds()}`;
+            let isRead = false;
             //VALIDATION
             if(senderName.match(/(\s\s+)+/g) || senderName === '' || senderName === ' ') {
                 toastr.error('Моля въведи валидно име.');
@@ -41,7 +42,8 @@ let contactFormSubmit = () => {
                 contactEmail,
                 message,
                 date,
-                exactTime
+                exactTime,
+                isRead
             });
             requestData('appdata', 'messages', '', 'POST', reqBody).then((message) => {
                 $('#message_form').find('input[type=text], input[type=email], textarea').val('');

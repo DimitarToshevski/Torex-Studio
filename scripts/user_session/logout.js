@@ -22,7 +22,7 @@ let logout = function (ctx) {
             let name = localStorage.getItem('name');
             toastr.success(`До скоро, ${name}`);
             localStorage.clear();
-            $('#greeting, #logout').hide();
+            $('#greeting, #messages, #logout').hide();
             ctx.redirect('#/');
         }
     }, 100)

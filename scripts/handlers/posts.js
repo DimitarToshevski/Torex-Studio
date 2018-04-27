@@ -12,9 +12,12 @@ let posts = function (ctx) {
     if (localStorage.getItem('role') === role) {
         this.role = localStorage.getItem('name');
         this.postsAuthed = true;
+        this.showGreetAuthed = true;
+        this.unreadMessages = localStorage.getItem('messages');
     } else {
         this.role = 'user';
         this.postsAuthed = false;
+        this.showGreetAuthed = false;
     }
 
     this.post_page = true; //If this is true - posts are rendering for post page
@@ -25,6 +28,7 @@ let posts = function (ctx) {
         header_logo: './templates/common/header/header_logo.hbs',
         header_menu: './templates/common/header/header_menu.hbs',
         header_greeting: './templates/common/header/header_greeting.hbs',
+        header_messages: './templates/common/header/header_messages.hbs',
         main: './templates/post_page/postpage_main_wrapper.hbs',
         posts: './templates/common/posts/posts.hbs',
         post_input: './templates/admin/post_input.hbs',
@@ -44,6 +48,22 @@ let posts = function (ctx) {
                 this.replace('.postpage_main_wrapper');
                 })
         });
+        //Getting messages so if you click F5 they will still load without loging in and they will
+        // render again with new count if they change dynamically
+        if(ctx.showGreetAuthed) {
+            requestData('appdata', 'messages', '', 'GET').then((messages) => {
+                ctx.unreadMessages = messages.length;
+                if(localStorage.getItem('messages') !== messages.length.toString()) {
+                    localStorage.setItem('messages', messages.length);
+                    ctx.unreadMessages = messages.length;
+                    this.render('./templates/common/header/header_messages.hbs')
+                        .then(() => {
+                            this.replace('#messages');
+                            toastr.info('Имате ново съобщение');
+                        })
+                }
+            });
+        }
     }).then(function () {
         stickFooter();
         stickHeader();

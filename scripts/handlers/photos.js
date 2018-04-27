@@ -15,9 +15,12 @@ let photos = function (ctx) {
     if (localStorage.getItem('role') === role) {
         this.role = localStorage.getItem('name');
         this.photosAuthed = true;
+        this.showGreetAuthed = true;
+        this.unreadMessages = localStorage.getItem('messages');
     } else {
         this.role = 'user';
         this.photosAuthed = false;
+        this.showGreetAuthed = false;
     }
     this.offers = myData['offers'];
     this.loadPartials({
@@ -25,6 +28,7 @@ let photos = function (ctx) {
         header_logo: './templates/common/header/header_logo.hbs',
         header_menu: './templates/common/header/header_menu.hbs',
         header_greeting: './templates/common/header/header_greeting.hbs',
+        header_messages: './templates/common/header/header_messages.hbs',
         main: './templates/common/photo_video gallery/gallery_main_wrapper.hbs',
         single_photo: './templates/photo_page/single_photo_partial.hbs',
         photo_input: './templates/admin/photo_input.hbs',
@@ -91,7 +95,22 @@ let photos = function (ctx) {
                     });
                     break;
             }
-
+            //Getting messages so if you click F5 they will still load without loging in and they will
+            // render again with new count if they change dynamically
+            if(ctx.showGreetAuthed) {
+                requestData('appdata', 'messages', '', 'GET').then((messages) => {
+                    ctx.unreadMessages = messages.length;
+                    if(localStorage.getItem('messages') !== messages.length.toString()) {
+                        localStorage.setItem('messages', messages.length);
+                        ctx.unreadMessages = messages.length;
+                        this.render('./templates/common/header/header_messages.hbs')
+                            .then(() => {
+                                this.replace('#messages');
+                                toastr.info('Имате ново съобщение');
+                            })
+                    }
+                });
+            }
         })
         .then(function () {
             stickFooter();

@@ -6,7 +6,7 @@ import { stickHeader, stickFooter } from "../modules/stickyHeaderFooter";
 
 let admin = function (ctx) {
     if(localStorage.getItem('role') === role) {
-        this.redirect('#');
+        this.redirect('#/');
         toastr.info(`Вече си логнат, ${localStorage.getItem('name')}`);
     }
     if (localStorage.getItem('role') === role) {

@@ -23,7 +23,6 @@ import contactpage from '../styles/pages/contactpage.css'
 import slick from '../node_modules/slick-carousel/slick/slick.css'
 import toastr from '../node_modules/toastr/build/toastr.css'
 
-
 const myData = {};
 myData.offers = [
     {

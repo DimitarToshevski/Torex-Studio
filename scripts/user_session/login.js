@@ -1,6 +1,11 @@
+import { requestData } from "../modules/requester";
+import { role } from "../router";
+
 const authorization = 'Basic ' + btoa('kid_ByC4Pz0wz:' + 'c47c381ad9234508be7cb15d8d42c2aa');
 const url = 'https://baas.kinvey.com/user/kid_ByC4Pz0wz/login';
 const secretAnswer = 'numler';
+
+let myMessages = [];
 
 function setStorage(data) {
     localStorage.setItem('authtoken', data._kmd.authtoken);
@@ -8,7 +13,7 @@ function setStorage(data) {
     localStorage.setItem('id', data._id);
     localStorage.setItem('role', data._kmd.roles[0].roleId);
     localStorage.setItem('name', data.name);
-};
+}
 
 let login = function (ctx) {
     setTimeout(() => {      //Attaching event listener on form
@@ -43,16 +48,20 @@ let login = function (ctx) {
                         return;
                     }
                     setStorage(data);
-                    ctx.redirect('#/');
-                    toastr.success(`Добре дошъл, ${data.name}`);
+                    if(data._kmd.roles[0].roleId === role)
+                    requestData('appdata', 'messages', '', 'GET').then((messages) => {
+                        myMessages = messages;
+                        localStorage.setItem('messages', messages.length)
+                    }).then(() => {
+                        loadingAdminPanel.hide();
+                        loginSubmitButton.prop('disabled', '');
+                        ctx.redirect('#/');
+                        toastr.success(`Добре дошъл, ${data.name}`);
+                    })
                 },
                 error: (err) => {
                     toastr.error(err.responseJSON.description);
                     return;
-                },
-                complete: () => {
-                    loadingAdminPanel.hide();
-                    loginSubmitButton.prop('disabled', '');
                 }
             };
             $.ajax(req);
@@ -61,4 +70,4 @@ let login = function (ctx) {
 
     }, 100)
 };
-export { login };
+export { login, myMessages };

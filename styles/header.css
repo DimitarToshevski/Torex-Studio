@@ -86,15 +86,23 @@ body {
         .header_row .header_menu li .videos_dropdown #music_clips a, .header_row .header_menu li .photography_dropdown #music_clips a {
           margin-top: -10px; }
     .header_row .header_menu #greeting {
-      display: none;
       position: absolute;
       top: 70%;
       right: 15%;
       color: #c5c5c5;
       font-weight: bold;
       z-index: -1; }
+    .header_row .header_menu #messages {
+      position: absolute;
+      top: 70%;
+      right: 13%;
+      color: #c5c5c5;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1; }
+      .header_row .header_menu #messages:hover {
+        text-decoration: underline; }
     .header_row .header_menu #logout {
-      display: none;
       position: absolute;
       top: 70%;
       right: 4%;
