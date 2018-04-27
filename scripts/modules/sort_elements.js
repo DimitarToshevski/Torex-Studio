@@ -1,3 +1,5 @@
+const dayRegex = /(\d|\d\d)\s/g;
+
 let sortElements = (elements) => {
     elements = elements.sort((a, b) => {
         if(a.date.localeCompare( b.date) === 0) {

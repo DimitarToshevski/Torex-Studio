@@ -1,6 +1,6 @@
 import { months } from "../posts_form_module";
 import { requestData } from "../../requester";
-import { regexVideoUrl } from "../videos_form_module";
+import { regexVideoCurrentTimeUrl, regexVideoUrl } from "../videos_form_module";
 
 let editVideo = (id) => {
     $('.submitData').attr('disabled', 'true'); //disabling button so there are no multiple requests
@@ -12,9 +12,6 @@ let editVideo = (id) => {
     let img_url = `https://img.youtube.com/vi/${video_id}/0.jpg`;
     try {
         video_url = video_url.match(regexVideoUrl)[0];
-        video_id = video_url.slice(26);
-        video_url = 'https://www.youtube.com/embed/' + video_id;
-        img_url = `https://img.youtube.com/vi/${video_id}/0.jpg`;
     } catch (err) {
         toastr.error('Въведи валиден EMBED URL на видео от YOUTUBE.');
         setTimeout(() => {
@@ -22,6 +19,13 @@ let editVideo = (id) => {
         }, 1000);
         return;
     }
+    try {
+        video_url = video_url.match(regexVideoCurrentTimeUrl)[0];
+        video_url = video_url.slice(0,-1);
+    } catch(err) { }
+    video_id = video_url.slice(26);
+    video_url = 'https://www.youtube.com/embed/' + video_id;
+    img_url = `https://img.youtube.com/vi/${video_id}/0.jpg`;
     let video_title = $('#video_title').val();
     let type = $('#video_type option:selected').val();
     let reqBody = JSON.stringify({

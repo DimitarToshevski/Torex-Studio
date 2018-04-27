@@ -1,5 +1,5 @@
 import { requestData } from "../requester";
-import { regexVideoUrl } from "./videos_form_module";
+import {regexVideoCurrentTimeUrl, regexVideoUrl} from "./videos_form_module";
 
 let months =
     [
@@ -33,8 +33,6 @@ let attachPostsFormEvents = () => {
                 if(postVideo) {
                     try {
                         postVideo = postVideo.match(regexVideoUrl)[0];
-                        let post_video_id = postVideo.slice(26);
-                        postVideo = 'https://www.youtube.com/embed/' + post_video_id;
                     } catch (err) {
                         toastr.error('Въведи валиден URL на видео от YOUTUBE.');
                         setTimeout(() => {
@@ -42,6 +40,12 @@ let attachPostsFormEvents = () => {
                         }, 1000);
                         return;
                     }
+                    try {
+                        postVideo = postVideo.match(regexVideoCurrentTimeUrl)[0];
+                        postVideo = postVideo.slice(0,-1);
+                    } catch(err) { }
+                    let post_video_id = postVideo.slice(26);
+                    postVideo = 'https://www.youtube.com/embed/' + post_video_id;
                 }
                 let reqBody = JSON.stringify({
                     title,

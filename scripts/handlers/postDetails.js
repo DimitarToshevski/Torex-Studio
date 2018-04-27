@@ -23,6 +23,7 @@ let postDetails = function (ctx) {
         header_logo: './templates/common/header/header_logo.hbs',
         header_menu: './templates/common/header/header_menu.hbs',
         header_greeting: './templates/common/header/header_greeting.hbs',
+        header_messages: './templates/common/header/header_messages.hbs',
         main: './templates/post_page/postpage_main_wrapper.hbs',
         post: './templates/post_page/single_post.hbs',
         posts: './templates/common/posts/posts.hbs',

@@ -2,6 +2,7 @@ import { requestData } from "../requester";
 import {months} from "./posts_form_module";
 
 let regexVideoUrl = /\/\/www.youtube.com\/watch\?v=.*/g;
+let regexVideoCurrentTimeUrl = /\/\/www.youtube.com\/watch\?v=.*&{1}/g;
 let attachVideosFormEvents = (ctx) => {
     setTimeout(() => {
         $('#show_video_form').click(() => {
@@ -22,8 +23,6 @@ let attachVideosFormEvents = (ctx) => {
                 let video_id = '';
                 try {
                     video_url = video_url.match(regexVideoUrl)[0];
-                    video_id = video_url.slice(26);
-                    video_url = `https://www.youtube.com/embed/${video_id}`;
                 } catch (err) {
                     toastr.error('Въведи валиден URL на видео от YOUTUBE.');
                     setTimeout(() => {
@@ -31,6 +30,12 @@ let attachVideosFormEvents = (ctx) => {
                     }, 1000);
                     return;
                 }
+                try {
+                    video_url = video_url.match(regexVideoCurrentTimeUrl)[0];
+                    video_url = video_url.slice(0,-1);
+                } catch(err) { }
+                video_id = video_url.slice(26);
+                video_url = `https://www.youtube.com/embed/${video_id}`;
                 let video_title = $('#video_title').val();
                 let img_url = `https://img.youtube.com/vi/${video_id}/0.jpg`;
                 let type = $('#video_type option:selected').val();
@@ -54,4 +59,4 @@ let attachVideosFormEvents = (ctx) => {
         })
     }, 100)
 };
-export { attachVideosFormEvents, regexVideoUrl }
+export { attachVideosFormEvents, regexVideoUrl, regexVideoCurrentTimeUrl }
