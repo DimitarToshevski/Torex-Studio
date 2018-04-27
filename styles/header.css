@@ -99,7 +99,7 @@ body {
     .header_row .header_menu #messages {
       position: absolute;
       top: 70%;
-      right: 13%;
+      right: 12.5%;
       color: #c5c5c5;
       font-weight: bold;
       cursor: pointer;
