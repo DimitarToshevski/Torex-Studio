@@ -16,6 +16,8 @@ $linkHoverColor: rgb(28, 160, 60);
     position: absolute;
     top: -35px;
     right: 5%;
+    width: 26%;
+    min-width: 270px;
     border: 1px solid $mainHeaderColor;
     border-radius: 8px;
     padding: 3px;
@@ -25,6 +27,7 @@ $linkHoverColor: rgb(28, 160, 60);
       color: $mainHeaderColor;
       font-size: 19px;
       font-weight: bold;
+      width: 85%;
     }
     #search_button {
       background: none;

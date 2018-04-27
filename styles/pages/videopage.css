@@ -11,6 +11,8 @@
     position: absolute;
     top: -35px;
     right: 5%;
+    width: 26%;
+    min-width: 270px;
     border: 1px solid #c5c5c5;
     border-radius: 8px;
     padding: 3px; }
@@ -19,7 +21,8 @@
       background: none;
       color: #c5c5c5;
       font-size: 19px;
-      font-weight: bold; }
+      font-weight: bold;
+      width: 85%; }
     .gallery_wrapper #search_wrapper #search_button {
       background: none;
       border: none;
