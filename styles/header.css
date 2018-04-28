@@ -237,6 +237,8 @@ body {
     left: 52%;
     margin-top: 180px;
     width: 20%; }
+    .header_row .header_menu .header_nav {
+      background: rgba(4, 4, 4, 0.6); }
 
   .header_row #btn_menu {
     display: flex;
@@ -287,6 +289,10 @@ body {
     position: relative;
     top: -120px; } }
 @media screen and (max-width: 400px) {
+  .header_row .header_logo img {
+    width: 100px;
+    height: 75px; }
+
   .header_wrapper .header_video #video_pause_button {
     position: relative;
     left: 45%; }
