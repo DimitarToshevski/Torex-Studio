@@ -1,4 +1,5 @@
 import {months} from "./posts_form_module";
+import {requestData} from "../requester";
 
 let sortableMode = () => {
     let savedElements = [];
@@ -12,6 +13,7 @@ let sortableMode = () => {
             let img_url = $(element).attr('data-poster');
             let type = $(element).attr('data-type');
             let newDate = new Date();
+            let longDate = $(element).attr('data-long-date');
             let video_date = `${newDate.getDate()} ${months[newDate.getMonth()]} ${newDate.getFullYear()}`;
             let exactTime = `${newDate.getHours()} ${newDate.getMinutes()} ${newDate.getSeconds()}`;
             let reqBody = JSON.stringify({
@@ -21,31 +23,50 @@ let sortableMode = () => {
                 type,
                 "date": video_date,
                 "exact_time": exactTime,
-                "long_date": newDate
+                "long_date": longDate
             });
-            console.log(video_url);
-            console.log(video_title);
-            console.log(img_url);
-            console.log(type);
+            requestData('appdata', 'videos', `/${id}`, 'PUT', reqBody).then(
+                toastr.success(`Промените са записани успешно!<br> Натисни F5!`)
+            )
         }
-        toastr.success(`Промените са записани успешно!<br> Натисни F5!`);
     }
 
     function arrangeElements(event, element) {
         // if the element has been already dragged, get the date of the new prev el
         // set it to the dragged element
         // splice the new element with the new date with the old one
-        if(savedElements.indexOf(element.item[0]) !== -1) {
-
+        if(savedElements.indexOf($(element.item[0])[0]) !== -1) {
+console.log('found the same Jelement');
             let prevDate = $(element.item[0]).prev().attr('data-long-date');
             let nextDate = $(element.item[0]).next().attr('data-long-date');
             let matches = /(\d*)\./g.exec(prevDate);
             let changedSeconds = (parseInt(matches[1]) - 1) + '.';
             let newDate = prevDate.replace(/(\d*)\./g, changedSeconds );
             $(element.item[0]).attr('data-long-date', newDate);
+            savedElements.splice(savedElements.indexOf($(element.item[0])[0]) , 1, $(element.item[0])[0]);
 
-            savedElements.splice(savedElements.indexOf(element.item[0]) , 1, element.item[0]);
+            //if the current element after it has been dragged has the same date as the next element
+            //get and set the next element date to be less than the current and save it to the array
+            if(newDate === nextDate) {
+                console.log('found SAME element with SAME date');
+                let matchesNext = /(\d*)\./g.exec(nextDate);
+                let changedSecondsNext = (parseInt(matchesNext[1]) - 1) + '.';
+                let newDateNext = nextDate.replace(/(\d*)\./g, changedSecondsNext );
+                $(element.item[0]).next().attr('data-long-date', newDateNext);
+                //if we already have the next item in the array with moved elements
+                //splice it without changing it
+                if(savedElements.indexOf($(element.item[0]).next()[0]) !== -1) {
+                    console.log('Found the same element and spliced', savedElements.indexOf($(element.item[0]).next()[0]));
+                    savedElements
+                        .splice(savedElements.indexOf($(element.item[0]).next()[0]), 1, $(element.item[0]).next()[0]);
+                    console.log(savedElements);
+                } else {
+                    console.log('NOT Found the same element and NOT spliced');
+                    savedElements.push($(element.item[0]).next()[0]);
+                }
+            }
         } else {
+            console.log('NOT found the same Jelement');
         //else if it has NOT been dragged before get the date of prev el and set it to the dragged and push
             let prevDate = $(element.item[0]).prev().attr('data-long-date');
             let nextDate = $(element.item[0]).next().attr('data-long-date');
@@ -53,14 +74,29 @@ let sortableMode = () => {
             let changedSeconds = (parseInt(matches[1]) - 1) + '.';
             let newDate = prevDate.replace(/(\d*)\./g, changedSeconds );
             $(element.item[0]).attr('data-long-date', newDate);
+            //if the current element after it has been dragged has the same date as the next element
+            //get and set the next element date to be less than the current and save it to the array
             if(newDate === nextDate) {
+                console.log('Not found same element but found SAME date');
                 let matchesNext = /(\d*)\./g.exec(nextDate);
                 let changedSecondsNext = (parseInt(matchesNext[1]) - 1) + '.';
                 let newDateNext = nextDate.replace(/(\d*)\./g, changedSecondsNext );
                 $(element.item[0]).next().attr('data-long-date', newDateNext);
-                savedElements.push(element.item[0].next())
+
+                //if we already have the next item in the array with moved elements
+                //splice it without changing it
+                if(savedElements.indexOf($(element.item[0]).next()[0]) !== -1) {
+                    console.log('here');
+                    savedElements
+                        .splice(savedElements.indexOf($(element.item[0]).next()[0]),1,$(element.item[0]).next()[0]);
+                } else {
+                    console.log(`there`);
+                    console.log($(element.item[0]).next()[0]);
+                    savedElements.push($(element.item[0]).next()[0]);
+                }
             }
-            savedElements.push(element.item[0])
+            savedElements.push($(element.item[0])[0]);
+            console.log(savedElements);
         }
     }
 
