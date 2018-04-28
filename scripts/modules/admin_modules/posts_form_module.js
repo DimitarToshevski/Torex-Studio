@@ -55,7 +55,8 @@ let attachPostsFormEvents = () => {
                     "body": postBody,
                     "body2": postBody2,
                     "date": postDate,
-                    "exact_time": exactTime
+                    "exact_time": exactTime,
+                    "long_date": newDate
                 });
                 requestData('appdata', 'posts', '', 'POST', reqBody).then((post) => {
                     $('#submit_post').find('input[type=text], textarea').val('');

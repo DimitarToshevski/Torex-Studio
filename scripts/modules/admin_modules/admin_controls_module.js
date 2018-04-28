@@ -2,6 +2,7 @@ import { requestData } from "../requester";
 import { editPhoto } from "./edit_modules/edit_photos";
 import { editVideo } from "./edit_modules/edit_videos";
 import { editPost } from "./edit_modules/edit_posts";
+import { scrollTop } from "../scroll_top_button";
 
 let adminControls = () => {
     setTimeout(() => {
@@ -20,6 +21,7 @@ let adminControls = () => {
         //EDIT EVENT LISTENER
         $('.edit').click((e) => {
             e.preventDefault();
+            scrollTop(true);
             $('.submitData').val('Промени');
             $('.input').css('display', 'flex'); //showing form
 

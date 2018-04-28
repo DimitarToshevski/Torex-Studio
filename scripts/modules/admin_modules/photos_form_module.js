@@ -25,7 +25,8 @@ let attachPhotosFormEvents = () => {
                     title,
                     type,
                     "date": photoDate,
-                    "exact_time": exactTime
+                    "exact_time": exactTime,
+                    "long_date": newDate
                 });
                 requestData('appdata', 'photos', '', 'POST', reqBody).then((photo) => {
                     $('#submit_photo').find('input[type=text], textarea').val('');

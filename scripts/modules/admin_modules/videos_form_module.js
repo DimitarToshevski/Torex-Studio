@@ -45,7 +45,8 @@ let attachVideosFormEvents = (ctx) => {
                     img_url,
                     type,
                     "date": video_date,
-                    "exact_time": exactTime
+                    "exact_time": exactTime,
+                    "long_date": newDate
                 });
                 requestData('appdata', 'videos', '', 'POST', reqBody).then((videos) => {
                     $('#submit_video').find('input[type=text], textarea').val('');

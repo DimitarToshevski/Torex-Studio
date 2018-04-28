@@ -34,7 +34,8 @@ let editVideo = (id) => {
         img_url,
         type,
         "date": video_date,
-        "exact_time": exactTime
+        "exact_time": exactTime,
+        "long_date": newDate
     });
     requestData('appdata', 'videos', `/${id}`, 'PUT', reqBody).then((video) => {
         $('.input').css('display', 'none');

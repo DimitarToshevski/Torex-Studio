@@ -14,7 +14,8 @@ let editPhoto = (id) => {
         title,
         type,
         "date": photoDate,
-        "exact_time": exactTime
+        "exact_time": exactTime,
+        "long_date": newDate
     });
     requestData('appdata', 'photos', `/${id}`, 'PUT', reqBody).then((photo) => {
         $('.input').css('display', 'none');
