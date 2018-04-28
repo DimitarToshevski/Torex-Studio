@@ -9,6 +9,7 @@ import {attachVideosFormEvents} from "../modules/admin_modules/videos_form_modul
 import {adminControls} from "../modules/admin_modules/admin_controls_module";
 import {sortElements} from "../modules/sort_elements";
 import {searchVideosEngine} from "../modules/search_videos_engine";
+import {sortableMode} from "../modules/admin_modules/sortable_mode_module";
 
 let videos = function (ctx) {
     let route = this.params['route'];
@@ -94,6 +95,7 @@ let videos = function (ctx) {
             }
         })
         .then(function () {
+            sortableMode();
             stickFooter();
             stickHeader();
             adaptNav(ctx);

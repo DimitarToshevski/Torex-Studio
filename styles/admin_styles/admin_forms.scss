@@ -1,10 +1,23 @@
 .form_control {
   position: absolute;
   left: 39%;
-  top: 110px;
+  top: 100px;
   width: 22%;
   text-align: center;
   z-index: 3;
+  display: flex;
+  flex-direction: column;
+  .edit_mode {
+    display: flex;
+    justify-content: center;
+    #edit_mode {
+      margin-bottom: 5px;
+    }
+    #cancel_mode {
+      margin: 0 0 5px 5px;
+      display: none;
+    }
+  }
 }
 
 .input {
@@ -17,14 +30,14 @@
   z-index: 3;
   width: 100%;
   height: 400px;
-  background: rgba( 197, 197, 197, 0.8);
+  background: rgba(197, 197, 197, 0.8);
   align-items: center;
   text-align: center;
   padding: 10px;
   font-size: 15px;
   font-weight: bold;
   .close_form {
-  position: absolute;
+    position: absolute;
     top: 7%;
     right: 2%;
     cursor: pointer;
@@ -59,10 +72,11 @@
     &:hover {
       background: rgba(33, 241, 33, 0.6);
       cursor: pointer;
-      box-shadow: 0 0 5px 5px rgba(153, 153, 153, 1 );
+      box-shadow: 0 0 5px 5px rgba(153, 153, 153, 1);
     }
   }
 }
+
 #submit_post {
   height: 560px;
   textarea {
