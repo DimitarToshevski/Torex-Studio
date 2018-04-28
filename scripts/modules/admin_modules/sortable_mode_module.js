@@ -25,9 +25,10 @@ let sortableMode = () => {
                 "exact_time": exactTime,
                 "long_date": longDate
             });
-            requestData('appdata', 'videos', `/${id}`, 'PUT', reqBody).then(
-                toastr.success(`Промените са записани успешно!<br> Натисни F5!`)
-            )
+            requestData('appdata', 'videos', `/${id}`, 'PUT', reqBody).then(() => {
+                savedElements = [];
+                toastr.success(`Промените са записани успешно!<br> Натисни F5!`);
+            })
         }
     }
 
@@ -36,7 +37,6 @@ let sortableMode = () => {
         // set it to the dragged element
         // splice the new element with the new date with the old one
         if(savedElements.indexOf($(element.item[0])[0]) !== -1) {
-console.log('found the same Jelement');
             let prevDate = $(element.item[0]).prev().attr('data-long-date');
             let nextDate = $(element.item[0]).next().attr('data-long-date');
             let matches = /(\d*)\./g.exec(prevDate);
@@ -48,7 +48,6 @@ console.log('found the same Jelement');
             //if the current element after it has been dragged has the same date as the next element
             //get and set the next element date to be less than the current and save it to the array
             if(newDate === nextDate) {
-                console.log('found SAME element with SAME date');
                 let matchesNext = /(\d*)\./g.exec(nextDate);
                 let changedSecondsNext = (parseInt(matchesNext[1]) - 1) + '.';
                 let newDateNext = nextDate.replace(/(\d*)\./g, changedSecondsNext );
@@ -56,17 +55,13 @@ console.log('found the same Jelement');
                 //if we already have the next item in the array with moved elements
                 //splice it without changing it
                 if(savedElements.indexOf($(element.item[0]).next()[0]) !== -1) {
-                    console.log('Found the same element and spliced', savedElements.indexOf($(element.item[0]).next()[0]));
                     savedElements
                         .splice(savedElements.indexOf($(element.item[0]).next()[0]), 1, $(element.item[0]).next()[0]);
-                    console.log(savedElements);
                 } else {
-                    console.log('NOT Found the same element and NOT spliced');
                     savedElements.push($(element.item[0]).next()[0]);
                 }
             }
         } else {
-            console.log('NOT found the same Jelement');
         //else if it has NOT been dragged before get the date of prev el and set it to the dragged and push
             let prevDate = $(element.item[0]).prev().attr('data-long-date');
             let nextDate = $(element.item[0]).next().attr('data-long-date');
@@ -77,7 +72,6 @@ console.log('found the same Jelement');
             //if the current element after it has been dragged has the same date as the next element
             //get and set the next element date to be less than the current and save it to the array
             if(newDate === nextDate) {
-                console.log('Not found same element but found SAME date');
                 let matchesNext = /(\d*)\./g.exec(nextDate);
                 let changedSecondsNext = (parseInt(matchesNext[1]) - 1) + '.';
                 let newDateNext = nextDate.replace(/(\d*)\./g, changedSecondsNext );
@@ -86,17 +80,13 @@ console.log('found the same Jelement');
                 //if we already have the next item in the array with moved elements
                 //splice it without changing it
                 if(savedElements.indexOf($(element.item[0]).next()[0]) !== -1) {
-                    console.log('here');
                     savedElements
                         .splice(savedElements.indexOf($(element.item[0]).next()[0]),1,$(element.item[0]).next()[0]);
                 } else {
-                    console.log(`there`);
-                    console.log($(element.item[0]).next()[0]);
                     savedElements.push($(element.item[0]).next()[0]);
                 }
             }
             savedElements.push($(element.item[0])[0]);
-            console.log(savedElements);
         }
     }
 
