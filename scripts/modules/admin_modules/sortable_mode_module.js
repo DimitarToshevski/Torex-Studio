@@ -39,6 +39,15 @@ let sortableMode = () => {
         if(savedElements.indexOf($(element.item[0])[0]) !== -1) {
             let prevDate = $(element.item[0]).prev().attr('data-long-date');
             let nextDate = $(element.item[0]).next().attr('data-long-date');
+            //if we put the element on first position and there is no previous to take it's date
+            //take the next element date and add 1
+            if(!prevDate) {
+                let matchesNext = /(\d*)\./g.exec(nextDate);
+                let changedSecondsNext = (parseInt(matchesNext[1]) + 1) + '.';
+                let newDateCurrent = nextDate.replace(/(\d*)\./g, changedSecondsNext );
+                $(element.item[0]).attr('data-long-date', newDateCurrent);
+                return
+            }
             let matches = /(\d*)\./g.exec(prevDate);
             let changedSeconds = (parseInt(matches[1]) - 1) + '.';
             let newDate = prevDate.replace(/(\d*)\./g, changedSeconds );
@@ -65,6 +74,15 @@ let sortableMode = () => {
         //else if it has NOT been dragged before get the date of prev el and set it to the dragged and push
             let prevDate = $(element.item[0]).prev().attr('data-long-date');
             let nextDate = $(element.item[0]).next().attr('data-long-date');
+            //if we put the element on first position and there is no previous to take it's date
+            //take the next element date and add 1
+            if(!prevDate) {
+                let matchesNext = /(\d*)\./g.exec(nextDate);
+                let changedSecondsNext = (parseInt(matchesNext[1]) + 1) + '.';
+                let newDateCurrent = nextDate.replace(/(\d*)\./g, changedSecondsNext );
+                $(element.item[0]).attr('data-long-date', newDateCurrent);
+                return
+            }
             let matches = /(\d*)\./g.exec(prevDate);
             let changedSeconds = (parseInt(matches[1]) - 1) + '.';
             let newDate = prevDate.replace(/(\d*)\./g, changedSeconds );
@@ -146,6 +164,7 @@ let sortableMode = () => {
 
     setTimeout(() => {
         editMode();
+        console.log('Just update');
     }, 100)
 };
 export {sortableMode}
