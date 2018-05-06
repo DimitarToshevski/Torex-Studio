@@ -1,35 +1,62 @@
 import {months} from "./posts_form_module";
 import {requestData} from "../requester";
 
-let sortableMode = () => {
+let sortableMode = (type) => {
     let savedElements = [];
 
     //on submit changes send array with sorted elements to server
-    function saveChanges(elements) {
-        for(let element of elements) {
-            let id = $(element).prop('id');
-            let video_url = $(element).prop('href');
-            let video_title = $(element).attr("data-sub-html").match(/[^<h4>].*[^<\/h4>]/g)[0];
-            let img_url = $(element).attr('data-poster');
-            let type = $(element).attr('data-type');
-            let newDate = new Date();
-            let longDate = $(element).attr('data-long-date');
-            let video_date = `${newDate.getDate()} ${months[newDate.getMonth()]} ${newDate.getFullYear()}`;
-            let exactTime = `${newDate.getHours()} ${newDate.getMinutes()} ${newDate.getSeconds()}`;
-            let reqBody = JSON.stringify({
-                video_url,
-                video_title,
-                img_url,
-                type,
-                "date": video_date,
-                "exact_time": exactTime,
-                "long_date": longDate
-            });
-            requestData('appdata', 'videos', `/${id}`, 'PUT', reqBody).then(() => {
-                savedElements = [];
-                toastr.success(`Промените са записани успешно!<br> Натисни F5!`);
-            })
+    function saveChanges(elements, type) {
+        if(type === 'videos') {
+            for(let element of elements) {
+                let id = $(element).prop('id');
+                let video_url = $(element).prop('href');
+                let video_title = $(element).attr("data-sub-html").match(/[^<h4>].*[^<\/h4>]/g)[0];
+                let img_url = $(element).attr('data-poster');
+                let type = $(element).attr('data-type');
+                let newDate = new Date();
+                let longDate = $(element).attr('data-long-date');
+                let video_date = `${newDate.getDate()} ${months[newDate.getMonth()]} ${newDate.getFullYear()}`;
+                let exactTime = `${newDate.getHours()} ${newDate.getMinutes()} ${newDate.getSeconds()}`;
+                let reqBody = JSON.stringify({
+                    video_url,
+                    video_title,
+                    img_url,
+                    type,
+                    "date": video_date,
+                    "exact_time": exactTime,
+                    "long_date": longDate
+                });
+                requestData('appdata', 'videos', `/${id}`, 'PUT', reqBody).then(() => {
+                    savedElements = [];
+                    toastr.success(`Промените са записани успешно!<br> Натисни F5!`);
+                })
+            }
+        } else if(type === 'photos') {
+            console.log('photos');
+            for(let element of elements) {
+                let id = $(element).prop('id');
+                let url = element.attr('data-url');
+                let title= element.attr('data-sub-html');
+                let type = $(element).attr('data-type');
+                let newDate = new Date();
+                let longDate = $(element).attr('data-long-date');
+                let photoDate = `${newDate.getDate()} ${months[newDate.getMonth()]} ${newDate.getFullYear()}`;
+                let exactTime = `${newDate.getHours()} ${newDate.getMinutes()} ${newDate.getSeconds()}`;
+                let reqBody = JSON.stringify({
+                    url,
+                    title,
+                    type,
+                    "date": photoDate,
+                    "exact_time": exactTime,
+                    "long_date": longDate
+                });
+                requestData('appdata', 'photos', `/${id}`, 'PUT', reqBody).then(() => {
+                    savedElements = [];
+                    toastr.success(`Промените са записани успешно!<br> Натисни F5!`);
+                })
+            }
         }
+
     }
 
     function arrangeElements(event, element) {
@@ -137,7 +164,7 @@ let sortableMode = () => {
 
             //if the value is Запиши промените get updated elements and send to server
             if ($('#edit_mode').val() === 'Запиши промените') {
-                saveChanges(savedElements);
+                saveChanges(savedElements, type);
                 detachSortable();
                 $('#edit_mode').val('Режим sortable');
                 $('#cancel_mode').hide();
@@ -162,9 +189,6 @@ let sortableMode = () => {
         })
     }
 
-    setTimeout(() => {
         editMode();
-        console.log('Just update');
-    }, 100)
 };
 export {sortableMode}

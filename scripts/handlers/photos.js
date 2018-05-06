@@ -8,6 +8,7 @@ import { logout} from "../user_session/logout";
 import { attachPhotosFormEvents } from "../modules/admin_modules/photos_form_module";
 import { adminControls } from "../modules/admin_modules/admin_controls_module";
 import { sortElements } from "../modules/sort_elements";
+import {sortableMode} from "../modules/admin_modules/sortable_mode_module";
 
 let photos = function (ctx) {
     let route = this.params['route'];
@@ -113,6 +114,7 @@ let photos = function (ctx) {
             }
         })
         .then(function () {
+            sortableMode('photos');
             stickFooter();
             stickHeader();
             adaptNav(ctx);

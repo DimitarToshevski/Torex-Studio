@@ -95,7 +95,7 @@ let videos = function (ctx) {
             }
         })
         .then(function () {
-            sortableMode();
+            sortableMode('videos');
             stickFooter();
             stickHeader();
             adaptNav(ctx);
