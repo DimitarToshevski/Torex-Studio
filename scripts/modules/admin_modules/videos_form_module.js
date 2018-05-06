@@ -50,7 +50,14 @@ let attachVideosFormEvents = (ctx) => {
                 });
                 requestData('appdata', 'videos', '', 'POST', reqBody).then((videos) => {
                     $('#submit_video').find('input[type=text], textarea').val('');
-                    toastr.success(`Успешно качен клип: ${videos.video_title}`);
+                    toastr.success(`Успешно качен клип: ${videos.video_title}.<br>НАТИСНИ F5`);
+                    console.log('here2');
+                    if(window.location.href.toString().indexOf('/uploaded-video') !== -1) {
+                        window.location.href = window.location.href.toString().replace('/uploaded-video', '');
+                    } else {
+                        window.location.href = window.location.href + '/uploaded-video';
+                    }
+
                     setTimeout(() => {
                         $('.submitData').removeAttr('disabled'); //enabling submit button
                     }, 1000)

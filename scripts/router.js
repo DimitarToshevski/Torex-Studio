@@ -162,6 +162,8 @@ $(() => {
 
         this.get('#/admin', admin);
 
+        this.get('#/videos/:route/uploaded-video', videos);
+
     });//for deployment we must put router.run('#/')
     router.run('#/');
 });

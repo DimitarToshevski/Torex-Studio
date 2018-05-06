@@ -102,7 +102,7 @@ let videos = function (ctx) {
             scrollTop(true);
             lightGallery();
             logout(ctx);
-            attachVideosFormEvents();
+            attachVideosFormEvents(ctx);
             adminControls();
         })
 };
