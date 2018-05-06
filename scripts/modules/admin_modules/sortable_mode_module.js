@@ -31,7 +31,6 @@ let sortableMode = (type) => {
                 })
             }
         } else if(type === 'photos') {
-            console.log('photos');
             for(let element of elements) {
                 let id = $(element).prop('id');
                 let url = element.attr('data-url');
@@ -58,6 +57,8 @@ let sortableMode = (type) => {
 
     }
 
+    //on dropping an element down arrange the element by long date property and push into the array
+    //check the surrounding elements' long date properties and arrange if needed and push them into the array
     function arrangeElements(event, element) {
         // if the element has been already dragged, get the date of the new prev el
         // set it to the dragged element
@@ -146,6 +147,7 @@ let sortableMode = (type) => {
         $('#gallery').disableSelection();
     }
 
+    //on canceling the edit mode it detaches the sortable mode
     function detachSortable() {
         $( "#gallery" ).sortable("disable");
         return false;
