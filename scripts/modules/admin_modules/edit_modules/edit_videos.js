@@ -42,7 +42,13 @@ let editVideo = (id) => {
         $('.input').off('submit');
         $('.input').find('input[type=text], textarea').val('');
         $('.submitData').val('Качи');
-        toastr.success(`Успешно промененo видео: ${video.video_title}. <br> НАТИСНИ F5`);
+        toastr.success(`Успешно промененo видео: ${video.video_title}.`);
+        //Triggering new route that will callback the same function for rendering the page
+        if(window.location.href.toString().indexOf('/uploaded-video') !== -1) {
+            window.location.href = window.location.href.toString().replace('/uploaded-video', '');
+        } else {
+            window.location.href = window.location.href + '/uploaded-video';
+        }
         setTimeout(() => {
             $('.submitData').removeAttr('disabled'); //enabling submit button
         }, 1000)

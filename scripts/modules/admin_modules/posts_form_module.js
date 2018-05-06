@@ -61,6 +61,12 @@ let attachPostsFormEvents = () => {
                 requestData('appdata', 'posts', '', 'POST', reqBody).then((post) => {
                     $('#submit_post').find('input[type=text], textarea').val('');
                     toastr.success(`Успешно качен пост: ${post.title} <br> ${post.subtitle}`);
+                    //Triggering new route that will callback the same function for rendering the page
+                    if(window.location.href.toString().indexOf('/uploaded-post') !== -1) {
+                        window.location.href = window.location.href.toString().replace('uploaded-post', 'posts');
+                    } else {
+                        window.location.href = window.location.href.toString().replace('posts', 'uploaded-post');
+                    }
                     setTimeout(() => {
                         $('.submitData').removeAttr('disabled'); //enabling submit button
                     }, 1000)

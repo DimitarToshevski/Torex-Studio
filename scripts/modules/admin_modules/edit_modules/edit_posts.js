@@ -47,7 +47,13 @@ let editPost = (id) => {
         $('.input').off('submit');
         $('.input').find('input[type=text], textarea').val('');
         $('.submitData').val('Качи');
-        toastr.success(`Успешно променен пост: ${post.title}. <br> НАТИСНИ F5`);
+        toastr.success(`Успешно променен пост: ${post.title}.`);
+        //Triggering new route that will callback the same function for rendering the page
+        if(window.location.href.toString().indexOf('/uploaded-post') !== -1) {
+            window.location.href = window.location.href.toString().replace('uploaded-post', 'posts');
+        } else {
+            window.location.href = window.location.href.toString().replace('posts', 'uploaded-post');
+        }
         setTimeout(() => {
             $('.submitData').removeAttr('disabled'); //enabling submit button
         }, 1000)

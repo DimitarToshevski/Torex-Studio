@@ -22,7 +22,13 @@ let editPhoto = (id) => {
         $('.input').off('submit');
         $('.input').find('input[type=text], textarea').val('');
         $('.submitData').val('Качи');
-        toastr.success(`Успешно променена снимка: ${photo.title}. <br> НАТИСНИ F5`);
+        toastr.success(`Успешно променена снимка: ${photo.title}.`);
+        //Triggering new route that will callback the same function for rendering the page
+        if(window.location.href.toString().indexOf('/uploaded-photo') !== -1) {
+            window.location.href = window.location.href.toString().replace('/uploaded-photo', '');
+        } else {
+            window.location.href = window.location.href + '/uploaded-photo';
+        }
         setTimeout(() => {
             $('.submitData').removeAttr('disabled'); //enabling submit button
         }, 1000)

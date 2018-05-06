@@ -30,7 +30,13 @@ let attachPhotosFormEvents = () => {
                 });
                 requestData('appdata', 'photos', '', 'POST', reqBody).then((photo) => {
                     $('#submit_photo').find('input[type=text], textarea').val('');
-                    toastr.success(`Успешно качена снимка: ${photo.title}. <br>НАТИСНИ F5`);
+                    toastr.success(`Успешно качена снимка: ${photo.title}.`);
+                    //Triggering new route that will callback the same function for rendering the page
+                    if(window.location.href.toString().indexOf('/uploaded-photo') !== -1) {
+                        window.location.href = window.location.href.toString().replace('/uploaded-photo', '');
+                    } else {
+                        window.location.href = window.location.href + '/uploaded-photo';
+                    }
                     setTimeout(() => {
                         $('.submitData').removeAttr('disabled'); //enabling submit button
                     }, 2000)

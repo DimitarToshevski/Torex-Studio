@@ -164,6 +164,10 @@ $(() => {
 
         this.get('#/videos/:route/uploaded-video', videos);
 
+        this.get('#/photography/:route/uploaded-photo', photos);
+
+        this.get('#/uploaded-post', posts);
+
     });//for deployment we must put router.run('#/')
     router.run('#/');
 });
