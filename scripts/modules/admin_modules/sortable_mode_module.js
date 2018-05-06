@@ -3,7 +3,6 @@ import {requestData} from "../requester";
 
 let sortableMode = (type) => {
     let savedElements = [];
-
     //on submit changes send array with sorted elements to server
     function saveChanges(elements, type) {
         if(type === 'videos') {
@@ -155,7 +154,6 @@ let sortableMode = (type) => {
     //attach listeners to buttons edit mode and cancel edit mode
     function editMode() {
         $('#edit_mode').click(() => {
-
             //Entering edit mode
             attachSortable();
 
@@ -184,11 +182,29 @@ let sortableMode = (type) => {
                 $('#cancel_mode').hide();
                 $('.gallery_wrapper')
                     .css('background', 'linear-gradient(180deg,rgba(0,0,0,.5) 31%,rgba(173,61,32,.5))');
-                toastr.info(`Не са направени промени. <br> Натисни F5!`)
+                toastr.info(`Не са направени промени.`);
+                if(type === 'videos') {
+                    //Triggering new route that will callback the same function for rendering the page
+                    if(window.location.href.toString().indexOf('/uploaded-video') !== -1) {
+                        window.location.href = window.location.href.toString().replace('/uploaded-video', '');
+                    } else {
+                        window.location.href = window.location.href + '/uploaded-video';
+                    }
+                }
+                if(type === 'photos') {
+                    //Triggering new route that will callback the same function for rendering the page
+                    if(window.location.href.toString().indexOf('/uploaded-photo') !== -1) {
+                        window.location.href = window.location.href.toString().replace('/uploaded-photo', '');
+                    } else {
+                        window.location.href = window.location.href + '/uploaded-photo';
+                    }
+                }
             });
         })
     }
 
+    setTimeout(() => {
         editMode();
+    }, 100);
 };
 export {sortableMode}
