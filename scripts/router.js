@@ -6,6 +6,7 @@ import { postDetails } from './handlers/postDetails.js';
 import { posts } from './handlers/posts.js';
 import { videos } from './handlers/videos.js';
 import { admin } from './handlers/admin.js';
+import { adminMessages } from "./handlers/messages";
 import { toasterOptions } from "./modules/toastrOptions";
 
 import css from '../styles/reset.css'
@@ -161,6 +162,8 @@ $(() => {
         this.get('#/contact', contact);
 
         this.get('#/admin', admin);
+
+        this.get('#/messages', adminMessages);
 
         this.get('#/videos/:route/uploaded-video', videos);
 

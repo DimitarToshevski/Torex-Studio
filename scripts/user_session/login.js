@@ -48,16 +48,22 @@ let login = function (ctx) {
                         return;
                     }
                     setStorage(data);
-                    if(data._kmd.roles[0].roleId === role)
-                    requestData('appdata', 'messages', '', 'GET').then((messages) => {
-                        myMessages = messages;
-                        localStorage.setItem('messages', messages.length)
-                    }).then(() => {
+                    if(data._kmd.roles[0].roleId === role) {
+                        requestData('appdata', 'messages', '', 'GET').then((messages) => {
+                            localStorage.setItem('messages', messages.length);
+                            myMessages = messages;
+                        }).then(() => {
+                            loadingAdminPanel.hide();
+                            loginSubmitButton.prop('disabled', '');
+                            ctx.redirect('#/');
+                            toastr.success(`Добре дошъл, ${data.name}`);
+                        })
+                    } else {
                         loadingAdminPanel.hide();
                         loginSubmitButton.prop('disabled', '');
                         ctx.redirect('#/');
                         toastr.success(`Добре дошъл, ${data.name}`);
-                    })
+                    }
                 },
                 error: (err) => {
                     toastr.error(err.responseJSON.description);
