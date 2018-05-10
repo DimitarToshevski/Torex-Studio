@@ -42,13 +42,11 @@ let adminMessages = function (ctx) {
                             myMessages.push(messages[message]);
                         }
                         this.messages = myMessages;
-                        console.log(this.messages);
                         this.render('./templates/admin/messages/messages_list_wrapper.hbs')
                             .then(() => {
                                 this.replace('#message_list');
                             })
                     }
-                    console.log(myMessages.length);
                     if(localStorage.getItem('messages') !== messages.length.toString()) {
                         localStorage.setItem('messages', messages.length);
                         ctx.unreadMessages = messages.length;
